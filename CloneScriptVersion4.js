@@ -1,8 +1,7 @@
 //+ 
 /*
-	Version para el cliente (ClienteLT) hecho en c# .NET 
-	Tomado de la version original v3.4.3E
-	20/08/2015
+	CloneScript Versión 4.1
+	25/08/2015
 	Author:
 	+
 */

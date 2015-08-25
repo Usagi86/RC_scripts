@@ -221,7 +221,7 @@ document.getElementsByClassName("pN")[2].style.background = 'rgba(44,175,226,0.8
 document.getElementById("PL").style.color='#FFFFFF';
 document.getElementById("PC").style.color='#FFFFFF';
 }
-nuevoEstilo();
+//nuevoEstilo();
 //Fin_de_edicion_de_estilos.
 
 //FIN DEL SCRIPT.

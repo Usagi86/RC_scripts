@@ -55,7 +55,7 @@ function pressU()
 	underlinea0 = "[u]"; underlinea1 = "[/u]";
 	}
 
-	var r2= "[c=" + IN.clr+ "]" + negrita0 + italica0 + underlinea0 + rText + underlinea1 + italica1 + negrita1 + "[/c]"
+	r2= "[c=" + IN.clr+ "]" + negrita0 + italica0 + underlinea0 + rText + underlinea1 + italica1 + negrita1 + "[/c]"
 	r3 = r2.replace(/&ṈᏰຮᑬ;/g, " ").replace(/&ⁿᵇˢᵖ;/g, " ").replace(/&иჩჰρ;/g, " ").replace(/&ИßՏP;/g, " ").replace(/&ИßSṖ;/g, " ").replace(/&ᏁᏰᏕᎮ;/g, " ").replace(/&ивѕρ;/g, " ").replace(/&nᏰຮᑬ;/g, " ").replace(/&הЪ૬Ϸ;/g, " ").replace(/&ՌՅՏρ;/g, " ").replace(/&И85P;/g, " ").replace(/&ⓝⓑⓢⓟ;/g, " ").replace(/&ηbSǷ;/g, " ").replace(/&ﾢҌଌϸ;/g, " ").replace(/&ᑎᙖᔕᑭ;/g, " ").replace(/&uqsd;/g, " ").replace(/&ᴎBSԀ;/g, " ").replace(/&ղҍʂք;/g, " ").replace(/&ｎｂｓｐ;/g, " ").replace(/&ȠცƧק;/g, " ");
 
 	if ( r3.length != 19 )

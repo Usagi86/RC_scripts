@@ -58,9 +58,12 @@ function pressU()
 	var r2= "[c=" + IN.clr+ "]" + negrita0 + italica0 + underlinea0 + rText + underlinea1 + italica1 + negrita1 + "[/c]"
 	r3 = r2.replace(/&ṈᏰຮᑬ;/g, " ").replace(/&ⁿᵇˢᵖ;/g, " ").replace(/&иჩჰρ;/g, " ").replace(/&ИßՏP;/g, " ").replace(/&ИßSṖ;/g, " ").replace(/&ᏁᏰᏕᎮ;/g, " ").replace(/&ивѕρ;/g, " ").replace(/&nᏰຮᑬ;/g, " ").replace(/&הЪ૬Ϸ;/g, " ").replace(/&ՌՅՏρ;/g, " ").replace(/&И85P;/g, " ").replace(/&ⓝⓑⓢⓟ;/g, " ").replace(/&ηbSǷ;/g, " ").replace(/&ﾢҌଌϸ;/g, " ").replace(/&ᑎᙖᔕᑭ;/g, " ").replace(/&uqsd;/g, " ").replace(/&ᴎBSԀ;/g, " ").replace(/&ղҍʂք;/g, " ").replace(/&ｎｂｓｐ;/g, " ").replace(/&ȠცƧק;/g, " ");
 
+	if ( r3.length != 20 )
+	{
 	BL.sendMessage(TB.aT,rcUtil.html2bb(r3));
 	IN.clear();
 	IN.doFocus();
+	}
 }
 
 //para el html:

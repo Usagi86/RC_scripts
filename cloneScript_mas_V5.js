@@ -112,10 +112,10 @@ function n_clon()
 	}
 	else
 	{
-		tomar = '-1';// en caso de dar click a mi nick no tomará mi id.
+		tomar = "-1";// en caso de dar click a mi nick no tomará mi id.
 	}
 	
-	if ( tomar != "" )
+	if ( tomar != "-1" )
 	{
 		//abrir ventana de help:
 		document.getElementById('HD').style.visibility = 'visible';

@@ -92,32 +92,38 @@ nuevoAncla1.innerHTML = '<a id="clonarL" onclick="n_clon()" onmouseover="mouse_e
 //le quitamos el borde a la lista:
 document.getElementById('UMB').style.border = '0px';
 
-/*
-var nn="";
-// ++ tomar id del nick a clonar:
-var elemento = document.getElementById('UMB');
-if ( document.getElementById('UMB').innerHTML != '<ul><li><a onclick="return E.hide(ULS.uM)">You</a></li></ul>' )
-{
-	nn = elemento.getElementsByTagName('li');
-	var get_id = nn[1].innerHTML;
-	tomar = get_id.substring(27,33);
-}
-else
-{
-	tomar = '';// en caso de dar click a mi nick no tomará mi id.
-}
-
+/////////////////////////
 // ++ funcion para cuando se le da click al elemento:
+var elemento = document.getElementById('UMB');
+var nn="";
+var tomar="";
+
 function n_clon()
 {
-	//abrir ventana de help:
-	document.getElementById('HD').style.visibility = 'visible';
 	//cerrar submenu de usuario(profile):
 	E.hide(ULS.uM);
-	//meter el id de la variable global tomar en el espacio para clonar. y mostrar el nick en el lugar indicado:
-	//alert(tomar);
+	
+	if ( document.getElementById('UMB').innerHTML != '<ul><li><a onclick="return E.hide(ULS.uM)">You</a></li></ul>' )
+	{
+		nn = elemento.getElementsByTagName('li');
+		var get_id = nn[1].innerHTML;
+		tomar = get_id.substring(27,33);
+	}
+	else
+	{
+		tomar = '';// en caso de dar click a mi nick no tomará mi id.
+	}
+	
+	if ( tomar != "" )
+	{
+		//abrir ventana de help:
+		document.getElementById('HD').style.visibility = 'visible';
+		
+		//meter el id de la variable global tomar en el espacio para clonar. y mostrar el nick en el lugar indicado:
+		alert(tomar);
+	}
+
 }
-*/
 
 //++ funcion para el estilo del nuevo elemento:
 function mouse_entra()
@@ -135,7 +141,7 @@ function mouse_sale()
 ////////////////////// Aquí se retoma el script 'puro' de clonar:
 function cl_text(){
 var myText=document.getElementById("text_in").value;
-var u_nick=document.getElementById("cl_nick").value;
+var u_nick=document.getElementById("cl_nick").value;//escribir aqui la string con el nick perteneciente al valor de la variable tomar.
 
 var bo0; var bo1; var it0; var it1; var un0; var un1; 
 if (ctrl1==1){bo0 = "[/b]"; bo1 = "[b]";}else{bo0 = ""; bo1 = "";}
@@ -143,7 +149,8 @@ if (ctrl2==1){it0 = "[/i]"; it1 = "[i]";}else{it0 = ""; it1 = "";}
 if (ctrl3==1){un0 = "[/u]"; un1 = "[u]";}else{un0 = ""; un1 = "";}
 
 var T_1 = un1 + it1 + bo1 + "[c=" + colorN + "]" + myText + "[/c]" + bo0 + it0 + un0;
-var chekk=ULS.getID(u_nick); 
+
+var chekk=ULS.getID(u_nick);// COLOCAR AQUI LA VARIABLE tomar
 	if (chekk!==null && T_1!="[c=" + colorN + "]"+"[/c]" && T_1!="[b]"+"[c=" + colorN + "]"+"[/c]"+"[/b]" && T_1!="[i]"+"[c=" + colorN + "]"+"[/c]"+"[/i]" && T_1!="[u]"+"[c=" + colorN + "]"+"[/c]"+"[/u]" && T_1!="[b]"+"[i]"+"[c=" + colorN + "]"+"[/c]"+"[/i]"+"[/b]" && T_1!="[b]"+"[u]"+"[c=" + colorN + "]"+"[/c]"+"[/u]"+"[/b]")
 	{
 	rcFC.send("500","612",chekk,T_1);

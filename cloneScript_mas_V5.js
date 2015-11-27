@@ -121,9 +121,10 @@ function n_clon()
 		
 		//meter el id de la variable global tomar en el espacio para clonar. y mostrar el nick en el lugar indicado:
 		//alert(tomar);
-		mostrar_nick = ULS.getUser(tomar).nick;
-		document.getElementById("cl_nick").value = mostrar_nick;
+		
 	}
+mostrar_nick = ULS.getUser(tomar).nick;
+document.getElementById("cl_nick").value = mostrar_nick;
 
 }
 

@@ -96,6 +96,7 @@ document.getElementById('UMB').style.border = '0px';
 // ++ funcion para cuando se le da click al elemento:
 var elemento = document.getElementById('UMB');
 var nn="";
+nn = elemento.getElementsByTagName('li');
 var tomar="";
 
 function n_clon()
@@ -105,7 +106,6 @@ function n_clon()
 	
 	if ( document.getElementById('UMB').innerHTML != '<ul><li><a onclick="return E.hide(ULS.uM)">You</a></li></ul>' )
 	{
-		nn = elemento.getElementsByTagName('li');
 		var get_id = nn[1].innerHTML;
 		tomar = get_id.substring(27,33);
 	}

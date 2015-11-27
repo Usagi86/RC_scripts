@@ -109,7 +109,7 @@ function n_clon()
 	//abrir ventana de help:
 	document.getElementById('HD').style.visibility = 'visible';
 	//cerrar submenu de usuario(profile):
-	E.hide(ULS.uM
+	E.hide(ULS.uM);
 	//meter el id de la variable global tomar en el espacio para clonar. y mostrar el nick en el lugar indicado:
 	alert(tomar);
 }

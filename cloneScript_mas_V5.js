@@ -85,10 +85,12 @@ nuevoAncla1.appendChild(anclaTexto1);
 var anclaExistente = document.getElementById("UMB");
 var padre = anclaExistente.parentNode;
 var nuevoHijo1 = padre.insertBefore(nuevoAncla1, anclaExistente);
+
 //++ modificar elemento en el html:
 nuevoAncla1.innerHTML = '<a id="clonarL" onclick="n_clon()" onmouseover="mouse_entra()" onmouseout="mouse_sale()" style="color:#29354a; background:#edeff4; " >CLONAR';
+
 //le quitamos el borde a la lista:
-document.getElementById('UMB').style = 'border: 0px;'
+document.getElementById('UMB').style.border = '0px';
 
 /*
 var nn="";
@@ -120,11 +122,13 @@ function n_clon()
 //++ funcion para el estilo del nuevo elemento:
 function mouse_entra()
 {
-  document.getElementById('clonarL').style = 'color: #FFFFFF';
+  document.getElementById('clonarL').style.color = '#FFFFFF';
+  document.getElementById('clonarL').style.background = '#29354A';
 }
 function mouse_sale()
 {
-  document.getElementById('clonarL').style = 'color: #29354a; background:#edeff4;';
+  document.getElementById('clonarL').style.color = '#29354A';
+  document.getElementById('clonarL').style.background = '#EDEFF4';
 }
 
 

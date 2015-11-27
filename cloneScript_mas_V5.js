@@ -159,8 +159,11 @@ var T_1 = un1 + it1 + bo1 + "[c=" + colorN + "]" + myText + "[/c]" + bo0 + it0 +
 var chekk = tomar;
 	if (chekk!==null && T_1!="[c=" + colorN + "]"+"[/c]" && T_1!="[b]"+"[c=" + colorN + "]"+"[/c]"+"[/b]" && T_1!="[i]"+"[c=" + colorN + "]"+"[/c]"+"[/i]" && T_1!="[u]"+"[c=" + colorN + "]"+"[/c]"+"[/u]" && T_1!="[b]"+"[i]"+"[c=" + colorN + "]"+"[/c]"+"[/i]"+"[/b]" && T_1!="[b]"+"[u]"+"[c=" + colorN + "]"+"[/c]"+"[/u]"+"[/b]")
 	{
-	rcFC.send("500","612",chekk,T_1);
-	myText=document.getElementById("text_in").value="";
+		if ( myText.length != 0 )
+		{
+			rcFC.send("500","612",chekk,T_1);
+			myText=document.getElementById("text_in").value="";
+		}
 	}
 
 };

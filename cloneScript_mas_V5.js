@@ -98,7 +98,7 @@ document.getElementById('UMB').style.border = '0px';
 var elemento = document.getElementById('UMB');
 var nn="";
 nn = elemento.getElementsByTagName('li');
-var tomar="";
+var tomar="-1";
 
 function n_clon()
 {
@@ -112,7 +112,7 @@ function n_clon()
 	}
 	else
 	{
-		tomar = '';// en caso de dar click a mi nick no tomará mi id.
+		tomar = '-1';// en caso de dar click a mi nick no tomará mi id.
 	}
 	
 	if ( tomar != "" )

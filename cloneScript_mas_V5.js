@@ -115,6 +115,7 @@ function n_clon()
 	//meter el id de la variable global tomar en el espacio para clonar. y mostrar el nick en el lugar indicado:
 	//alert(tomar);
 }
+*/
 
 //++ funcion para el estilo del nuevo elemento:
 function mouse_entra()
@@ -125,7 +126,7 @@ function mouse_sale()
 {
   document.getElementById('clonarL').style = 'color: #29354a; background:#edeff4;';
 }
-*/
+
 
 ////////////////////// Aquí se retoma el script 'puro' de clonar:
 function cl_text(){

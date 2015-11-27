@@ -120,7 +120,7 @@ function n_clon()
 		document.getElementById('HD').style.visibility = 'visible';
 		
 		//meter el id de la variable global tomar en el espacio para clonar. y mostrar el nick en el lugar indicado:
-		alert(tomar);
+		//alert(tomar);
 	}
 
 }
@@ -141,7 +141,9 @@ function mouse_sale()
 ////////////////////// Aquí se retoma el script 'puro' de clonar:
 function cl_text(){
 var myText=document.getElementById("text_in").value;
-var u_nick=document.getElementById("cl_nick").value;//escribir aqui la string con el nick perteneciente al valor de la variable tomar.
+//var u_nick=document.getElementById("cl_nick").value;//escribir aqui la string con el nick perteneciente al valor de la variable tomar.
+mostrar_nick = ULS.getUser(tomar).nick;
+document.getElementById("cl_nick").value = mostrar_nick;
 
 var bo0; var bo1; var it0; var it1; var un0; var un1; 
 if (ctrl1==1){bo0 = "[/b]"; bo1 = "[b]";}else{bo0 = ""; bo1 = "";}
@@ -150,7 +152,8 @@ if (ctrl3==1){un0 = "[/u]"; un1 = "[u]";}else{un0 = ""; un1 = "";}
 
 var T_1 = un1 + it1 + bo1 + "[c=" + colorN + "]" + myText + "[/c]" + bo0 + it0 + un0;
 
-var chekk=ULS.getID(u_nick);// COLOCAR AQUI LA VARIABLE tomar
+//var chekk=ULS.getID(u_nick);// COLOCAR AQUI LA VARIABLE tomar
+var chekk = tomar;
 	if (chekk!==null && T_1!="[c=" + colorN + "]"+"[/c]" && T_1!="[b]"+"[c=" + colorN + "]"+"[/c]"+"[/b]" && T_1!="[i]"+"[c=" + colorN + "]"+"[/c]"+"[/i]" && T_1!="[u]"+"[c=" + colorN + "]"+"[/c]"+"[/u]" && T_1!="[b]"+"[i]"+"[c=" + colorN + "]"+"[/c]"+"[/i]"+"[/b]" && T_1!="[b]"+"[u]"+"[c=" + colorN + "]"+"[/c]"+"[/u]"+"[/b]")
 	{
 	rcFC.send("500","612",chekk,T_1);

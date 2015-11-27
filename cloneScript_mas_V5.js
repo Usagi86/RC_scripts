@@ -89,7 +89,7 @@ var nuevoHijo1 = padre.insertBefore(nuevoAncla1, anclaExistente);
 nuevoAncla1.innerHTML = '<a id="clonarL" onclick="n_clon()" onmouseover="mouse_entra()" onmouseout="mouse_sale()" style="color:#29354a; background:#edeff4; " >CLONAR';
 //le quitamos el borde a la lista:
 document.getElementById('UMB').style = 'border: 0px;'
-var nn=!!;
+var nn="";
 // ++ tomar id del nick a clonar:
 var elemento = document.getElementById('UMB');
 if ( document.getElementById('UMB').innerHTML != '<ul><li><a onclick="return E.hide(ULS.uM)">You</a></li></ul>' )

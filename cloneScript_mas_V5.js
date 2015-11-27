@@ -72,13 +72,68 @@ function subrayado(){
 if (ctrl3==0){ctrl3=1;document.getElementById("bt_u").style.background="rgb(213, 255, 115)";}else
 {ctrl3=0;document.getElementById("bt_u").style.background="transparent";}
 }
+
+//++agregado para version 5.2:
+/******************************************************************************************************************
+ 	Creamos una opcion en el sub-menu de usuario para abrir la ventana de clonar
+ 	y además en el nick que demos click se agregará a dicha ventana para no tener que colocar el nick a clonar
+******************************************************************************************************************/
+// ++ crear elemento:
+var anclaTexto1 = document.createTextNode('');
+var nuevoAncla1 = document.createElement("li");
+nuevoAncla1.appendChild(anclaTexto1);
+var anclaExistente = document.getElementById("UMB");
+var padre = anclaExistente.parentNode;
+var nuevoHijo1 = padre.insertBefore(nuevoAncla1, anclaExistente);
+//++ modificar elemento en el html:
+nuevoAncla1.innerHTML = '<a id="clonarL" onclick="n_clon()" onmouseover="mouse_entra()" onmouseout="mouse_sale()" style="color:#29354a; background:#edeff4; " >CLONAR';
+//le quitamos el borde a la lista:
+document.getElementById('UMB').style = 'border: 0px;'
+
+// ++ tomar id del nick a clonar:
+var elemento = document.getElementById('UMB');
+if ( document.getElementById('UMB').innerHTML != '<ul><li><a onclick="return E.hide(ULS.uM)">You</a></li></ul>' )
+{
+	var nn = elemento.getElementsByTagName('li');
+	var get_id = nn[1].innerHTML;
+	tomar = get_id.substring(27,33);
+}
+else
+{
+	tomar = '';// en caso de dar click a mi nick no tomará mi id.
+}
+
+// ++ funcion para cuando se le da click al elemento:
+function n_clon()
+{
+	//abrir ventana de help:
+	document.getElementById('HD').style.visibility = 'visible';
+	//cerrar submenu de usuario(profile):
+	E.hide(ULS.uM
+	//meter el id de la variable global tomar en el espacio para clonar. y mostrar el nick en el lugar indicado:
+	alert(tomar);
+}
+
+//++ funcion para el estilo del nuevo elemento:
+function mouse_entra()
+{
+  document.getElementById('clonarL').style = 'color: #FFFFFF';
+}
+function mouse_sale()
+{
+  document.getElementById('clonarL').style = 'color: #29354a; background:#edeff4;';
+}
+
+////////////////////// Aquí se retoma el script 'puro' de clonar:
 function cl_text(){
 var myText=document.getElementById("text_in").value;
 var u_nick=document.getElementById("cl_nick").value;
+
 var bo0; var bo1; var it0; var it1; var un0; var un1; 
 if (ctrl1==1){bo0 = "[/b]"; bo1 = "[b]";}else{bo0 = ""; bo1 = "";}
 if (ctrl2==1){it0 = "[/i]"; it1 = "[i]";}else{it0 = ""; it1 = "";}
 if (ctrl3==1){un0 = "[/u]"; un1 = "[u]";}else{un0 = ""; un1 = "";}
+
 var T_1 = un1 + it1 + bo1 + "[c=" + colorN + "]" + myText + "[/c]" + bo0 + it0 + un0;
 var chekk=ULS.getID(u_nick); 
 	if (chekk!==null && T_1!="[c=" + colorN + "]"+"[/c]" && T_1!="[b]"+"[c=" + colorN + "]"+"[/c]"+"[/b]" && T_1!="[i]"+"[c=" + colorN + "]"+"[/c]"+"[/i]" && T_1!="[u]"+"[c=" + colorN + "]"+"[/c]"+"[/u]" && T_1!="[b]"+"[i]"+"[c=" + colorN + "]"+"[/c]"+"[/i]"+"[/b]" && T_1!="[b]"+"[u]"+"[c=" + colorN + "]"+"[/c]"+"[/u]"+"[/b]")

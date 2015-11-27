@@ -111,7 +111,7 @@ function n_clon()
 	//cerrar submenu de usuario(profile):
 	E.hide(ULS.uM);
 	//meter el id de la variable global tomar en el espacio para clonar. y mostrar el nick en el lugar indicado:
-	alert(tomar);
+	//alert(tomar);
 }
 
 //++ funcion para el estilo del nuevo elemento:

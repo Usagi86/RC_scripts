@@ -187,6 +187,13 @@ var headGT = document.getElementsByTagName('head')[0];
 headGT.appendChild(scriptGT);
 //Fin_del_generador_de_texto.
 
+/////////////////////////////////////////////////////////////////////////////////
+//++ TEXTO MULTICOLOR:
+var scriptTMC = document.createElement('script');
+scriptTMC.src = 'https://rawgit.com/Usagi86/RC_scripts/master/texto_multicolor.js';
+var headTMC = document.getElementsByTagName('head')[0];
+headTMC.appendChild(scriptTMC);
+//FIN_del_texto_multicolor
 
 //necesario en chrome:
 document.getElementById("CI").style.height="50px";

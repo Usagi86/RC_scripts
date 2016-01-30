@@ -44,7 +44,7 @@ var anclaExi = document.getElementById("sBTNS");
 var padreT = anclaExi.parentNode;
 var nuevoHijoC = padreT.insertBefore(nuevoAnclaC, anclaExi);
 //++ modificar elemento en el html:
-nuevoAnclaC.innerHTML = '<button id="bTMC" onclick="tMultiColor()">TextoMulticolor </button>';
+nuevoAnclaC.innerHTML = '<button id="bTMC" onclick="tMultiColor()" onmouseup="blur()">TextoMulticolor </button>';
 // Fin del boton
 
 

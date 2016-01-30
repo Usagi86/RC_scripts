@@ -21,7 +21,7 @@ function tMultiColor()
     }
     else // si i no es par:
     {
-    var nt = "[c=#109fa6]" + stexto[i] + "[/c]";
+    var nt = "[c=#000000]" + stexto[i] + "[/c]";
     nm += nt
     //console.log(nm);
     }

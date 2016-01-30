@@ -35,6 +35,17 @@ function tMultiColor()
 }
 
 // crear boton:
+var anclaTC = document.createTextNode('');
+var nuevoAnclaC = document.createElement("a");
+nuevoAnclaC.appendChild(anclaTC);
+
+var anclaExi = document.getElementById("sBTNS");
+var padreT = anclaExi.parentNode;
+var nuevoHijoC = padreT.insertBefore(nuevoAnclaC, anclaExi);
+//++ modificar elemento en el html:
+nuevoAnclaC.innerHTML = '<button id="bTMC" onclick="tMultiColor()">TextoMulticolor </button>';
+// Fin del boton
+
 
 
 

@@ -28,31 +28,30 @@ function tMultiColor()
     nm += nt
     //console.log(nm);
     }
-  
   }
   //console.log(nm);
   
+  if (document.getElementById("TBB").className == "tbtnt")
+  {
+    document.getElementById("TBB").className = "tbtn";
+  }
+  if (document.getElementById("TBI").className == "tbtnt")
+  {
+    document.getElementById("TBI").className = "tbtn";
+  }
+  if (document.getElementById("TBU").className == "tbtnt")
+  {
+    document.getElementById("TBU").className = "tbtn";
+  }
+
+
   if ( texto != "" )
   {
-    if (document.getElementById("TBB").className == "tbtnt")
-    {
-        document.getElementById("TBB").className = "tbtn";
-    }
-        
-    if (document.getElementById("TBI").className == "tbtnt")
-    {
-        document.getElementById("TBI").className = "tbtn";
-    }
-    if (document.getElementById("TBU").className == "tbtnt")
-    {
-        document.getElementById("TBU").className = "tbtn";
-    }
-    
-      var nt = "[b]" + nm + "[/b]";
-      var nb = nt.replace("undefined", "");
-      BL.sendMessage(TB.aT,rcUtil.html2bb(nb));
-      IN.CI.document.body.innerHTML="";
-      nm="";
+    var nt = "[b]" + nm + "[/b]";
+    var nb = nt.replace("undefined", "");
+    BL.sendMessage(TB.aT,rcUtil.html2bb(nb));
+    IN.CI.document.body.innerHTML="";
+    nm="";
   }
 }
 

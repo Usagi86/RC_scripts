@@ -33,9 +33,13 @@ function tMultiColor()
   //console.log(nm);
   var nt = "[b]" + nm + "[/b]";
   var nb = nt.replace("undefined", "");
+  
+  if ( texto != "" )
+  {
   BL.sendMessage(TB.aT,rcUtil.html2bb(nb));
   IN.CI.document.body.innerHTML="";
   nm="";
+  }
 }
 
 // crear boton:

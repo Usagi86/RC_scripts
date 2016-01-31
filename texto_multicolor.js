@@ -4,9 +4,27 @@
     
 *************************/
 
-// constructor de la funcion:
+// funcion para quitar B I U:
+function noBIU()
+{
+  if (document.getElementById("TBB").className == "tbtnt")
+  {
+    document.getElementById("TBB").className = "tbtn";
+  }
+  if (document.getElementById("TBI").className == "tbtnt")
+  {
+    document.getElementById("TBI").className = "tbtn";
+  }
+  if (document.getElementById("TBU").className == "tbtnt")
+  {
+    document.getElementById("TBU").className = "tbtn";
+  }
+}
+
+// constructor de la funcion para texto multicolor:
 function tMultiColor()
 {
+    noBIU();
   var texto = rcUtil.html2bb(IN.CB.innerHTML);
   var stexto = texto.split("");
   
@@ -50,7 +68,7 @@ var anclaExi = document.getElementById("sBTNS");
 var padreT = anclaExi.parentNode;
 var nuevoHijoC = padreT.insertBefore(nuevoAnclaC, anclaExi);
 //++ modificar elemento en el html:
-nuevoAnclaC.innerHTML = '<button id="bTMC" onclick="noBIU();" onmousedown="tMultiColor();" onmouseup="blur()">TextoMulticolor </button> C1:<select id="tMC_1" onclick="d_color_1();" style="background: #FFFFFF; size:25px; "><option value="#FF0000" style="background: #FF0000"> </option><option value="#007BFF" style="background: #007BFF"> </option><option value="#238C00" style="background: #238C00"> </option><option value="#000000" style="background: #000000"> </option><option value="#909090" style="background: #909090"> </option><option value="#109FA6" style="background: #109FA6"> </option><option value="#B300B3" style="background: #B300B3"> </option><option value="#FF037F" style="background: #FF037F"> </option><option value="#00FFFF" style="background: #00FFFF"> </option><option value="#FF4000" style="background: #FF4000"> </option><option value="#992CE2" style="background: #992CE2"> </option></select> C2:<select id="tMC_2" onclick="d_color_2();" style="background: #FFFFFF; size:25px; "><option value="#FF0000" style="background: #FF0000"> </option><option value="#007BFF" style="background: #007BFF"> </option><option value="#238C00" style="background: #238C00"> </option><option value="#000000" style="background: #000000"> </option><option value="#909090" style="background: #909090"> </option><option value="#109FA6" style="background: #109FA6"> </option><option value="#B300B3" style="background: #B300B3"> </option><option value="#FF037F" style="background: #FF037F"> </option><option value="#00FFFF" style="background: #00FFFF"> </option><option value="#FF4000" style="background: #FF4000"> </option><option value="#992CE2" style="background: #992CE2"> </option></select>';
+nuevoAnclaC.innerHTML = '<button id="bTMC" onclick="tMultiColor()" onmouseup="blur()">TextoMulticolor </button> C1:<select id="tMC_1" onclick="d_color_1();" style="background: #FFFFFF; size:25px; "><option value="#FF0000" style="background: #FF0000"> </option><option value="#007BFF" style="background: #007BFF"> </option><option value="#238C00" style="background: #238C00"> </option><option value="#000000" style="background: #000000"> </option><option value="#909090" style="background: #909090"> </option><option value="#109FA6" style="background: #109FA6"> </option><option value="#B300B3" style="background: #B300B3"> </option><option value="#FF037F" style="background: #FF037F"> </option><option value="#00FFFF" style="background: #00FFFF"> </option><option value="#FF4000" style="background: #FF4000"> </option><option value="#992CE2" style="background: #992CE2"> </option></select> C2:<select id="tMC_2" onclick="d_color_2();" style="background: #FFFFFF; size:25px; "><option value="#FF0000" style="background: #FF0000"> </option><option value="#007BFF" style="background: #007BFF"> </option><option value="#238C00" style="background: #238C00"> </option><option value="#000000" style="background: #000000"> </option><option value="#909090" style="background: #909090"> </option><option value="#109FA6" style="background: #109FA6"> </option><option value="#B300B3" style="background: #B300B3"> </option><option value="#FF037F" style="background: #FF037F"> </option><option value="#00FFFF" style="background: #00FFFF"> </option><option value="#FF4000" style="background: #FF4000"> </option><option value="#992CE2" style="background: #992CE2"> </option></select>';
 // Fin del boton
 
 
@@ -66,21 +84,6 @@ var rrrr = document.getElementById("tMC_2")
 rrrr.style.background = rrrr.value;
 }
 
-// funcion para quitar B I U:
-function noBIU()
-{
-  if (document.getElementById("TBB").className == "tbtnt")
-  {
-    document.getElementById("TBB").className = "tbtn";
-  }
-  if (document.getElementById("TBI").className == "tbtnt")
-  {
-    document.getElementById("TBI").className = "tbtn";
-  }
-  if (document.getElementById("TBU").className == "tbtnt")
-  {
-    document.getElementById("TBU").className = "tbtn";
-  }
-}
+
 
 

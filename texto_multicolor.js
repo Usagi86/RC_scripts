@@ -49,6 +49,10 @@ function tMultiColor()
   }
   //console.log(nm);
 
+// poner el color negro:
+IN.sCol(37);
+IN.sCol(37);
+
   if ( texto != "" )
   {
     var nt = "[b]" + nm + "[/b]";

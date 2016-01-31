@@ -34,6 +34,20 @@ function tMultiColor()
   
   if ( texto != "" )
   {
+    if (document.getElementById("TBB").className == "tbtnt")
+    {
+        document.getElementById("TBB").className = "tbtn";
+    }
+        
+    if (document.getElementById("TBI").className == "tbtnt")
+    {
+        document.getElementById("TBI").className = "tbtn";
+    }
+    if (document.getElementById("TBU").className == "tbtnt")
+    {
+        document.getElementById("TBU").className = "tbtn";
+    }
+    
       var nt = "[b]" + nm + "[/b]";
       var nb = nt.replace("undefined", "");
       BL.sendMessage(TB.aT,rcUtil.html2bb(nb));
@@ -54,7 +68,8 @@ var nuevoHijoC = padreT.insertBefore(nuevoAnclaC, anclaExi);
 nuevoAnclaC.innerHTML = '<button id="bTMC" onclick="tMultiColor()" onmouseup="blur()">TextoMulticolor </button> C1:<select id="tMC_1" onclick="d_color_1();" style="background: #FFFFFF; size:25px; "><option value="#FF0000" style="background: #FF0000"> </option><option value="#007BFF" style="background: #007BFF"> </option><option value="#238C00" style="background: #238C00"> </option><option value="#000000" style="background: #000000"> </option><option value="#909090" style="background: #909090"> </option><option value="#109FA6" style="background: #109FA6"> </option><option value="#B300B3" style="background: #B300B3"> </option><option value="#FF037F" style="background: #FF037F"> </option><option value="#00FFFF" style="background: #00FFFF"> </option><option value="#FF4000" style="background: #FF4000"> </option><option value="#992CE2" style="background: #992CE2"> </option></select> C2:<select id="tMC_2" onclick="d_color_2();" style="background: #FFFFFF; size:25px; "><option value="#FF0000" style="background: #FF0000"> </option><option value="#007BFF" style="background: #007BFF"> </option><option value="#238C00" style="background: #238C00"> </option><option value="#000000" style="background: #000000"> </option><option value="#909090" style="background: #909090"> </option><option value="#109FA6" style="background: #109FA6"> </option><option value="#B300B3" style="background: #B300B3"> </option><option value="#FF037F" style="background: #FF037F"> </option><option value="#00FFFF" style="background: #00FFFF"> </option><option value="#FF4000" style="background: #FF4000"> </option><option value="#992CE2" style="background: #992CE2"> </option></select>';
 // Fin del boton
 
-// funcion para darle color a la eleccion de color que hagamos:
+
+// funcion para darle color a la eleccion de color que hagamos en el 'select':
 function d_color_1()
 {
 var rrrr = document.getElementById("tMC_1")

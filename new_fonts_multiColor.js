@@ -13,22 +13,33 @@
 ***********************************************/
 
 
-// SCRIPT "GENERADOR DE TEXTO":
-// v3.3
+// Crear los elementos para los objetos donde se elegiran dos colores a mostrar en el texto:
+var anclaTC = document.createTextNode('');
+var nuevoAnclaC = document.createElement("a");
+nuevoAnclaC.appendChild(anclaTC);
 
+var anclaExi = document.getElementById("sBTNS");
+var padreT = anclaExi.parentNode;
+var nuevoHijoC = padreT.insertBefore(nuevoAnclaC, anclaExi);
+//++ modificar elemento en el html:
+nuevoAnclaC.innerHTML = ' C1:<select id="tMC_1" onclick="d_color_1();" style="background: #FFFFFF; size:25px; "><option value="#FF0000" style="background: #FF0000"> </option><option value="#007BFF" style="background: #007BFF"> </option><option value="#238C00" style="background: #238C00"> </option><option value="#000000" style="background: #000000"> </option><option value="#909090" style="background: #909090"> </option><option value="#109FA6" style="background: #109FA6"> </option><option value="#B300B3" style="background: #B300B3"> </option><option value="#FF037F" style="background: #FF037F"> </option><option value="#00FFFF" style="background: #00FFFF"> </option><option value="#FF4000" style="background: #FF4000"> </option><option value="#992CE2" style="background: #992CE2"> </option><option value="#FF99E5" style="background: #FF99E5"> </option></select> C2:<select id="tMC_2" onclick="d_color_2();" style="background: #FFFFFF; size:25px; "><option value="#FF0000" style="background: #FF0000"> </option><option value="#007BFF" style="background: #007BFF"> </option><option value="#238C00" style="background: #238C00"> </option><option value="#000000" style="background: #000000"> </option><option value="#909090" style="background: #909090"> </option><option value="#109FA6" style="background: #109FA6"> </option><option value="#B300B3" style="background: #B300B3"> </option><option value="#FF037F" style="background: #FF037F"> </option><option value="#00FFFF" style="background: #00FFFF"> </option><option value="#FF4000" style="background: #FF4000"> </option><option value="#992CE2" style="background: #992CE2"> </option><option value="#FF99E5" style="background: #FF99E5"> </option></select>';
+// Fin_de_la_creacion_de_los_elementos_html.
+
+
+
+// SCRIPT "GENERADOR DE TEXTO":
+// v4
 var myTe;
 
 //para el html:
 var nuevaAnclaT1 = document.createElement("a");
 nuevaAnclaT1.appendChild(document.createTextNode(''));
-var nuevaAnclaT2 = document.createElement("a");
-nuevaAnclaT2.appendChild(document.createTextNode(''));
-var anclaExistenteT = document.getElementById("sBTNS"); var padreT = anclaExistenteT.parentNode;
+var anclaExistenteT = document.getElementById("sBTNS");
+var padreT = anclaExistenteT.parentNode;
 var nuevoHijoT1 = padreT.insertBefore(nuevaAnclaT1, anclaExistenteT);
-var nuevoHijoT2 = padreT.insertBefore(nuevaAnclaT2, anclaExistenteT);
 
+// Parte del html con los nuevos símbolos:
 nuevaAnclaT1.innerHTML = ' Letras: <select id="newFont"><option value="abcdefghijklmnñopqrstuvwxyz">abc</option><option value="ᾀᏰᏨᕍ⁅ᖴgᏲḭʝḳ℄ḾṈῆṎᑬQᖇຮtᙈעᏔჯẙẔ">ᾀᏰᏨ</option><option value="მჩეძპfცhἶქκlოиῆᎤρგΓჰtυ√wჯყz">მჩე</option><option value="ÂßĈÐЄŦǤĦĪʖҚĿ♏ИῆØPҨRՏ†ЦVЩX￥Ẕ">ÂßĈ</option><option value="ΛßƇDƐFƓĤĪĴҠĿMИῆ♡ṖҨŔSƬƱѴѠӾYZ">ΛßƇ♡</option><option value="ᏗᏰՇᎴᏋƒĢᏂᎥᏠᏦᏝᎷᏁῆᎧᎮᎤᏒᏕᏖᏬᏉᏇጀᎩፚ">ᏗᏰՇ</option><option value="αвς∂εƒցнɪĵƙℓɱиῆσρףяѕтƲνωχϓՀ">αвς</option><option value="ᎯᏰᏨᕍḕᖴgᏲḭǰḳl๓nῆ๏ᑬqᖇຮtᙈvᏔჯẙẔ">ᎯᏰᏨ</option><option value="નЪ૮ԁ૯ԲցસіڙқԼறהῆଇϷ૧Я૬Ҭμνயϰϓｚ">નЪ૮</option><option value="ԹՅՇԺƐԲցɧᎥʝƙℓʍՌῆʘρφʀՏԵՄעաχՎʑ">ԹՅՇ</option><option value="48CD3F6HIJK1MИÑ0PQЯ57UVWXY2">48C</option><option value="ⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝñⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩ">ⓐⓑⓒ</option><option value="ªb¢ÞÈF૬ɧÎjΚĻмηῆ◊ǷƍrS⊥µ√w×ýz">ªb¢</option><option value="ΔҌﾧdﾼԲɢￃΙۆӃﾤϺﾢῆﾷϸϘЯଌȚȗѵ￦ҲעŻ">ΔҌﾧ</option><option value="ᗩᙖᙅᗪᙓᖴᘜᕼIᒍKᒪᙏᑎῆOᑭᑫᖇᔕTᙀᐯᙎ᙭Yᘔ">ᗩᙖᙅ</option><option value="ᵃᵇᶜᵈᵉᶠᵍʰᶤʲᵏˡᵐⁿῆᵒᵖᵠʳˢᵗᵘᵛʷˣʸᶻ">ᵃᵇᶜ</option><option value="ɐqɔpǝɟɓɥıſʞlɯuñodbɹsʇnʌʍxʎz">ɐqɔ</option><option value="∀BɔDƎℲGHIſʞlWᴎñOԀQᴚS⊥∩ᴧMXʎZ">∀Bɔ</option><option value="ąҍçժҽƒցհìʝҟӀʍղῆօքզɾʂէմѵա×վՀ">ąҍç</option><option value="ａｂｃｄｅｆｇｈｉｊｋｌｍｎñｏｐｑｒｓｔｕｖｗｘｙｚ">ａｂｃ</option><option value="ᕱცᕳᗬӬ∮ʛஅɪلɮᄂ♏ȠňФקϤԄƧてʊᏉʬϪץʑ">ᕱცᕳ</option><option value="ąც८ძ૯ʄ૭ҺɿڽқℓɱՈῆరƿҩ२ﻯ੮υ౮ω૪ყζ">ąც८</option><option value="ₐᵇᵓᵈₑᶠᵍʰᵢᶨᵏᶫᶬᶮῆₒᵖᵩͬᶳᵗᵤᵛᵚ×ᵧᶼ"" title="ₐᵇᵓᵈₑᶠᵍʰᵢᶨᵏᶫᶬᶮῆₒᵖᵩͬᶳᵗᵤᵛᵚ×ᵧᶼ">ₐᵇᵓ</option><option value="ᾀᏰᏨᕍ⁅ᖴgᏲḭᏧḳ℄๓ՌñṎᑬQᖇຮtᙈvᏔჯẙẔ">ᾀᏰᏨ</option><option value="Aʙඋd㉫ƒＧħÏﻝĸし๓Ǹñ✿ƿqr＄†µvŴxƴz">Aʙඋ</option><option value="ᏜℬᏟᗬ℮ℱℊዞℹᎫʞᎱmɲñʘ℘ɸℛᏕʈʉʋᎳℵᎽᏃ">ᏜℬᏟ</option><option value="ᎪbᏟᎠᎬfᎶhᎥjᏦᏞmᏁñᎾᏢqᏒsᏆuᏉᎳxᎽᏃ">ᎪbᏟ</option><option value="♌♭꒞꒯㉹f꒸♬ﭐ꒻kLѪոñ♡рզrՖﮠvա꒾վՀ">♌♭꒞</option><option value="Ⱥβ↻DƐƑƓǶįلҠL♏ՌῆoƿףЯϚTԱVచჯӋʑ">Ⱥβ↻</option><option value="ค๒ς๔єŦɠђเןкl๓ภÑ๏թợгรtยvฬxץz">ค๒ς</option><option value="ᾆḇḉḓễḟḡḧἷjḵḺḿᾖῇỠῤǬṝṧṯῠṽᾧẍỹẐ">ᾆḇḉ</option>';
-nuevaAnclaT2.innerHTML = ' <button id="enviarT" title="Te Amo mi Cielo Bella" onmousedown="pressD();" onmouseup="pressU();">Enviar</button> ';
 
 //++
 function pSMas()
@@ -63,26 +74,23 @@ function pSMas()
 }
 //Fin del Generador_de_texto.
 
-//++ Aquí se crea la llamada al evento, agregando la funcion a la caja de texto del elemento B:
-var elemento = CI.window.document.getElementById("B");
 
+// Aquí se crea la llamada al evento, agregando la funcion a la caja de texto del elemento B:
+var elemento = CI.window.document.getElementById("B");
 elemento.addEventListener( "keyup", function()
 {
   myTe = CI.window.document.getElementById("B").innerHTML;
 
   if ( myTe.search(/\053/) > -1 )
 	{
-	//056= .
 	//053= +
 	// aqui se ejecuta la funcion propiamente:
 	pSMas();
 	}
 })
+//Fin del add_event_listener.
 
 
-//Fin.
-
-
-
+// FIN DEL SCRIPT.
 
 

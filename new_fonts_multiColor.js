@@ -17,8 +17,9 @@ nuevoAnclaC.appendChild(anclaTC);
 var anclaExi = document.getElementById("sBTNS");
 var padreT = anclaExi.parentNode;
 var nuevoHijoC = padreT.insertBefore(nuevoAnclaC, anclaExi);
-//++ modificar elemento en el html:
-nuevoAnclaC.innerHTML = ' C1:<select id="tMC_1" onclick="d_color_1();" style="background: #FFFFFF; size:25px; "><option value="#FF0000" style="background: #FF0000"> </option><option value="#007BFF" style="background: #007BFF"> </option><option value="#238C00" style="background: #238C00"> </option><option value="#000000" style="background: #000000"> </option><option value="#909090" style="background: #909090"> </option><option value="#109FA6" style="background: #109FA6"> </option><option value="#B300B3" style="background: #B300B3"> </option><option value="#FF037F" style="background: #FF037F"> </option><option value="#00FFFF" style="background: #00FFFF"> </option><option value="#FF4000" style="background: #FF4000"> </option><option value="#992CE2" style="background: #992CE2"> </option><option value="#FF99E5" style="background: #FF99E5"> </option></select> C2:<select id="tMC_2" onclick="d_color_2();" style="background: #FFFFFF; size:25px; "><option value="#FF0000" style="background: #FF0000"> </option><option value="#007BFF" style="background: #007BFF"> </option><option value="#238C00" style="background: #238C00"> </option><option value="#000000" style="background: #000000"> </option><option value="#909090" style="background: #909090"> </option><option value="#109FA6" style="background: #109FA6"> </option><option value="#B300B3" style="background: #B300B3"> </option><option value="#FF037F" style="background: #FF037F"> </option><option value="#00FFFF" style="background: #00FFFF"> </option><option value="#FF4000" style="background: #FF4000"> </option><option value="#992CE2" style="background: #992CE2"> </option><option value="#FF99E5" style="background: #FF99E5"> </option></select>';
+
+//++ modificar elemento en el html para agregar los colores de texto:
+nuevoAnclaC.innerHTML = ' C1:<select id="tMC_1" onclick="d_color_1();" style="background: #FF0000; size:25px; "><option value="#FF0000" style="background: #FF0000"> </option><option value="#007BFF" style="background: #007BFF"> </option><option value="#238C00" style="background: #238C00"> </option><option value="#000000" style="background: #000000"> </option><option value="#909090" style="background: #909090"> </option><option value="#109FA6" style="background: #109FA6"> </option><option value="#B300B3" style="background: #B300B3"> </option><option value="#FF037F" style="background: #FF037F"> </option><option value="#00FFFF" style="background: #00FFFF"> </option><option value="#FF4000" style="background: #FF4000"> </option><option value="#992CE2" style="background: #992CE2"> </option><option value="#FF99E5" style="background: #FF99E5"> </option></select> C2:<select id="tMC_2" onclick="d_color_2();" style="background: #FF0000; size:25px; "><option value="#FF0000" style="background: #FF0000"> </option><option value="#007BFF" style="background: #007BFF"> </option><option value="#238C00" style="background: #238C00"> </option><option value="#000000" style="background: #000000"> </option><option value="#909090" style="background: #909090"> </option><option value="#109FA6" style="background: #109FA6"> </option><option value="#B300B3" style="background: #B300B3"> </option><option value="#FF037F" style="background: #FF037F"> </option><option value="#00FFFF" style="background: #00FFFF"> </option><option value="#FF4000" style="background: #FF4000"> </option><option value="#992CE2" style="background: #992CE2"> </option><option value="#FF99E5" style="background: #FF99E5"> </option></select>';
 // Fin_de_la_creacion_de_los_elementos_html.
 
 // funcion para darle color a la eleccion de color que hagamos en el 'select':
@@ -76,8 +77,10 @@ function pSMas()
 	}
 
 	var r2= rText;
+	//EXCEPCIONES de fuente:
 	r3 = r2.replace("+", "").replace(/&ՌβϚƿ;/g, " ").replace(/&ภ๒รթ;/g, " ").replace(/&ᾖḇṧῤ;/g, " ").replace(/&ᏁbsᏢ;/g, " ").replace(/&ՌᏰຮᑬ;/g, " ").replace(/&Ǹʙ＄ƿ;/g, " ").replace(/&Ǹʙ＄ƿ;/g, " ").replace(/&ɲℬᏕ℘;/g, " ").replace(/&ո♭Ֆр;/g, " ").replace(/&ᶮᵇᶳᵖ;/g, " ").replace(/&Ոცﻯƿ;/g, " ").replace(/&ṈᏰຮᑬ;/g, " ").replace(/&ⁿᵇˢᵖ;/g, " ").replace(/&иჩჰρ;/g, " ").replace(/&ИßՏP;/g, " ").replace(/&ИßSṖ;/g, " ").replace(/&ᏁᏰᏕᎮ;/g, " ").replace(/&ивѕρ;/g, " ").replace(/&nᏰຮᑬ;/g, " ").replace(/&הЪ૬Ϸ;/g, " ").replace(/&ՌՅՏρ;/g, " ").replace(/&И85P;/g, " ").replace(/&ⓝⓑⓢⓟ;/g, " ").replace(/&ηbSǷ;/g, " ").replace(/&ﾢҌଌϸ;/g, " ").replace(/&ᑎᙖᔕᑭ;/g, " ").replace(/&uqsd;/g, " ").replace(/&nbsd;/g, " ").replace(/&ᴎBSԀ;/g, " ").replace(/&ղҍʂք;/g, " ").replace(/&ｎｂｓｐ;/g, " ").replace(/&ȠცƧק;/g, " ");
-	r4 = r3.replace("<Ᏸᖇ>", "").replace("<br>", "");
+	//Excepciones (cada vez que se agrega una fuente agregar su respectiva excepcion a <br>):
+	r4 = r3.replace("<br>", "").replace("<Ᏸᖇ>", "").replace("<ჩΓ>", "").replace("<ßR>", "").replace("<ßŔ>", "").replace("<ᏰᏒ>", "").replace("<вя>", "").replace("<Ᏸᖇ>", "").replace("<ЪЯ>", "").replace("<Յʀ>", "").replace("<8Я>", "").replace("<ⓑⓡ>", "").replace("<br>", "").replace("<ҌЯ>", "").replace("<ᙖᖇ>", "").replace("<ᵇʳ>", "").replace("<bɹ>", "").replace("<Bᴚ>", "").replace("<ҍɾ>", "").replace("<ｂｒ>", "").replace("<ცԄ>", "").replace("<ც२>", "").replace("<ᵇͬ>", "").replace("<Ᏸᖇ>", "").replace("<ʙr>", "").replace("<ℬℛ>", "").replace("<bᏒ>", "").replace("<♭r>", "").replace("<βЯ>", "").replace("<๒г>", "").replace("<ḇṝ>", "");
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // constructor de la funcion para texto multicolor:
@@ -113,7 +116,6 @@ function pSMas()
     IN.CI.document.body.innerHTML="";
     nm="";
   }
-
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
 //BL.sendMessage(TB.aT,rcUtil.html2bb(r3));

@@ -178,24 +178,34 @@ scriptE.src='https://rawgit.com/Usagi86/RC_scripts/master/edicion_estilos_y_colo
 var headE=document.getElementsByTagName('head')[0];
 headE.appendChild(scriptE);
 //Fin_del_editor_de estilos_mas_colores.
-
 /////////////////////////////////////////////////////////////////////////////////
+//++ Script de Generador de texto (letras_símbolos) + Texto multicolor:
+var scriptGTMC = document.createElement('script');
+scriptGTMC.src = 'https://rawgit.com/Usagi86/RC_scripts/master/new_fonts_multiColor.js';
+var headGTMC = document.getElementsByTagName('head')[0];
+headGTMC.appendChild(scriptGTMC);
+//Fin_del_generador_de_texto_mas_texto_multicolor.
+/////////////////////////////////////////////////////////////////////////////////
+
+/*
 //++ GENERADOR DE TEXTO (letras-caracteres):
 var scriptGT = document.createElement('script');
 scriptGT.src = 'https://rawgit.com/Usagi86/RC_scripts/master/generador_de_texto.js';
 var headGT = document.getElementsByTagName('head')[0];
 headGT.appendChild(scriptGT);
-//Fin_del_generador_de_texto.
-
+*/
 /////////////////////////////////////////////////////////////////////////////////
+/*
 //++ TEXTO MULTICOLOR:
 var scriptTMC = document.createElement('script');
 scriptTMC.src = 'https://rawgit.com/Usagi86/RC_scripts/master/texto_multicolor.js';
 var headTMC = document.getElementsByTagName('head')[0];
 headTMC.appendChild(scriptTMC);
-//FIN_del_texto_multicolor
+*/
+/////////////////////////////////////////////////////////////////////////////////
 
 //necesario en chrome:
 document.getElementById("CI").style.height="50px";
 
-//FIN DEL SCRIPT.
+//
+////FIN DEL SCRIPT.

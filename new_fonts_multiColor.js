@@ -21,6 +21,17 @@ var nuevoHijoC = padreT.insertBefore(nuevoAnclaC, anclaExi);
 nuevoAnclaC.innerHTML = ' C1:<select id="tMC_1" onclick="d_color_1();" style="background: #FFFFFF; size:25px; "><option value="#FF0000" style="background: #FF0000"> </option><option value="#007BFF" style="background: #007BFF"> </option><option value="#238C00" style="background: #238C00"> </option><option value="#000000" style="background: #000000"> </option><option value="#909090" style="background: #909090"> </option><option value="#109FA6" style="background: #109FA6"> </option><option value="#B300B3" style="background: #B300B3"> </option><option value="#FF037F" style="background: #FF037F"> </option><option value="#00FFFF" style="background: #00FFFF"> </option><option value="#FF4000" style="background: #FF4000"> </option><option value="#992CE2" style="background: #992CE2"> </option><option value="#FF99E5" style="background: #FF99E5"> </option></select> C2:<select id="tMC_2" onclick="d_color_2();" style="background: #FFFFFF; size:25px; "><option value="#FF0000" style="background: #FF0000"> </option><option value="#007BFF" style="background: #007BFF"> </option><option value="#238C00" style="background: #238C00"> </option><option value="#000000" style="background: #000000"> </option><option value="#909090" style="background: #909090"> </option><option value="#109FA6" style="background: #109FA6"> </option><option value="#B300B3" style="background: #B300B3"> </option><option value="#FF037F" style="background: #FF037F"> </option><option value="#00FFFF" style="background: #00FFFF"> </option><option value="#FF4000" style="background: #FF4000"> </option><option value="#992CE2" style="background: #992CE2"> </option><option value="#FF99E5" style="background: #FF99E5"> </option></select>';
 // Fin_de_la_creacion_de_los_elementos_html.
 
+// funcion para darle color a la eleccion de color que hagamos en el 'select':
+function d_color_1()
+{
+var rrrr = document.getElementById("tMC_1")
+rrrr.style.background = rrrr.value;
+}
+function d_color_2()
+{
+var rrrr = document.getElementById("tMC_2")
+rrrr.style.background = rrrr.value;
+}
 
 
 // SCRIPT "GENERADOR DE TEXTO":
@@ -61,14 +72,13 @@ function pSMas()
 	negrita0 = "[b]"; negrita1 = "[/b]";
 	}
 
-	var r2= "[c=" + IN.clr+ "]" + negrita0 + rText + negrita1 + "[/c]"
+	var r2= rText;
 	r3 = r2.replace("+", "").replace(/&ՌβϚƿ;/g, " ").replace(/&ภ๒รթ;/g, " ").replace(/&ᾖḇṧῤ;/g, " ").replace(/&ᏁbsᏢ;/g, " ").replace(/&ՌᏰຮᑬ;/g, " ").replace(/&Ǹʙ＄ƿ;/g, " ").replace(/&Ǹʙ＄ƿ;/g, " ").replace(/&ɲℬᏕ℘;/g, " ").replace(/&ո♭Ֆр;/g, " ").replace(/&ᶮᵇᶳᵖ;/g, " ").replace(/&Ոცﻯƿ;/g, " ").replace(/&ṈᏰຮᑬ;/g, " ").replace(/&ⁿᵇˢᵖ;/g, " ").replace(/&иჩჰρ;/g, " ").replace(/&ИßՏP;/g, " ").replace(/&ИßSṖ;/g, " ").replace(/&ᏁᏰᏕᎮ;/g, " ").replace(/&ивѕρ;/g, " ").replace(/&nᏰຮᑬ;/g, " ").replace(/&הЪ૬Ϸ;/g, " ").replace(/&ՌՅՏρ;/g, " ").replace(/&И85P;/g, " ").replace(/&ⓝⓑⓢⓟ;/g, " ").replace(/&ηbSǷ;/g, " ").replace(/&ﾢҌଌϸ;/g, " ").replace(/&ᑎᙖᔕᑭ;/g, " ").replace(/&uqsd;/g, " ").replace(/&nbsd;/g, " ").replace(/&ᴎBSԀ;/g, " ").replace(/&ղҍʂք;/g, " ").replace(/&ｎｂｓｐ;/g, " ").replace(/&ȠცƧק;/g, " ");
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // constructor de la funcion para texto multicolor:
-function tMultiColor()
-{
+
   var texto = r3;
   var stexto = texto.split("");
   
@@ -100,14 +110,15 @@ function tMultiColor()
     IN.CI.document.body.innerHTML="";
     nm="";
   }
-}
+
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
-//	BL.sendMessage(TB.aT,rcUtil.html2bb(r3));
+//BL.sendMessage(TB.aT,rcUtil.html2bb(r3));
 	IN.clear();
 	IN.doFocus();
 }
-//Fin del Generador_de_texto.
+//Fin del Generador_de_texto_+_texto_multi_color.
+
 
 
 // Aquí se crea la llamada al evento, agregando la funcion a la caja de texto del elemento B:

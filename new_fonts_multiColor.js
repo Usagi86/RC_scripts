@@ -19,7 +19,7 @@ var padreT = anclaExi.parentNode;
 var nuevoHijoC = padreT.insertBefore(nuevoAnclaC, anclaExi);
 
 //++ modificar elemento en el html para agregar los colores de texto:
-nuevoAnclaC.innerHTML = ' C1:<select id="tMC_1" onclick="d_color_1();" style="background: #FF0000; size:25px; "><option value="#FF0000" style="background: #FF0000"> </option><option value="#007BFF" style="background: #007BFF"> </option><option value="#238C00" style="background: #238C00"> </option><option value="#000000" style="background: #000000"> </option><option value="#909090" style="background: #909090"> </option><option value="#109FA6" style="background: #109FA6"> </option><option value="#B300B3" style="background: #B300B3"> </option><option value="#FF037F" style="background: #FF037F"> </option><option value="#00FFFF" style="background: #00FFFF"> </option><option value="#FF4000" style="background: #FF4000"> </option><option value="#992CE2" style="background: #992CE2"> </option><option value="#FF99E5" style="background: #FF99E5"> </option><option value="#FFCD00" style="background: #FFCD00"> </option><option value="#4BE22C" style="background: #4BE22C"> </option><option value="#2CAFE2" style="background: #2CAFE2"> </option><option value="#353CC4" style="background: #353CC4"> </option><option value="#E22C9A" style="background: #E22C9A"> </option><option value="#35A31F" style="background: #35A31F"> </option><option value="#A31F6E" style="background: #A31F6E"> </option></select> C2:<select id="tMC_2" onclick="d_color_2();" style="background: #FF0000; size:25px; "><option value="#FF0000" style="background: #FF0000"> </option><option value="#007BFF" style="background: #007BFF"> </option><option value="#238C00" style="background: #238C00"> </option><option value="#000000" style="background: #000000"> </option><option value="#909090" style="background: #909090"> </option><option value="#109FA6" style="background: #109FA6"> </option><option value="#B300B3" style="background: #B300B3"> </option><option value="#FF037F" style="background: #FF037F"> </option><option value="#00FFFF" style="background: #00FFFF"> </option><option value="#FF4000" style="background: #FF4000"> </option><option value="#992CE2" style="background: #992CE2"> </option><option value="#FF99E5" style="background: #FF99E5"> </option><option value="#FFCD00" style="background: #FFCD00"> </option><option value="#4BE22C" style="background: #4BE22C"> </option><option value="#2CAFE2" style="background: #2CAFE2"> </option><option value="#353CC4" style="background: #353CC4"> </option><option value="#E22C9A" style="background: #E22C9A"> </option><option value="#35A31F" style="background: #35A31F"> </option><option value="#A31F6E" style="background: #A31F6E"> </option></select>';
+nuevoAnclaC.innerHTML = ' C1:<select id="tMC_1" onclick="d_color_1();" style="background: #FF0000; size:25px; "><option value="#FF0000" style="background: #FF0000"> </option><option value="#007BFF" style="background: #007BFF"> </option><option value="#238C00" style="background: #238C00"> </option><option value="#000000" style="background: #000000"> </option><option value="#909090" style="background: #909090"> </option><option value="#109FA6" style="background: #109FA6"> </option><option value="#B300B3" style="background: #B300B3"> </option><option value="#FF037F" style="background: #FF037F"> </option><option value="#00FFFF" style="background: #00FFFF"> </option><option value="#FF4000" style="background: #FF4000"> </option><option value="#992CE2" style="background: #992CE2"> </option><option value="#FF99E5" style="background: #FF99E5"> </option><option value="#FFCD00" style="background: #FFCD00"> </option><option value="#4BE22C" style="background: #4BE22C"> </option><option value="#2CAFE2" style="background: #2CAFE2"> </option><option value="#353CC4" style="background: #353CC4"> </option><option value="#E22C9A" style="background: #E22C9A"> </option><option value="#35A31F" style="background: #35A31F"> </option><option value="#A31F6E" style="background: #A31F6E"> </option></select> C2:<select id="tMC_2" onclick="d_color_2();" style="background: #FF0000; size:25px; "><option value="#FF0000" style="background: #FF0000"> </option><option value="#007BFF" style="background: #007BFF"> </option><option value="#238C00" style="background: #238C00"> </option><option value="#000000" style="background: #000000"> </option><option value="#909090" style="background: #909090"> </option><option value="#109FA6" style="background: #109FA6"> </option><option value="#B300B3" style="background: #B300B3"> </option><option value="#FF037F" style="background: #FF037F"> </option><option value="#00FFFF" style="background: #00FFFF"> </option><option value="#FF4000" style="background: #FF4000"> </option><option value="#992CE2" style="background: #992CE2"> </option><option value="#FF99E5" style="background: #FF99E5"> </option><option value="#FFCD00" style="background: #FFCD00"> </option><option value="#4BE22C" style="background: #4BE22C"> </option><option value="#2CAFE2" style="background: #2CAFE2"> </option><option value="#353CC4" style="background: #353CC4"> </option><option value="#E22C9A" style="background: #E22C9A"> </option><option value="#35A31F" style="background: #35A31F"> </option><option value="#A31F6E" style="background: #A31F6E"> </option></select> <button id="bS1" style="cursor: pointer" onmouseup="insertS1()">♫</button> <button id="bS2" style="cursor: pointer" onmouseup="insertS2()">♪</button> <button id="bS3" style="cursor: pointer" onmouseup="insertS3()">♬</button>';
 // Fin_de_la_creacion_de_los_elementos_html.
 
 // funcion para darle color a la eleccion de color que hagamos en el 'select':
@@ -35,7 +35,23 @@ var rrrr = document.getElementById("tMC_2")
 rrrr.style.background = rrrr.value;
 IN.doFocus();
 }
-
+// funciones para insertar simbolos:
+function insertS1()
+{
+CI.window.document.getElementById("B").innerHTML += "♫";
+//dar el foco a:
+//IN.doFocus();
+}
+function insertS2()
+{
+CI.window.document.getElementById("B").innerHTML += "♪";
+//IN.doFocus();
+}
+function insertS3()
+{
+CI.window.document.getElementById("B").innerHTML += "♬";
+//IN.doFocus();
+}
 
 // SCRIPT "GENERADOR DE TEXTO":
 // v4

@@ -27,11 +27,13 @@ function d_color_1()
 {
 var rrrr = document.getElementById("tMC_1")
 rrrr.style.background = rrrr.value;
+IN.doFocus();
 }
 function d_color_2()
 {
 var rrrr = document.getElementById("tMC_2")
 rrrr.style.background = rrrr.value;
+IN.doFocus();
 }
 
 

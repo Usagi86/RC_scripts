@@ -3,7 +3,7 @@
     v1
     
 *************************/
-
+/*
 // funcion para quitar B I U:
 function noBIU()
 {
@@ -89,5 +89,5 @@ rrrr.style.background = rrrr.value;
 }
 
 
-
+*/
 

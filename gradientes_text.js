@@ -133,6 +133,7 @@ function gradient (thetext,thecolors) {
 	
 	IN.CI.document.body.onclick = (function(){
 	BL.sendMessage(TB.aT,rcUtil.html2bb(salida_texto));
+	console.log("hola");
 	})
 	
 	

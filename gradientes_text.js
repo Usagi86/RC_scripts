@@ -126,7 +126,11 @@ function gradient (thetext,thecolors) {
       
 	//document.write(thetext.charAt(i).fontcolor(tohex[rr]+tohex[gg]+tohex[bb]));
 	//salida_texto:
+	function rTM()
+	{
 	var salida_texto = thetext.charAt(i).fontcolor("#"+tohex[rr]+tohex[gg]+tohex[bb]);
+	return salida_texto;
+	}
 	
     }
 	

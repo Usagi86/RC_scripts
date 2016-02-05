@@ -124,7 +124,7 @@ function gradient (thetext,thecolors) {
         //gg = 255 - gg;
         //bb = 255 - bb;
       
-	document.write(thetext.charAt(i).fontcolor(tohex[rr]+tohex[gg]+tohex[bb]));
+	this.write(thetext.charAt(i).fontcolor(tohex[rr]+tohex[gg]+tohex[bb]));
     }
 	
 }

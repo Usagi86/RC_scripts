@@ -4,7 +4,6 @@
 //IN.CI.document.execCommand('selectall',false);
 // IN.CI.document.execCommand('forecolor',false,'#FF00FF');
 // ...luego enviar.
-var salida_texto="";
 
 // lookup table
 var tohex = new Array(256);
@@ -70,8 +69,8 @@ function hicolorindex (x, y, z, low) {
   else return Math.floor( (x*(z-1))/(y-1) + 1 )
 }
 
-function gradient (thetext,thecolors) {
-
+function gradient (thetext,thecolors)
+{
     var colors = new ColorList(thecolors);
     var numcolors = colors.len;
     var numchars = thetext.length;
@@ -80,29 +79,19 @@ function gradient (thetext,thecolors) {
     var bb = 0;
     var lci = 0; //lower color index
     var hci = 0; //high color index
-    for (i=0; i<numchars; ++i) {
+    for (i=0; i<numchars; ++i)
+    {
       lci = lowcolorindex(i, numchars, numcolors);
       hci = hicolorindex(i, numchars, numcolors, lci);
-	  
       rr = Math.round(interpolate( lci/(numcolors-1), colors.codes[lci].r, hci/(numcolors-1), colors.codes[hci].r, i/(numchars-1)));
       gg = Math.round(interpolate( lci/(numcolors-1), colors.codes[lci].g, hci/(numcolors-1), colors.codes[hci].g, i/(numchars-1)));
       bb = Math.round(interpolate( lci/(numcolors-1), colors.codes[lci].b, hci/(numcolors-1), colors.codes[hci].b, i/(numchars-1)));
-
-        //rr = 255 - rr;
-        //gg = 255 - gg;
-        //bb = 255 - bb;
-      
+//////////////////////////////
+//////////////////////////////
 	//document.write(thetext.charAt(i).fontcolor(tohex[rr]+tohex[gg]+tohex[bb]));
 	//salida_texto:
-	
-	function rTM()
-	{
-	salida_texto = thetext.charAt(i).fontcolor("#"+tohex[rr]+tohex[gg]+tohex[bb]);
-	return salida_texto;
-	}
-IN.CI.document.body.innerHTML = salida_texto;
-	
+
+	IN.CI.document.body.innerHTML = thetext.charAt(i).fontcolor("#"+tohex[rr]+tohex[gg]+tohex[bb]);
     }
-	gradient("amor estoy haciendo unas pruebas para poder escribir con estos colores","EA112F 6F6EF1 02B5F3 00FF00 10650D 164CB2");
 	
 }

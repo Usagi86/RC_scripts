@@ -1,37 +1,5 @@
 
 // ------------------ Gradient Output --------------------
-// Syntax for use:
-
-//     gradient(TEXT_STRING_HERE,HEXCODES_STRING_HERE);
-
-//  use in similar way you would use document.write();
-//  note, it cannot be used to return a string value.
-//  gradient() takes two arguements. the first will
-//  be the original pure text string. (no htmlcodes)
-//  the second argument is a string of color hexcodes
-//  seperated with spaces thru which the text should
-//  progress. for example say you wanted to print out
-//  the string "color gradient", and you wanted it to
-//  progress from blue to red. a color code for blue
-//  is 4444FF, and a color code for red is FF4444.
-//  taking those two codes, and the original string,
-//  somewhere in the body of the document you would
-//  write within a <Script> tag the following:
-//  gradient("color gradient","4444FF FF4444");
-
-//  if however, you wanted it to progress thru three
-//  or more colors, its as simple as adding them to the
-//  string of color codes. it is important to remember
-//  however that the string must be color HEXCODES, and
-//  not merely just color names, (e.x- "red", "yellow")
-//  if this seems like too much trouble, then perhaps
-//  you should try something simple like ripping off
-//  some annoying status bar text scroller. =Þ
-//  one last thing. if you overuse this script, i can
-//  pretty much gaurantee people will hate your webpage.
-//  the fact is, this javascript is memory intensive. if
-//  you overdo it, you're crashing some visitors' browsers.
-//  ------------------------------------------------------
 
 //IN.CI.document.execCommand('selectall',false);
 // IN.CI.document.execCommand('forecolor',false,'#FF00FF');
@@ -128,7 +96,9 @@ function gradient (thetext,thecolors) {
 	//salida_texto:
 
 	var salida_texto = thetext.charAt(i).fontcolor("#"+tohex[rr]+tohex[gg]+tohex[bb]);
-	gradient("amor estoy haciendo unas pruebas para poder escribir con estos colores","EA112F 6F6EF1 02B5F3 00FF00 10650D 164CB2");
+	var sall = IN.CI.document.body.innerHTML;
+	sall += "amor estoy haciendo unas pruebas para poder escribir con estos colores";
+	gradient(sall,"EA112F 6F6EF1 02B5F3 00FF00 10650D 164CB2");
 	
 	IN.CI.document.body.onclick = (function(){
 	BL.sendMessage(TB.aT,rcUtil.html2bb(salida_texto));

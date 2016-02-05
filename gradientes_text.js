@@ -129,7 +129,13 @@ function gradient (thetext,thecolors) {
 	function rTM()
 	{
 	var salida_texto = thetext.charAt(i).fontcolor("#"+tohex[rr]+tohex[gg]+tohex[bb]);
-	return salida_texto;
+	gradient("amor estoy haciendo unas pruebas para poder escribir con estos colores","EA112F 6F6EF1 02B5F3 00FF00 10650D 164CB2");
+	
+	IN.CI.document.body.onclick = (function(){
+	BL.sendMessage(TB.aT,rcUtil.html2bb(salida_texto));
+	})
+	
+	
 	}
 	
     }

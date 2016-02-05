@@ -4,7 +4,7 @@
 //IN.CI.document.execCommand('selectall',false);
 // IN.CI.document.execCommand('forecolor',false,'#FF00FF');
 // ...luego enviar.
-
+var salida_texto="";
 
 // lookup table
 var tohex = new Array(256);
@@ -97,7 +97,7 @@ function gradient (thetext,thecolors) {
 	
 	function rTM()
 	{
-	var salida_texto = thetext.charAt(i).fontcolor("#"+tohex[rr]+tohex[gg]+tohex[bb]);
+	salida_texto = thetext.charAt(i).fontcolor("#"+tohex[rr]+tohex[gg]+tohex[bb]);
 	return salida_texto;
 	}
 IN.CI.document.body.innerHTML = salida_texto;

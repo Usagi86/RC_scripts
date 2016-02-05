@@ -94,21 +94,15 @@ function gradient (thetext,thecolors) {
       
 	//document.write(thetext.charAt(i).fontcolor(tohex[rr]+tohex[gg]+tohex[bb]));
 	//salida_texto:
-
+	
+	function rTM()
+	{
 	var salida_texto = thetext.charAt(i).fontcolor("#"+tohex[rr]+tohex[gg]+tohex[bb]);
-	var sall = IN.CI.document.body.innerHTML;
-	sall += "amor estoy haciendo unas pruebas para poder escribir con estos colores";
-	gradient(sall,"EA112F 6F6EF1 02B5F3 00FF00 10650D 164CB2");
-	
-	IN.CI.document.body.onclick = (function(){
-	BL.sendMessage(TB.aT,rcUtil.html2bb(salida_texto));
-	console.log("hola");
-	return;
-	})
-	
-	
-	
+	return salida_texto;
+	}
+IN.CI.document.body.innerHTML = salida_texto;
 	
     }
+	gradient("amor estoy haciendo unas pruebas para poder escribir con estos colores","EA112F 6F6EF1 02B5F3 00FF00 10650D 164CB2");
 	
 }

@@ -37,7 +37,7 @@ rrrr.style.background = rrrr.value;
 function insertS1()
 {
 CI.window.document.getElementById("B").innerHTML += "♫♬♪";
-IN.doFocus();
+//IN.doFocus();
 }
 
 

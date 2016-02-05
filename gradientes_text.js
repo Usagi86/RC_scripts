@@ -93,6 +93,7 @@ function gradient (thetext,thecolors)
 	var nn_t ="";
 	nn_t += thetext.charAt(i).fontcolor("#"+tohex[rr]+tohex[gg]+tohex[bb]);
 	IN.CI.document.body.innerHTML = nn_t
+	console.log(nn_t);
     }
 	
 }

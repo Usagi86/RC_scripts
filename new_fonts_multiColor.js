@@ -8,6 +8,21 @@
     de símbolos.
 ***********************************************/
 
+// Funcion para el boton de cambiar el moto de Color:
+function cambiar_modo()
+{
+  var t_ele = document.getElementById("c_btn");
+  
+  if ( t_ele.innerHTML == "Modo1" )
+  {
+    t_ele.innerHTML = "Modo2";
+  }
+  else
+  {
+    t_ele.innerHTML = "Modo1";
+  }
+}
+
 
 // Crear los elementos para los objetos donde se elegiran dos colores a mostrar en el texto:
 var anclaTC = document.createTextNode('');
@@ -19,7 +34,7 @@ var padreT = anclaExi.parentNode;
 var nuevoHijoC = padreT.insertBefore(nuevoAnclaC, anclaExi);
 
 //++ modificar elemento en el html para agregar los colores de texto:
-nuevoAnclaC.innerHTML = ' C1:<select id="tMC_1" onclick="d_color_1();" style="background: #FF0000; size:25px; "><option value="#FF0000" style="background: #FF0000" onclick="IN.doFocus();"> </option><option value="#007BFF" style="background: #007BFF" onclick="IN.doFocus();"> </option><option value="#238C00" style="background: #238C00" onclick="IN.doFocus();"> </option><option value="#000000" style="background: #000000" onclick="IN.doFocus();"> </option><option value="#909090" style="background: #909090" onclick="IN.doFocus();"> </option><option value="#109FA6" style="background: #109FA6" onclick="IN.doFocus();"> </option><option value="#B300B3" style="background: #B300B3" onclick="IN.doFocus();"> </option><option value="#FF037F" style="background: #FF037F" onclick="IN.doFocus();"> </option><option value="#00FFFF" style="background: #00FFFF" onclick="IN.doFocus();"> </option><option value="#FF4000" style="background: #FF4000" onclick="IN.doFocus();"> </option><option value="#992CE2" style="background: #992CE2" onclick="IN.doFocus();"> </option><option value="#FF99E5" style="background: #FF99E5" onclick="IN.doFocus();"> </option><option value="#FFCD00" style="background: #FFCD00" onclick="IN.doFocus();"> </option><option value="#4BE22C" style="background: #4BE22C" onclick="IN.doFocus();"> </option><option value="#2CAFE2" style="background: #2CAFE2" onclick="IN.doFocus();"> </option><option value="#353CC4" style="background: #353CC4" onclick="IN.doFocus();"> </option><option value="#E22C9A" style="background: #E22C9A" onclick="IN.doFocus();"> </option><option value="#35A31F" style="background: #35A31F" onclick="IN.doFocus();"> </option><option value="#A31F6E" style="background: #A31F6E" onclick="IN.doFocus();"> </option><option value="#FF00FF" style="background: #FF00FF" onclick="IN.doFocus();"> </option></select> C2:<select id="tMC_2" onclick="d_color_2();" style="background: #FF0000; size:25px; "><option value="#FF0000" style="background: #FF0000" onclick="IN.doFocus();"> </option><option value="#007BFF" style="background: #007BFF" onclick="IN.doFocus();"> </option><option value="#238C00" style="background: #238C00" onclick="IN.doFocus();"> </option><option value="#000000" style="background: #000000" onclick="IN.doFocus();"> </option><option value="#909090" style="background: #909090" onclick="IN.doFocus();"> </option><option value="#109FA6" style="background: #109FA6" onclick="IN.doFocus();"> </option><option value="#B300B3" style="background: #B300B3" onclick="IN.doFocus();"> </option><option value="#FF037F" style="background: #FF037F" onclick="IN.doFocus();"> </option><option value="#00FFFF" style="background: #00FFFF" onclick="IN.doFocus();"> </option><option value="#FF4000" style="background: #FF4000" onclick="IN.doFocus();"> </option><option value="#992CE2" style="background: #992CE2" onclick="IN.doFocus();"> </option><option value="#FF99E5" style="background: #FF99E5" onclick="IN.doFocus();"> </option><option value="#FFCD00" style="background: #FFCD00" onclick="IN.doFocus();"> </option><option value="#4BE22C" style="background: #4BE22C" onclick="IN.doFocus();"> </option><option value="#2CAFE2" style="background: #2CAFE2" onclick="IN.doFocus();"> </option><option value="#353CC4" style="background: #353CC4" onclick="IN.doFocus();"> </option><option value="#E22C9A" style="background: #E22C9A" onclick="IN.doFocus();"> </option><option value="#35A31F" style="background: #35A31F" onclick="IN.doFocus();"> </option><option value="#A31F6E" style="background: #A31F6E" onclick="IN.doFocus();"> </option><option value="#FF00FF" style="background: #FF00FF" onclick="IN.doFocus();"> </option></select> <button id="bS1" style="cursor: pointer" onmouseup="insertS1()">♫♬♪</button> ';
+nuevoAnclaC.innerHTML = ' C1:<select id="tMC_1" onclick="d_color_1();" style="background: #FF0000; size:25px; "><option value="#FF0000" style="background: #FF0000" onclick="IN.doFocus();"> </option><option value="#007BFF" style="background: #007BFF" onclick="IN.doFocus();"> </option><option value="#238C00" style="background: #238C00" onclick="IN.doFocus();"> </option><option value="#000000" style="background: #000000" onclick="IN.doFocus();"> </option><option value="#909090" style="background: #909090" onclick="IN.doFocus();"> </option><option value="#109FA6" style="background: #109FA6" onclick="IN.doFocus();"> </option><option value="#B300B3" style="background: #B300B3" onclick="IN.doFocus();"> </option><option value="#FF037F" style="background: #FF037F" onclick="IN.doFocus();"> </option><option value="#00FFFF" style="background: #00FFFF" onclick="IN.doFocus();"> </option><option value="#FF4000" style="background: #FF4000" onclick="IN.doFocus();"> </option><option value="#992CE2" style="background: #992CE2" onclick="IN.doFocus();"> </option><option value="#FF99E5" style="background: #FF99E5" onclick="IN.doFocus();"> </option><option value="#FFCD00" style="background: #FFCD00" onclick="IN.doFocus();"> </option><option value="#FFFF00" style="background: #FFFF00" onclick="IN.doFocus();"> </option><option value="#4BE22C" style="background: #4BE22C" onclick="IN.doFocus();"> </option><option value="#2CAFE2" style="background: #2CAFE2" onclick="IN.doFocus();"> </option><option value="#353CC4" style="background: #353CC4" onclick="IN.doFocus();"> </option><option value="#E22C9A" style="background: #E22C9A" onclick="IN.doFocus();"> </option><option value="#35A31F" style="background: #35A31F" onclick="IN.doFocus();"> </option><option value="#A31F6E" style="background: #A31F6E" onclick="IN.doFocus();"> </option><option value="#FF00FF" style="background: #FF00FF" onclick="IN.doFocus();"> </option></select> C2:<select id="tMC_2" onclick="d_color_2();" style="background: #FF0000; size:25px; "><option value="#FF0000" style="background: #FF0000" onclick="IN.doFocus();"> </option><option value="#007BFF" style="background: #007BFF" onclick="IN.doFocus();"> </option><option value="#238C00" style="background: #238C00" onclick="IN.doFocus();"> </option><option value="#000000" style="background: #000000" onclick="IN.doFocus();"> </option><option value="#909090" style="background: #909090" onclick="IN.doFocus();"> </option><option value="#109FA6" style="background: #109FA6" onclick="IN.doFocus();"> </option><option value="#B300B3" style="background: #B300B3" onclick="IN.doFocus();"> </option><option value="#FF037F" style="background: #FF037F" onclick="IN.doFocus();"> </option><option value="#00FFFF" style="background: #00FFFF" onclick="IN.doFocus();"> </option><option value="#FF4000" style="background: #FF4000" onclick="IN.doFocus();"> </option><option value="#992CE2" style="background: #992CE2" onclick="IN.doFocus();"> </option><option value="#FF99E5" style="background: #FF99E5" onclick="IN.doFocus();"> </option><option value="#FFCD00" style="background: #FFCD00" onclick="IN.doFocus();"> </option><option value="#FFFF00" style="background: #FFFF00" onclick="IN.doFocus();"> </option><option value="#4BE22C" style="background: #4BE22C" onclick="IN.doFocus();"> </option><option value="#2CAFE2" style="background: #2CAFE2" onclick="IN.doFocus();"> </option><option value="#353CC4" style="background: #353CC4" onclick="IN.doFocus();"> </option><option value="#E22C9A" style="background: #E22C9A" onclick="IN.doFocus();"> </option><option value="#35A31F" style="background: #35A31F" onclick="IN.doFocus();"> </option><option value="#A31F6E" style="background: #A31F6E" onclick="IN.doFocus();"> </option><option value="#FF00FF" style="background: #FF00FF" onclick="IN.doFocus();"> </option></select> <button id="bS1" style="cursor: pointer" onmouseup="insertS1()">♫♬♪</button> ';
 // Fin_de_la_creacion_de_los_elementos_html.
 
 // funcion para darle color a la eleccion de color que hagamos en el 'select':
@@ -42,9 +57,7 @@ CI.window.document.getElementById("B").innerHTML += "♫♬♪";
 
 
 // SCRIPT "GENERADOR DE TEXTO":
-// v4
-var myTe;
-var r3;
+// v5
 
 //para el html:
 var nuevaAnclaT1 = document.createElement("a");
@@ -55,7 +68,7 @@ var nuevoHijoT1 = padreT.insertBefore(nuevaAnclaT1, anclaExistenteT);
 
 
 // Parte del html con los nuevos símbolos:
-nuevaAnclaT1.innerHTML = ' Letras: <select id="newFont"><option value="abcdefghijklmnñopqrstuvwxyz">abc</option><option value="ᾀᏰᏨᕍ⁅ᖴgᏲḭʝḳ℄ḾṈῆṎᑬQᖇຮtᙈעᏔჯẙẔ">ᾀᏰᏨ</option><option value="მჩეძპfცhἶქκlოиῆᎤρგΓჰtυ√wჯყz">მჩე</option><option value="ÂßĈÐЄŦǤĦĪʖҚĿ♏ИῆØPҨRՏ†ЦVЩX￥Ẕ">ÂßĈ</option><option value="ΛßƇDƐFƓĤĪĴҠĿMИῆ♡ṖҨŔSƬƱѴѠӾYZ">ΛßƇ♡</option><option value="ᏗᏰՇᎴᏋƒĢᏂᎥᏠᏦᏝᎷᏁῆᎧᎮᎤᏒᏕᏖᏬᏉᏇጀᎩፚ">ᏗᏰՇ</option><option value="αвς∂εƒցнɪĵƙℓɱиῆσρףяѕтƲνωχϓՀ">αвς</option><option value="ᎯᏰᏨᕍḕᖴgᏲḭǰḳl๓nῆ๏ᑬqᖇຮtᙈvᏔჯẙẔ">ᎯᏰᏨ</option><option value="નЪ૮ԁ૯ԲցસіڙқԼறהῆଇϷ૧Я૬Ҭμνயϰϓｚ">નЪ૮</option><option value="ԹՅՇԺƐԲցɧᎥʝƙℓʍՌῆʘρφʀՏԵՄעաχՎʑ">ԹՅՇ</option><option value="48CD3F6HIJK1MИÑ0PQЯ57UVWXY2">48C</option><option value="ⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝñⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩ">ⓐⓑⓒ</option><option value="ªb¢ÞÈF૬ɧÎjΚĻмηῆ◊ǷƍrS⊥µ√w×ýz">ªb¢</option><option value="ΔҌﾧdﾼԲɢￃΙۆӃﾤϺﾢῆﾷϸϘЯଌȚȗѵ￦ҲעŻ">ΔҌﾧ</option><option value="ᗩᙖᙅᗪᙓᖴᘜᕼIᒍKᒪᙏᑎῆOᑭᑫᖇᔕTᙀᐯᙎ᙭Yᘔ">ᗩᙖᙅ</option><option value="ᵃᵇᶜᵈᵉᶠᵍʰᶤʲᵏˡᵐⁿῆᵒᵖᵠʳˢᵗᵘᵛʷˣʸᶻ">ᵃᵇᶜ</option><option value="ɐqɔpǝɟɓɥıſʞlɯuñodbɹsʇnʌʍxʎz">ɐqɔ</option><option value="∀BɔDƎℲGHIſʞlWᴎñOԀQᴚS⊥∩ᴧMXʎZ">∀Bɔ</option><option value="ąҍçժҽƒցհìʝҟӀʍղῆ✿քզɾʂէմѵա×վՀ">ąҍç</option><option value="ａｂｃｄｅｆｇｈｉｊｋｌｍｎñｏｐｑｒｓｔｕｖｗｘｙｚ">ａｂｃ</option><option value="ᕱცᕳᗬӬ∮ʛஅɪلɮᄂ♏ȠňФקϤԄƧてʊᏉʬϪץʑ">ᕱცᕳ</option><option value="ąც८ძ૯ʄ૭ҺɿڽқℓɱՈῆరƿҩ२ﻯ੮υ౮ω૪ყζ">ąც८</option><option value="ₐᵇᵓᵈₑᶠᵍʰᵢᶨᵏᶫᶬᶮῆₒᵖᵩͬᶳᵗᵤᵛᵚ×ᵧᶼ"" title="ₐᵇᵓᵈₑᶠᵍʰᵢᶨᵏᶫᶬᶮῆₒᵖᵩͬᶳᵗᵤᵛᵚ×ᵧᶼ">ₐᵇᵓ</option><option value="ᾀᏰᏨᕍ⁅ᖴgᏲḭᏧḳ℄๓ՌñṎᑬQᖇຮtᙈvᏔჯẙẔ">ᾀᏰᏨ</option><option value="Aʙඋd㉫ƒＧħÏﻝĸし๓Ǹñ✿ƿqr＄†µvŴxƴz">Aʙඋ</option><option value="ᏜℬᏟᗬ℮ℱℊዞℹᎫʞᎱmɲñʘ℘ɸℛᏕʈʉʋᎳℵᎽᏃ">ᏜℬᏟ</option><option value="ᎪbᏟᎠᎬfᎶhᎥjᏦᏞmᏁñᎾᏢqᏒsᏆuᏉᎳxᎽᏃ">ᎪbᏟ</option><option value="♌♭꒞꒯㉹f꒸♬ﭐ꒻kLѪոñ♡рզrՖﮠvա꒾վՀ">♌♭꒞</option><option value="Ⱥβ↻DƐƑƓǶįلҠL♏ՌῆoƿףЯϚTԱVచჯӋʑ">Ⱥβ↻</option><option value="ค๒ς๔єŦɠђเןкl๓ภÑ๏թợгรtยvฬxץz">ค๒ς</option><option value="ᾆḇḉḓễḟḡḧἷjḵḺḿᾖῇỠῤǬṝṧṯῠṽᾧẍỹẐ">ᾆḇḉ</option></select> <button id="c_btn" onmouseup="cambiar_modo()">MulTicolor</button>';
+nuevaAnclaT1.innerHTML = ' Letras: <select id="newFont"><option value="abcdefghijklmnñopqrstuvwxyz">abc</option><option value="ᾀᏰᏨᕍ⁅ᖴgᏲḭʝḳ℄ḾṈῆṎᑬQᖇຮtᙈעᏔჯẙẔ">ᾀᏰᏨ</option><option value="მჩეძპfცhἶქκlოиῆᎤρგΓჰtυ√wჯყz">მჩე</option><option value="ÂßĈÐЄŦǤĦĪʖҚĿ♏ИῆØPҨRՏ†ЦVЩX￥Ẕ">ÂßĈ</option><option value="ΛßƇDƐFƓĤĪĴҠĿMИῆ♡ṖҨŔSƬƱѴѠӾYZ">ΛßƇ♡</option><option value="ᏗᏰՇᎴᏋƒĢᏂᎥᏠᏦᏝᎷᏁῆᎧᎮᎤᏒᏕᏖᏬᏉᏇጀᎩፚ">ᏗᏰՇ</option><option value="αвς∂εƒցнɪĵƙℓɱиῆσρףяѕтƲνωχϓՀ">αвς</option><option value="ᎯᏰᏨᕍḕᖴgᏲḭǰḳl๓nῆ๏ᑬqᖇຮtᙈvᏔჯẙẔ">ᎯᏰᏨ</option><option value="નЪ૮ԁ૯ԲցસіڙқԼறהῆଇϷ૧Я૬Ҭμνயϰϓｚ">નЪ૮</option><option value="ԹՅՇԺƐԲցɧᎥʝƙℓʍՌῆʘρφʀՏԵՄעաχՎʑ">ԹՅՇ</option><option value="48CD3F6HIJK1MИÑ0PQЯ57UVWXY2">48C</option><option value="ⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝñⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩ">ⓐⓑⓒ</option><option value="ªb¢ÞÈF૬ɧÎjΚĻмηῆ◊ǷƍrS⊥µ√w×ýz">ªb¢</option><option value="ΔҌﾧdﾼԲɢￃΙۆӃﾤϺﾢῆﾷϸϘЯଌȚȗѵ￦ҲעŻ">ΔҌﾧ</option><option value="ᗩᙖᙅᗪᙓᖴᘜᕼIᒍKᒪᙏᑎῆOᑭᑫᖇᔕTᙀᐯᙎ᙭Yᘔ">ᗩᙖᙅ</option><option value="ᵃᵇᶜᵈᵉᶠᵍʰᶤʲᵏˡᵐⁿῆᵒᵖᵠʳˢᵗᵘᵛʷˣʸᶻ">ᵃᵇᶜ</option><option value="ɐqɔpǝɟɓɥıſʞlɯuñodbɹsʇnʌʍxʎz">ɐqɔ</option><option value="∀BɔDƎℲGHIſʞlWᴎñOԀQᴚS⊥∩ᴧMXʎZ">∀Bɔ</option><option value="ąҍçժҽƒցհìʝҟӀʍղῆ✿քզɾʂէմѵա×վՀ">ąҍç</option><option value="ａｂｃｄｅｆｇｈｉｊｋｌｍｎñｏｐｑｒｓｔｕｖｗｘｙｚ">ａｂｃ</option><option value="ᕱცᕳᗬӬ∮ʛஅɪلɮᄂ♏ȠňФקϤԄƧてʊᏉʬϪץʑ">ᕱცᕳ</option><option value="ąც८ძ૯ʄ૭ҺɿڽқℓɱՈῆరƿҩ२ﻯ੮υ౮ω૪ყζ">ąც८</option><option value="ₐᵇᵓᵈₑᶠᵍʰᵢᶨᵏᶫᶬᶮῆₒᵖᵩͬᶳᵗᵤᵛᵚ×ᵧᶼ"" title="ₐᵇᵓᵈₑᶠᵍʰᵢᶨᵏᶫᶬᶮῆₒᵖᵩͬᶳᵗᵤᵛᵚ×ᵧᶼ">ₐᵇᵓ</option><option value="ᾀᏰᏨᕍ⁅ᖴgᏲḭᏧḳ℄๓ՌñṎᑬQᖇຮtᙈvᏔჯẙẔ">ᾀᏰᏨ</option><option value="Aʙඋd㉫ƒＧħÏﻝĸし๓Ǹñ✿ƿqr＄†µvŴxƴz">Aʙඋ</option><option value="ᏜℬᏟᗬ℮ℱℊዞℹᎫʞᎱmɲñʘ℘ɸℛᏕʈʉʋᎳℵᎽᏃ">ᏜℬᏟ</option><option value="ᎪbᏟᎠᎬfᎶhᎥjᏦᏞmᏁñᎾᏢqᏒsᏆuᏉᎳxᎽᏃ">ᎪbᏟ</option><option value="♌♭꒞꒯㉹f꒸♬ﭐ꒻kLѪոñ♡рզrՖﮠvա꒾վՀ">♌♭꒞</option><option value="Ⱥβ↻DƐƑƓǶįلҠL♏ՌῆoƿףЯϚTԱVచჯӋʑ">Ⱥβ↻</option><option value="ค๒ς๔єŦɠђเןкl๓ภÑ๏թợгรtยvฬxץz">ค๒ς</option><option value="ᾆḇḉḓễḟḡḧἷjḵḺḿᾖῇỠῤǬṝṧṯῠṽᾧẍỹẐ">ᾆḇḉ</option></select> <button id="c_btn" onmouseup="cambiar_modo()">Modo1</button>';
 
 
 var myTe;
@@ -104,13 +117,11 @@ function pSMas()
     var nm;
     var nn = "[c=" + tColor1 + "]" + stexto[i] + "[/c]";
     nm += nn;
-    //console.log(nm);
     }
     else // si i no es par:
     {
     var nt = "[c=" + tColor2 + "]" + stexto[i] + "[/c]";
     nm += nt
-    //console.log(nm);
     }
   }
 
@@ -123,15 +134,18 @@ function pSMas()
     nm="";
   }
 ////////////////////////////////////////////////////////////////////////////////////////////////
-
-//BL.sendMessage(TB.aT,rcUtil.html2bb(r3));
 	IN.clear();
 	IN.doFocus();
 }
 //Fin del Generador_de_texto_+_texto_multi_color.
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+// AQUI IRÁ La FUNCION PARA EL TEXTO CON DEGRADADO:
 
 
 
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 // Aquí se crea la llamada al evento, agregando la funcion a la caja de texto del elemento B:
 var elemento = CI.window.document.getElementById("B");
 elemento.addEventListener( "keyup", function()
@@ -142,6 +156,7 @@ elemento.addEventListener( "keyup", function()
 	{
 	//053= +
 	// aqui se ejecuta la funcion propiamente:
+	// if ( document.getElementById("c_btn").innerHTML == "Modo1" ){pSMas();}else{la_funcion_del_degradado}
 	pSMas();
 	}
 })

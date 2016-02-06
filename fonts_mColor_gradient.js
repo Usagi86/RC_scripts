@@ -224,7 +224,7 @@ function gradient (thetext,thecolors)
     var hci = 0; //high color index
 //////////////////////////////////////////////////////////////////
 	
-	console.log(numchars);
+	//console.log(numchars);
 	
 //////////////////////////////////////////////////////////////////	
 	for (i=0; i<numchars; ++i) 
@@ -250,7 +250,7 @@ function gradient (thetext,thecolors)
 
 // Aqui tomamos el texto y se lo pasamos a la funcion de arriba:
 var e_text = IN.CI.document.body.innerHTML;
-var r_t = e_text.replace("<br>","");
+var r_t = e_text.replace("<br>","").replace("+", "");
 gradient(r_t,"EA112F 6F6EF1 02B5F3 00FF00 10650D 164CB2");
 
 }

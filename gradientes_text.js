@@ -90,10 +90,11 @@ function gradient (thetext,thecolors)
 //////////////////////////////
 	//document.write(thetext.charAt(i).fontcolor(tohex[rr]+tohex[gg]+tohex[bb]));
 	//salida_texto:
-	var nn_t ="";
-	nn_t += thetext.charAt(i).fontcolor("#"+tohex[rr]+tohex[gg]+tohex[bb]);
-	IN.CI.document.body.innerHTML = nn_t
-	console.log(nn_t);
+	
+	//var nn_t ="";
+	//nn_t += thetext.charAt(i).fontcolor("#"+tohex[rr]+tohex[gg]+tohex[bb]);
+	IN.CI.document.body.innerHTML = thetext.charAt(i).fontcolor("#"+tohex[rr]+tohex[gg]+tohex[bb]);
+	//console.log(nn_t);
     }
 	
 }

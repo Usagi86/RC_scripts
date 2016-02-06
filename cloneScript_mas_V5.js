@@ -179,9 +179,9 @@ var headE=document.getElementsByTagName('head')[0];
 headE.appendChild(scriptE);
 //Fin_del_editor_de estilos_mas_colores.
 /////////////////////////////////////////////////////////////////////////////////
-//++ Script de Generador de texto (letras_símbolos) + Texto multicolor:
+//++ Script de Generador de texto (letras_símbolos) + Texto multicolor + Texto con GRADIENTES:
 var scriptGTMC = document.createElement('script');
-scriptGTMC.src = 'https://rawgit.com/Usagi86/RC_scripts/master/new_fonts_multiColor.js';
+scriptGTMC.src = 'https://rawgit.com/Usagi86/RC_scripts/master/fonts_mColor_gradient.js';
 var headGTMC = document.getElementsByTagName('head')[0];
 headGTMC.appendChild(scriptGTMC);
 //Fin_del_generador_de_texto_mas_texto_multicolor.

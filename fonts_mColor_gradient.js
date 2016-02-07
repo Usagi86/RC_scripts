@@ -229,7 +229,6 @@ var nT;
 var nR;
 function gradient (thetext,thecolors) 
 {
-
     var colors = new ColorList(thecolors);
     var numcolors = colors.len;
     var numchars = thetext.length;
@@ -239,7 +238,6 @@ function gradient (thetext,thecolors)
     var lci = 0; //lower color index
     var hci = 0; //high color index
 
-	
 	for (i=0; i<numchars; ++i) 
 	{
       	lci = lowcolorindex(i, numchars, numcolors);
@@ -255,19 +253,17 @@ function gradient (thetext,thecolors)
 
   //aqui debe ir el envio de datos:
   var tN = "[b]"+nR+"[/b]";
-  var uT = tN.replace("undefined", "");
-  BL.sendMessage(TB.aT,rcUtil.html2bb(uT));
+  BL.sendMessage(TB.aT,rcUtil.html2bb(tN));
   IN.CI.document.body.innerHTML="";
   nT="";
   nR="";
 }
-
 	if ( IN.CI.document.body.innerHTML != "" )
 	{
 	// Aqui tomamos el texto y se lo pasamos a la funcion de arriba:
 	var e_text = textoG;
-	//var r_t = e_text.replace("<br>","").replace("+", "");
-	gradient(e_text,"EA112F 6F6EF1 02B5F3 00FF00 10650D 164CB2");
+	var r_t = e_text.replace("undefined", "");
+	gradient(r_t,"EA112F 6F6EF1 02B5F3 00FF00 10650D 164CB2");
 	}
 ////////////////////////////////////////////////////////////////////////////////////////////////
 	IN.clear();

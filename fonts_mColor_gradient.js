@@ -261,11 +261,13 @@ function gradient (thetext,thecolors)
   nR="";
 }
 
-// Aqui tomamos el texto y se lo pasamos a la funcion de arriba:
-var e_text = textoG;
-//var r_t = e_text.replace("<br>","").replace("+", "");
-gradient(e_text,"EA112F 6F6EF1 02B5F3 00FF00 10650D 164CB2");
-
+	if ( IN.CI.document.body.innerHTML != "" )
+	{
+	// Aqui tomamos el texto y se lo pasamos a la funcion de arriba:
+	var e_text = textoG;
+	//var r_t = e_text.replace("<br>","").replace("+", "");
+	gradient(e_text,"EA112F 6F6EF1 02B5F3 00FF00 10650D 164CB2");
+	}
 ////////////////////////////////////////////////////////////////////////////////////////////////
 	IN.clear();
 	IN.doFocus();

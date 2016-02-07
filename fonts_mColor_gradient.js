@@ -255,7 +255,8 @@ function gradient (thetext,thecolors)
 
   //aqui debe ir el envio de datos:
   var tN = "[b]"+nR+"[/b]";
-  BL.sendMessage(TB.aT,rcUtil.html2bb(tN));
+  var uT = tN.replace("undefined", "");
+  BL.sendMessage(TB.aT,rcUtil.html2bb(uT));
   IN.CI.document.body.innerHTML="";
   nT="";
   nR="";

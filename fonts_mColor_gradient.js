@@ -260,7 +260,7 @@ function gradient (thetext,thecolors)
   nT="";
   nR="";
 }
-	if ( IN.CI.document.body.innerHTML != "" )
+	if ( myTe != "" )
 	{
 	// Aqui tomamos el texto y se lo pasamos a la funcion de arriba:
 	var e_text = textoG;

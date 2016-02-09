@@ -332,7 +332,19 @@ function gradient (thetext,thecolors)
 	// Aqui tomamos el texto y se lo pasamos a la funcion de arriba:
 	var e_text = textoG;
 	var r_t = e_text.replace("undefined", "").replace("<br>", "");
-	gradient(r_t,"EA112F FF037F 6F6EF1  02B5F3 00FF00 10650D 164CB2");
+	// id de los select:
+	var _sel1 = document.getElementById("sel1").value;
+	var _sel2 = document.getElementById("sel2").value;
+	var _sel3 = document.getElementById("sel3").value;
+	var _sel4 = document.getElementById("sel4").value;
+	var _sel5 = document.getElementById("sel5").value;
+	var _sel6 = document.getElementById("sel6").value;
+	
+	//adiciones.
+	var adiciones = _sel1 + _sel2 + _sel3 + _sel4 + _sel5 + _sel6;
+	
+	
+	gradient(r_t,adiciones);
 	}
 ////////////////////////////////////////////////////////////////////////////////////////////////
 	IN.clear();

@@ -352,6 +352,26 @@ function gradient (thetext,thecolors)
 }
 //Fin del Generador_de_texto + Gradiente.
 
+
+// Funciones para agregar simbolos donde van los iconos:
+function sym1()
+{IN.sEm(' ♫♬♪ ');}
+function sym2()
+{IN.sEm(' ❤ ');}
+function sym3()
+{IN.sEm(' ♡ ');}
+function sym4()
+{IN.sEm(' ❥ ');}
+function sym5()
+{IN.sEm(' ❣ ');}
+function sym6()
+{IN.sEm(' ✿ ❀ ❁ ✾ ✽ ❃ ');}
+function sym7()
+{IN.sEm(' ♬♪♫ ヾ(*・。・)ﾉ ♬♪♫ ');}
+// modificar elemento de los iconos para mostrar los simbolos:
+document.getElementById("EP").innerHTML += ' <tr><td><a style="border:1px solid #000000" onclick="sym1();">♫</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym2();">❤</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym3();">♡</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym4();">❥</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym5();">❣</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym6();">✿</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym7();">♪</a></td></tr> ';
+//_fin_de_mmodificar_el_elemento_con_los_iconos.
+
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 // Aquí se crea la llamada al evento, agregando la funcion a la caja de texto del elemento B:
 var elemento = CI.window.document.getElementById("B");

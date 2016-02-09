@@ -332,7 +332,7 @@ function gradient (thetext,thecolors)
 	// Aqui tomamos el texto y se lo pasamos a la funcion de arriba:
 	var e_text = textoG;
 	var r_t = e_text.replace("undefined", "").replace("<br>", "");
-	gradient(r_t,"EA112F FF037F 6F6EF1 02B5F3 00FF00 10650D 164CB2");
+	gradient(r_t,"EA112F FF037F 6F6EF1  02B5F3 00FF00 10650D 164CB2");
 	}
 ////////////////////////////////////////////////////////////////////////////////////////////////
 	IN.clear();

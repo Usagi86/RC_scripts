@@ -118,7 +118,8 @@ rrrr.style.background = rrrr.value;
 // funcion para insertar simbolos:
 function insertS1()
 {
-CI.window.document.getElementById("B").innerHTML += "♫♬♪";
+IN.set(' ♫♬♪ ');
+//CI.window.document.getElementById("B").innerHTML += "♫♬♪";
 //IN.doFocus();
 }
 

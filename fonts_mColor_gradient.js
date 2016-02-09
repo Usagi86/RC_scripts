@@ -31,7 +31,51 @@ nuevaAncla1G.innerHTML = ' <div id="form_colores" style="visibility:hidden; widt
 		}
 	}
 
-// Funcion para el boton de cambiar el moto de Color:
+//constructor para los selectores:
+	function consEs(miVariable)
+	{
+	var miVariable; 
+	if ( miVariable.value == "" )
+	{miVariable.style.background = "#FFFFFF";}
+	else
+	{miVariable.style.background = "#"+miVariable.value;}
+	return;
+	}
+	
+//Funciones para dar el color a la seleccion del 'select' que hagamos:
+	function col_sel1()
+	{
+		var sel1 = document.getElementById("sel1");
+		consEs(sel1);
+	}
+	function col_sel2()
+	{
+		var sel2 = document.getElementById("sel2");
+		consEs(sel2);
+	}
+	
+	function col_sel3()
+	{
+		var sel3 = document.getElementById("sel3");
+		consEs(sel3);
+	}
+	function col_sel4()
+	{
+		var sel4 = document.getElementById("sel4");
+		consEs(sel4);
+	}
+	function col_sel5()
+	{
+		var sel5 = document.getElementById("sel5");
+		consEs(sel5);
+	}
+	function col_sel6()
+	{
+		var sel6 = document.getElementById("sel6");
+		consEs(sel6);
+	}
+
+// Funcion para el boton de cambiar el modo de Color (dos colores o gradientes):
 function cambiar_modo()
 {
   var t_ele = document.getElementById("c_btn");

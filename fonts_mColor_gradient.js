@@ -365,7 +365,7 @@ function gradient (thetext,thecolors)
 			adiciones = _sel1 + _sel2 + _sel3 + _sel4 + _sel5 + _sel6;
 		}
 		if ( limpia == 1 )
-		{adiciones = "EA112F 6F6EF1 02B5F3 00FF00 10650D 164CB2";}
+		{adiciones = "EA112F FF037F 6F6EF1 02B5F3 00FF00 10650D 164CB2";}
 		if ( limpia == 2 )
 		{adiciones = "FF8888 FFFF88 88FF88 88FFFF 8888FF FF88FF";}
 		if ( limpia == 3 )

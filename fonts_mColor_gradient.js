@@ -15,7 +15,7 @@ nuevaAncla1G.appendChild(document.createTextNode(''));
 var lanclaExistente = document.getElementById("RN");
 var padre_g = lanclaExistente.parentNode;
 var nuevoHijo1G = padre_g.insertBefore(nuevaAncla1G, lanclaExistente);
-nuevaAncla1G.innerHTML = ' <div id="form_colores" style="visibility:hidden; width:300; height:250; position: absolute; top:78px; left:88px; border:3px solid #000000; background:#109fa6;"><div><b>Estilo predefinido 1:</b> <button id="" style="cursor:pointer;" onclick="colPred1()">Seleccionar</button></div><div><b>Estilo predefinido 2:</b> <button id="" style="cursor:pointer;" onclick="colPred2()">Seleccionar</button></div><div><b>Estilo predefinido 3:</b> <button id="" style="cursor:pointer;" onclick="colPred3()">Seleccionar</button></div><div style="color:#FFFFFF;"><i>Elegir colores manualmente:</i></div><a>&nbsp;</a><select id="sel1" onclick="col_sel1();" style="background:#000000;"><option value="000000 " style="background: #000000">&nbsp;&nbsp;</option><option value="ff0000 " style="background: #ff0000">&nbsp;&nbsp;</option><option value="007bff " style="background:#007bff;">&nbsp;&nbsp;</option><option value="238c00 " style="background:#238c00;">&nbsp;&nbsp;</option><option value="909090 " style="background:#909090;">&nbsp;&nbsp;</option><option value="109fa6 " style="background:#109fa6;">&nbsp;&nbsp;</option><option value="b300b3 " style="background:#b300b3;">&nbsp;&nbsp;</option><option value="ff037f " style="background:#ff037f;">&nbsp;&nbsp;</option><option value="00ffff " style="background:#00ffff;">&nbsp;&nbsp;</option><option value="ff4000 " style="background:#ff4000;">&nbsp;&nbsp;</option><option value="ff99e5 " style="background:#ff99e5;">&nbsp;&nbsp;</option><option value="ffcd00 " style="background:#ffcd00;">&nbsp;&nbsp;</option><option value="4be22c " style="background:#4be22c;">&nbsp;&nbsp;</option><option value="2cafe2 " style="background:#2cafe2;">&nbsp;&nbsp;</option><option value="353cc4 " style="background:#353cc4;">&nbsp;&nbsp;</option><option value="e22c9a " style="background:#e22c9a;">&nbsp;&nbsp;</option><option value="35a31f " style="background:#35a31f;">&nbsp;&nbsp;</option><option value="a31f6e " style="background:#a31f6e;">&nbsp;&nbsp;</option><option value="ff00ff " style="background:#ff00ff;">&nbsp;&nbsp;</option></select><a>&nbsp;</a><select id="sel2" onclick="col_sel2();" style="background:#000000;"><option value="000000 " style="background: #000000">&nbsp;&nbsp;</option><option value="ff0000 " style="background: #ff0000">&nbsp;&nbsp;</option><option value="007bff " style="background:#007bff;">&nbsp;&nbsp;</option><option value="238c00 " style="background:#238c00;">&nbsp;&nbsp;</option><option value="909090 " style="background:#909090;">&nbsp;&nbsp;</option><option value="109fa6 " style="background:#109fa6;">&nbsp;&nbsp;</option><option value="b300b3 " style="background:#b300b3;">&nbsp;&nbsp;</option><option value="ff037f " style="background:#ff037f;">&nbsp;&nbsp;</option><option value="00ffff " style="background:#00ffff;">&nbsp;&nbsp;</option><option value="ff4000 " style="background:#ff4000;">&nbsp;&nbsp;</option><option value="ff99e5 " style="background:#ff99e5;">&nbsp;&nbsp;</option><option value="ffcd00 " style="background:#ffcd00;">&nbsp;&nbsp;</option><option value="4be22c " style="background:#4be22c;">&nbsp;&nbsp;</option><option value="2cafe2 " style="background:#2cafe2;">&nbsp;&nbsp;</option><option value="353cc4 " style="background:#353cc4;">&nbsp;&nbsp;</option><option value="e22c9a " style="background:#e22c9a;">&nbsp;&nbsp;</option><option value="35a31f " style="background:#35a31f;">&nbsp;&nbsp;</option><option value="a31f6e " style="background:#a31f6e;">&nbsp;&nbsp;</option><option value="ff00ff " style="background:#ff00ff;">&nbsp;&nbsp;</option></select><a>&nbsp;</a><select id="sel3" onclick="col_sel3();" style="background:#FFFFFF;"><option value="" style="background: #FFFFFF">¤</option><option value="000000 " style="background:#000000;">&nbsp;&nbsp;</option><option value="ff0000 " style="background: #ff0000">&nbsp;&nbsp;</option><option value="007bff " style="background:#007bff;">&nbsp;&nbsp;</option><option value="238c00 " style="background:#238c00;">&nbsp;&nbsp;</option><option value="909090 " style="background:#909090;">&nbsp;&nbsp;</option><option value="109fa6 " style="background:#109fa6;">&nbsp;&nbsp;</option><option value="b300b3 " style="background:#b300b3;">&nbsp;&nbsp;</option><option value="ff037f " style="background:#ff037f;">&nbsp;&nbsp;</option><option value="00ffff " style="background:#00ffff;">&nbsp;&nbsp;</option><option value="ff4000 " style="background:#ff4000;">&nbsp;&nbsp;</option><option value="ff99e5 " style="background:#ff99e5;">&nbsp;&nbsp;</option><option value="ffcd00 " style="background:#ffcd00;">&nbsp;&nbsp;</option><option value="4be22c " style="background:#4be22c;">&nbsp;&nbsp;</option><option value="2cafe2 " style="background:#2cafe2;">&nbsp;&nbsp;</option><option value="353cc4 " style="background:#353cc4;">&nbsp;&nbsp;</option><option value="e22c9a " style="background:#e22c9a;">&nbsp;&nbsp;</option><option value="35a31f " style="background:#35a31f;">&nbsp;&nbsp;</option><option value="a31f6e " style="background:#a31f6e;">&nbsp;&nbsp;</option><option value="ff00ff " style="background:#ff00ff;">&nbsp;&nbsp;</option></select><a>&nbsp;</a><select id="sel4" onclick="col_sel4();" style="background:#FFFFFF;"><option value="" style="background: #FFFFFF">¤</option><option value="000000 " style="background:#000000;">&nbsp;&nbsp;</option><option value="ff0000 " style="background: #ff0000">&nbsp;&nbsp;</option><option value="007bff " style="background:#007bff;">&nbsp;&nbsp;</option><option value="238c00 " style="background:#238c00;">&nbsp;&nbsp;</option><option value="909090 " style="background:#909090;">&nbsp;&nbsp;</option><option value="109fa6 " style="background:#109fa6;">&nbsp;&nbsp;</option><option value="b300b3 " style="background:#b300b3;">&nbsp;&nbsp;</option><option value="ff037f " style="background:#ff037f;">&nbsp;&nbsp;</option><option value="00ffff " style="background:#00ffff;">&nbsp;&nbsp;</option><option value="ff4000 " style="background:#ff4000;">&nbsp;&nbsp;</option><option value="ff99e5 " style="background:#ff99e5;">&nbsp;&nbsp;</option><option value="ffcd00 " style="background:#ffcd00;">&nbsp;&nbsp;</option><option value="4be22c " style="background:#4be22c;">&nbsp;&nbsp;</option><option value="2cafe2 " style="background:#2cafe2;">&nbsp;&nbsp;</option><option value="353cc4 " style="background:#353cc4;">&nbsp;&nbsp;</option><option value="e22c9a " style="background:#e22c9a;">&nbsp;&nbsp;</option><option value="35a31f " style="background:#35a31f;">&nbsp;&nbsp;</option><option value="a31f6e " style="background:#a31f6e;">&nbsp;&nbsp;</option><option value="ff00ff " style="background:#ff00ff;">&nbsp;&nbsp;</option></select><a>&nbsp;</a><select id="sel5" onclick="col_sel5();" style="background:#FFFFFF;"><option value="" style="background: #FFFFFF">¤</option><option value="000000 " style="background:#000000;">&nbsp;&nbsp;</option><option value="ff0000 " style="background: #ff0000">&nbsp;&nbsp;</option><option value="007bff " style="background:#007bff;">&nbsp;&nbsp;</option><option value="238c00 " style="background:#238c00;">&nbsp;&nbsp;</option><option value="909090 " style="background:#909090;">&nbsp;&nbsp;</option><option value="109fa6 " style="background:#109fa6;">&nbsp;&nbsp;</option><option value="b300b3 " style="background:#b300b3;">&nbsp;&nbsp;</option><option value="ff037f " style="background:#ff037f;">&nbsp;&nbsp;</option><option value="00ffff " style="background:#00ffff;">&nbsp;&nbsp;</option><option value="ff4000 " style="background:#ff4000;">&nbsp;&nbsp;</option><option value="ff99e5 " style="background:#ff99e5;">&nbsp;&nbsp;</option><option value="ffcd00 " style="background:#ffcd00;">&nbsp;&nbsp;</option><option value="4be22c " style="background:#4be22c;">&nbsp;&nbsp;</option><option value="2cafe2 " style="background:#2cafe2;">&nbsp;&nbsp;</option><option value="353cc4 " style="background:#353cc4;">&nbsp;&nbsp;</option><option value="e22c9a " style="background:#e22c9a;">&nbsp;&nbsp;</option><option value="35a31f " style="background:#35a31f;">&nbsp;&nbsp;</option><option value="a31f6e " style="background:#a31f6e;">&nbsp;&nbsp;</option><option value="ff00ff " style="background:#ff00ff;">&nbsp;&nbsp;</option></select><a>&nbsp;</a><select id="sel6" onclick="col_sel6();" style="background:#FFFFFF;"><option value="" style="background: #FFFFFF">¤</option><option value="000000 " style="background:#000000;">&nbsp;&nbsp;</option><option value="ff0000 " style="background: #ff0000">&nbsp;&nbsp;</option><option value="007bff " style="background:#007bff;">&nbsp;&nbsp;</option><option value="238c00 " style="background:#238c00;">&nbsp;&nbsp;</option><option value="909090 " style="background:#909090;">&nbsp;&nbsp;</option><option value="109fa6 " style="background:#109fa6;">&nbsp;&nbsp;</option><option value="b300b3 " style="background:#b300b3;">&nbsp;&nbsp;</option><option value="ff037f " style="background:#ff037f;">&nbsp;&nbsp;</option><option value="00ffff " style="background:#00ffff;">&nbsp;&nbsp;</option><option value="ff4000 " style="background:#ff4000;">&nbsp;&nbsp;</option><option value="ff99e5 " style="background:#ff99e5;">&nbsp;&nbsp;</option><option value="ffcd00 " style="background:#ffcd00;">&nbsp;&nbsp;</option><option value="4be22c " style="background:#4be22c;">&nbsp;&nbsp;</option><option value="2cafe2 " style="background:#2cafe2;">&nbsp;&nbsp;</option><option value="353cc4 " style="background:#353cc4;">&nbsp;&nbsp;</option><option value="e22c9a " style="background:#e22c9a;">&nbsp;&nbsp;</option><option value="35a31f " style="background:#35a31f;">&nbsp;&nbsp;</option><option value="a31f6e " style="background:#a31f6e;">&nbsp;&nbsp;</option><option value="ff00ff " style="background:#ff00ff;">&nbsp;&nbsp;</option></select><div>..........................</div><div style="color:#FFFFFF;"><i>Instrucciones:</i></div><div>Se pueden elegir hasta 6 colores distintos...<br>Si eliges la opcion con ¤ significará<br>que no elegirás ningún color.</div></div> ';
+nuevaAncla1G.innerHTML = ' <div id="form_colores" style="visibility:hidden; width:300; height:250; position: absolute; top:78px; left:88px; border:3px solid #000000; background:#109fa6;"><div><b>Estilo predefinido 1:</b> <button id="" style="cursor:pointer;" onclick="colPred1()">Seleccionar</button></div><div><b>Estilo predefinido 2:</b> <button id="" style="cursor:pointer;" onclick="colPred2()">Seleccionar</button></div><div><b>Estilo predefinido 3:</b> <button id="" style="cursor:pointer;" onclick="colPred3()">Seleccionar</button></div><div style="color:#FFFFFF;"><i>Elegir colores manualmente:</i></div><a>&nbsp;</a><select id="sel1" onclick="col_sel1(); limpia=0;" style="background:#000000;"><option value="000000 " style="background: #000000">&nbsp;&nbsp;</option><option value="ff0000 " style="background: #ff0000">&nbsp;&nbsp;</option><option value="007bff " style="background:#007bff;">&nbsp;&nbsp;</option><option value="238c00 " style="background:#238c00;">&nbsp;&nbsp;</option><option value="909090 " style="background:#909090;">&nbsp;&nbsp;</option><option value="109fa6 " style="background:#109fa6;">&nbsp;&nbsp;</option><option value="b300b3 " style="background:#b300b3;">&nbsp;&nbsp;</option><option value="ff037f " style="background:#ff037f;">&nbsp;&nbsp;</option><option value="00ffff " style="background:#00ffff;">&nbsp;&nbsp;</option><option value="ff4000 " style="background:#ff4000;">&nbsp;&nbsp;</option><option value="ff99e5 " style="background:#ff99e5;">&nbsp;&nbsp;</option><option value="ffcd00 " style="background:#ffcd00;">&nbsp;&nbsp;</option><option value="4be22c " style="background:#4be22c;">&nbsp;&nbsp;</option><option value="2cafe2 " style="background:#2cafe2;">&nbsp;&nbsp;</option><option value="353cc4 " style="background:#353cc4;">&nbsp;&nbsp;</option><option value="e22c9a " style="background:#e22c9a;">&nbsp;&nbsp;</option><option value="35a31f " style="background:#35a31f;">&nbsp;&nbsp;</option><option value="a31f6e " style="background:#a31f6e;">&nbsp;&nbsp;</option><option value="ff00ff " style="background:#ff00ff;">&nbsp;&nbsp;</option></select><a>&nbsp;</a><select id="sel2" onclick="col_sel2(); limpia=0;" style="background:#000000;"><option value="000000 " style="background: #000000">&nbsp;&nbsp;</option><option value="ff0000 " style="background: #ff0000">&nbsp;&nbsp;</option><option value="007bff " style="background:#007bff;">&nbsp;&nbsp;</option><option value="238c00 " style="background:#238c00;">&nbsp;&nbsp;</option><option value="909090 " style="background:#909090;">&nbsp;&nbsp;</option><option value="109fa6 " style="background:#109fa6;">&nbsp;&nbsp;</option><option value="b300b3 " style="background:#b300b3;">&nbsp;&nbsp;</option><option value="ff037f " style="background:#ff037f;">&nbsp;&nbsp;</option><option value="00ffff " style="background:#00ffff;">&nbsp;&nbsp;</option><option value="ff4000 " style="background:#ff4000;">&nbsp;&nbsp;</option><option value="ff99e5 " style="background:#ff99e5;">&nbsp;&nbsp;</option><option value="ffcd00 " style="background:#ffcd00;">&nbsp;&nbsp;</option><option value="4be22c " style="background:#4be22c;">&nbsp;&nbsp;</option><option value="2cafe2 " style="background:#2cafe2;">&nbsp;&nbsp;</option><option value="353cc4 " style="background:#353cc4;">&nbsp;&nbsp;</option><option value="e22c9a " style="background:#e22c9a;">&nbsp;&nbsp;</option><option value="35a31f " style="background:#35a31f;">&nbsp;&nbsp;</option><option value="a31f6e " style="background:#a31f6e;">&nbsp;&nbsp;</option><option value="ff00ff " style="background:#ff00ff;">&nbsp;&nbsp;</option></select><a>&nbsp;</a><select id="sel3" onclick="col_sel3(); limpia=0;" style="background:#FFFFFF;"><option value="" style="background: #FFFFFF">¤</option><option value="000000 " style="background:#000000;">&nbsp;&nbsp;</option><option value="ff0000 " style="background: #ff0000">&nbsp;&nbsp;</option><option value="007bff " style="background:#007bff;">&nbsp;&nbsp;</option><option value="238c00 " style="background:#238c00;">&nbsp;&nbsp;</option><option value="909090 " style="background:#909090;">&nbsp;&nbsp;</option><option value="109fa6 " style="background:#109fa6;">&nbsp;&nbsp;</option><option value="b300b3 " style="background:#b300b3;">&nbsp;&nbsp;</option><option value="ff037f " style="background:#ff037f;">&nbsp;&nbsp;</option><option value="00ffff " style="background:#00ffff;">&nbsp;&nbsp;</option><option value="ff4000 " style="background:#ff4000;">&nbsp;&nbsp;</option><option value="ff99e5 " style="background:#ff99e5;">&nbsp;&nbsp;</option><option value="ffcd00 " style="background:#ffcd00;">&nbsp;&nbsp;</option><option value="4be22c " style="background:#4be22c;">&nbsp;&nbsp;</option><option value="2cafe2 " style="background:#2cafe2;">&nbsp;&nbsp;</option><option value="353cc4 " style="background:#353cc4;">&nbsp;&nbsp;</option><option value="e22c9a " style="background:#e22c9a;">&nbsp;&nbsp;</option><option value="35a31f " style="background:#35a31f;">&nbsp;&nbsp;</option><option value="a31f6e " style="background:#a31f6e;">&nbsp;&nbsp;</option><option value="ff00ff " style="background:#ff00ff;">&nbsp;&nbsp;</option></select><a>&nbsp;</a><select id="sel4" onclick="col_sel4(); limpia=0;" style="background:#FFFFFF;"><option value="" style="background: #FFFFFF">¤</option><option value="000000 " style="background:#000000;">&nbsp;&nbsp;</option><option value="ff0000 " style="background: #ff0000">&nbsp;&nbsp;</option><option value="007bff " style="background:#007bff;">&nbsp;&nbsp;</option><option value="238c00 " style="background:#238c00;">&nbsp;&nbsp;</option><option value="909090 " style="background:#909090;">&nbsp;&nbsp;</option><option value="109fa6 " style="background:#109fa6;">&nbsp;&nbsp;</option><option value="b300b3 " style="background:#b300b3;">&nbsp;&nbsp;</option><option value="ff037f " style="background:#ff037f;">&nbsp;&nbsp;</option><option value="00ffff " style="background:#00ffff;">&nbsp;&nbsp;</option><option value="ff4000 " style="background:#ff4000;">&nbsp;&nbsp;</option><option value="ff99e5 " style="background:#ff99e5;">&nbsp;&nbsp;</option><option value="ffcd00 " style="background:#ffcd00;">&nbsp;&nbsp;</option><option value="4be22c " style="background:#4be22c;">&nbsp;&nbsp;</option><option value="2cafe2 " style="background:#2cafe2;">&nbsp;&nbsp;</option><option value="353cc4 " style="background:#353cc4;">&nbsp;&nbsp;</option><option value="e22c9a " style="background:#e22c9a;">&nbsp;&nbsp;</option><option value="35a31f " style="background:#35a31f;">&nbsp;&nbsp;</option><option value="a31f6e " style="background:#a31f6e;">&nbsp;&nbsp;</option><option value="ff00ff " style="background:#ff00ff;">&nbsp;&nbsp;</option></select><a>&nbsp;</a><select id="sel5" onclick="col_sel5(); limpia=0;" style="background:#FFFFFF;"><option value="" style="background: #FFFFFF">¤</option><option value="000000 " style="background:#000000;">&nbsp;&nbsp;</option><option value="ff0000 " style="background: #ff0000">&nbsp;&nbsp;</option><option value="007bff " style="background:#007bff;">&nbsp;&nbsp;</option><option value="238c00 " style="background:#238c00;">&nbsp;&nbsp;</option><option value="909090 " style="background:#909090;">&nbsp;&nbsp;</option><option value="109fa6 " style="background:#109fa6;">&nbsp;&nbsp;</option><option value="b300b3 " style="background:#b300b3;">&nbsp;&nbsp;</option><option value="ff037f " style="background:#ff037f;">&nbsp;&nbsp;</option><option value="00ffff " style="background:#00ffff;">&nbsp;&nbsp;</option><option value="ff4000 " style="background:#ff4000;">&nbsp;&nbsp;</option><option value="ff99e5 " style="background:#ff99e5;">&nbsp;&nbsp;</option><option value="ffcd00 " style="background:#ffcd00;">&nbsp;&nbsp;</option><option value="4be22c " style="background:#4be22c;">&nbsp;&nbsp;</option><option value="2cafe2 " style="background:#2cafe2;">&nbsp;&nbsp;</option><option value="353cc4 " style="background:#353cc4;">&nbsp;&nbsp;</option><option value="e22c9a " style="background:#e22c9a;">&nbsp;&nbsp;</option><option value="35a31f " style="background:#35a31f;">&nbsp;&nbsp;</option><option value="a31f6e " style="background:#a31f6e;">&nbsp;&nbsp;</option><option value="ff00ff " style="background:#ff00ff;">&nbsp;&nbsp;</option></select><a>&nbsp;</a><select id="sel6" onclick="col_sel6(); limpia=0;" style="background:#FFFFFF;"><option value="" style="background: #FFFFFF">¤</option><option value="000000 " style="background:#000000;">&nbsp;&nbsp;</option><option value="ff0000 " style="background: #ff0000">&nbsp;&nbsp;</option><option value="007bff " style="background:#007bff;">&nbsp;&nbsp;</option><option value="238c00 " style="background:#238c00;">&nbsp;&nbsp;</option><option value="909090 " style="background:#909090;">&nbsp;&nbsp;</option><option value="109fa6 " style="background:#109fa6;">&nbsp;&nbsp;</option><option value="b300b3 " style="background:#b300b3;">&nbsp;&nbsp;</option><option value="ff037f " style="background:#ff037f;">&nbsp;&nbsp;</option><option value="00ffff " style="background:#00ffff;">&nbsp;&nbsp;</option><option value="ff4000 " style="background:#ff4000;">&nbsp;&nbsp;</option><option value="ff99e5 " style="background:#ff99e5;">&nbsp;&nbsp;</option><option value="ffcd00 " style="background:#ffcd00;">&nbsp;&nbsp;</option><option value="4be22c " style="background:#4be22c;">&nbsp;&nbsp;</option><option value="2cafe2 " style="background:#2cafe2;">&nbsp;&nbsp;</option><option value="353cc4 " style="background:#353cc4;">&nbsp;&nbsp;</option><option value="e22c9a " style="background:#e22c9a;">&nbsp;&nbsp;</option><option value="35a31f " style="background:#35a31f;">&nbsp;&nbsp;</option><option value="a31f6e " style="background:#a31f6e;">&nbsp;&nbsp;</option><option value="ff00ff " style="background:#ff00ff;">&nbsp;&nbsp;</option></select><div>..........................</div><div style="color:#FFFFFF;"><i>Instrucciones:</i></div><div>Se pueden elegir hasta 6 colores distintos...<br>Si eliges la opcion con ¤ significará<br>que no elegirás ningún color.</div></div> ';
 
 //Funcion para mostrar u ocultar el form:
 	function funcMCol()
@@ -142,17 +142,21 @@ var r3G;
 
 // Variable donde meteremos el valor de los colores:
 var adiciones = "#000000 #000000";
-	function colPred1()
+var  limpia = 0;
+function colPred1()
 	{
-	adiciones = "EA112F 6F6EF1 02B5F3 00FF00 10650D 164CB2";
+	limpia = 1;
+	//adiciones = "EA112F 6F6EF1 02B5F3 00FF00 10650D 164CB2";
 	}
 	function colPred2()
 	{
-	adiciones = "FF8888 FFFF88 88FF88 88FFFF 8888FF FF88FF";
+	limpia = 2;
+	//adiciones = "FF8888 FFFF88 88FF88 88FFFF 8888FF FF88FF";
 	}
 	function colPred3()
 	{
-	adiciones = "884488 444488 448888 448844 888844 884444";
+	limpia = 3;
+	//adiciones = "884488 444488 448888 448844 888844 884444";
 	}
 
 // SCRIPT "GENERADOR DE TEXTO con fuente de símbolos y de 2 Colores":
@@ -241,9 +245,9 @@ function pGrad()
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // constructor de la funcion para texto con Gradiente:
 
-  var textoG = r4G;// SALIDA DE TEXTO YA CON LOS CARACTERES CAMBIADOS.
+	var textoG = r4G;// SALIDA DE TEXTO YA CON LOS CARACTERES CAMBIADOS.
   
-// lookup table
+// lookup table (SCTIOT DE Gradientes)
 var tohex = new Array(256);
 var hex = "0123456789ABCDEF";
 var count = 0;
@@ -311,63 +315,70 @@ function hicolorindex (x, y, z, low) {
 var nT;
 var nR;
 function gradient (thetext,thecolors) 
-{
-    var colors = new ColorList(thecolors);
-    var numcolors = colors.len;
-    var numchars = thetext.length;
-    var rr = 0;
-    var gg = 0;
-    var bb = 0;
-    var lci = 0; //lower color index
-    var hci = 0; //high color index
+	{
+    	var colors = new ColorList(thecolors);
+    	var numcolors = colors.len;
+    	var numchars = thetext.length;
+    	var rr = 0;
+    	var gg = 0;
+    	var bb = 0;
+    	var lci = 0; //lower color index
+    	var hci = 0; //high color index
 
 	for (i=0; i<numchars; ++i) 
 	{
-      	lci = lowcolorindex(i, numchars, numcolors);
-      	hci = hicolorindex(i, numchars, numcolors, lci);
-      	rr = Math.round(interpolate( lci/(numcolors-1), colors.codes[lci].r, hci/(numcolors-1), colors.codes[hci].r, i/(numchars-1)));
-      	gg = Math.round(interpolate( lci/(numcolors-1), colors.codes[lci].g, hci/(numcolors-1), colors.codes[hci].g, i/(numchars-1)));
-      	bb = Math.round(interpolate( lci/(numcolors-1), colors.codes[lci].b, hci/(numcolors-1), colors.codes[hci].b, i/(numchars-1)));
-	/////
-	var salida = "[c=#" + tohex[rr] + tohex[gg] + tohex[bb] + "]" + thetext.charAt(i) + "[/c]"
-  	nT += salida
-  	nR = nT.replace("undefined", "");
+      		lci = lowcolorindex(i, numchars, numcolors);
+      		hci = hicolorindex(i, numchars, numcolors, lci);
+      		rr = Math.round(interpolate( lci/(numcolors-1), colors.codes[lci].r, hci/(numcolors-1), colors.codes[hci].r, i/(numchars-1)));
+      		gg = Math.round(interpolate( lci/(numcolors-1), colors.codes[lci].g, hci/(numcolors-1), colors.codes[hci].g, i/(numchars-1)));
+      		bb = Math.round(interpolate( lci/(numcolors-1), colors.codes[lci].b, hci/(numcolors-1), colors.codes[hci].b, i/(numchars-1)));
+		/////
+		var salida = "[c=#" + tohex[rr] + tohex[gg] + tohex[bb] + "]" + thetext.charAt(i) + "[/c]"
+  		nT += salida
+  		nR = nT.replace("undefined", "");
 	}
-
-  //aqui debe ir el envio de datos:
-  var tN = "[b]"+nR+"[/b]";
-  var uT = tN.replace("undefined", "");
-  BL.sendMessage(TB.aT,rcUtil.html2bb(uT));
-  IN.CI.document.body.innerHTML="";
-  nT="";
-  nR="";
-}
+	
+	  //aqui debe ir el envio de datos:
+	  var tN = "[b]"+nR+"[/b]";
+	  var uT = tN.replace("undefined", "");
+	  BL.sendMessage(TB.aT,rcUtil.html2bb(uT));
+	  IN.CI.document.body.innerHTML="";
+	  nT="";
+	  nR="";
+	}
+	
 	if ( myTe != "" )
 	{
-	// Aqui tomamos el texto y se lo pasamos a la funcion de arriba:
-	var e_text = textoG;
-	var r_t = e_text.replace("undefined", "").replace("<br>", "");
-	// id de los select:
-	var _sel1 = document.getElementById("sel1").value;
-	var _sel2 = document.getElementById("sel2").value;
-	var _sel3 = document.getElementById("sel3").value;
-	var _sel4 = document.getElementById("sel4").value;
-	var _sel5 = document.getElementById("sel5").value;
-	var _sel6 = document.getElementById("sel6").value;
-	
-	//adiciones.
-	adiciones = _sel1 + _sel2 + _sel3 + _sel4 + _sel5 + _sel6;
-	
-	
+		// Aqui tomamos el texto y se lo pasamos a la funcion de arriba:
+		var e_text = textoG;
+		var r_t = e_text.replace("undefined", "").replace("<br>", "");
+		// id de los select:
+		if ( limpia == 0 )
+		{
+			var _sel1 = document.getElementById("sel1").value;
+			var _sel2 = document.getElementById("sel2").value;
+			var _sel3 = document.getElementById("sel3").value;
+			var _sel4 = document.getElementById("sel4").value;
+			var _sel5 = document.getElementById("sel5").value;
+			var _sel6 = document.getElementById("sel6").value;
+			//adiciones.
+			adiciones = _sel1 + _sel2 + _sel3 + _sel4 + _sel5 + _sel6;
+		}
+		if ( limpia == 1 )
+		{adiciones = "EA112F 6F6EF1 02B5F3 00FF00 10650D 164CB2";}
+		if ( limpia == 2 )
+		{adiciones = "FF8888 FFFF88 88FF88 88FFFF 8888FF FF88FF";}
+		if ( limpia == 3 )
+		{adiciones = "884488 444488 448888 448844 888844 884444";}
+		
 	gradient(r_t,adiciones);
 	}
-////////////////////////////////////////////////////////////////////////////////////////////////
-	IN.clear();
-	IN.doFocus();
+IN.clear();
+IN.doFocus();
 }
-//Fin del Generador_de_texto + Gradiente.
+//Fin del Generador_de_texto + Gradiente, o sea Fin de la funcion pGrad().
 
-
+////////////////////////////////////////////////////////////////////////////////////////////////
 // Funciones para agregar simbolos donde van los iconos:
 function sym1()
 {IN.sEm(' ♫♬♪ ');}
@@ -410,7 +421,4 @@ elemento.addEventListener( "keyup", function()
 })
 //Fin del add_event_listener.
 
-
 // FIN DEL SCRIPT.
-
-

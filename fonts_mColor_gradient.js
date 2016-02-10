@@ -351,7 +351,7 @@ function gradient (thetext,thecolors)
 	{
 		// Aqui tomamos el texto y se lo pasamos a la funcion de arriba:
 		var e_text = textoG;
-		var r_t = e_text.replace("undefined", "").replace("<br>", "");
+		var r_t = e_text.replace("undefined", "").replace("<br>", "").replace("<b>", "").replace("</b>", "").replace("<i>", "").replace("</i>", "").replace("<u>", "").replace("</u>", "");
 		// id de los select:
 		if ( limpia == 0 )
 		{

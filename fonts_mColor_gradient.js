@@ -407,7 +407,7 @@ elemento.addEventListener( "keyup", function()
 
   if ( myTe.search(/\053/) > -1 )
 	{
-		if (IN.CI.document.body.innerHTML.length <= 128)
+		if (IN.CI.document.body.innerHTML.length < 128)
 		{
 			//053= +
 			// aqui se ejecuta la (las) funcion (es) propiamente:

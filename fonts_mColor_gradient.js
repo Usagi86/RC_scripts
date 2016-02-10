@@ -146,17 +146,17 @@ var  limpia = 0;
 function colPred1()
 	{
 	limpia = 1;
-	//adiciones = "EA112F 6F6EF1 02B5F3 00FF00 10650D 164CB2";
+	document.getElementById("form_colores").style.visibility = "hidden";
 	}
 	function colPred2()
 	{
 	limpia = 2;
-	//adiciones = "FF8888 FFFF88 88FF88 88FFFF 8888FF FF88FF";
+	document.getElementById("form_colores").style.visibility = "hidden";
 	}
 	function colPred3()
 	{
 	limpia = 3;
-	//adiciones = "884488 444488 448888 448844 888844 884444";
+	document.getElementById("form_colores").style.visibility = "hidden";
 	}
 
 // SCRIPT "GENERADOR DE TEXTO con fuente de símbolos y de 2 Colores":

@@ -407,22 +407,15 @@ elemento.addEventListener( "keyup", function()
 
   if ( myTe.search(/\053/) > -1 )
 	{
-		if (IN.CI.document.body.innerHTML.length < 128)
+		//053= +
+		// aqui se ejecuta la (las) funcion (es) propiamente:
+		if ( document.getElementById("c_btn").innerHTML == "Modo1" )
 		{
-			//053= +
-			// aqui se ejecuta la (las) funcion (es) propiamente:
-			if ( document.getElementById("c_btn").innerHTML == "Modo1" )
-			{
-			pGrad();
-			}
-			else
-			{
-			pSMas();
-			}
+		pGrad();
 		}
 		else
 		{
-			alert("Has escrito mucho, borra un poco para que salga toda la línea de texto completa :D");
+		pSMas();
 		}
 	}
 })

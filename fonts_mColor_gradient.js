@@ -404,7 +404,7 @@ function sym8()
 function sym9()
 {IN.sEm(' ︻┳═一 ');}
 // modificar elemento de los iconos para mostrar los simbolos:
-document.getElementById("EP").innerHTML += ' <tr><td><a style="border:1px solid #000000" onclick="sym1();">♫</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym2();">❤</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym3();">♡</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym4();">❥</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym5();">⊱╮</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym6();">✿</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym7();">♪</a></td><td><a style="border:1px solid #000000" onclick="sym8();">☺</a></td><td><a style="border:1px solid #000000" onclick="sym9();">☻</a></td></tr> ';
+document.getElementById("EP").innerHTML += ' <tr><td><a style="border:1px solid #000000" onclick="sym1();">♫</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym2();">❤</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym3();">♡</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym4();">❥</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym5();">f</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym6();">✿</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym7();">♪</a></td><td><a style="border:1px solid #000000" onclick="sym8();">☺</a></td><td><a style="border:1px solid #000000" onclick="sym9();">☻</a></td></tr>';
 
 //_fin_de_mmodificar_el_elemento_con_los_iconos.
 

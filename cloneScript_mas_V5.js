@@ -203,7 +203,22 @@ var headTMC = document.getElementsByTagName('head')[0];
 headTMC.appendChild(scriptTMC);
 */
 /////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
 
+// CAMBIAR PARTE DEL ESTILO (colores, imagenes, etc)
+//++Eliminar css original:
+var x = document.body.getElementsByTagName("style");
+if (x.length)
+    x[0].parentElement.removeChild(x[0]);
+
+//++Agregar nuevo css:
+var newSS=document.createElement('link');
+newSS.rel='stylesheet';
+newSS.href='https://rawgit.com/Usagi86/RC_scripts/master/archivocss.css';
+document.getElementsByTagName("head")[0].appendChild(newSS);
+//Fin_de_css.
+
+/////////////////////////////////////////////////////////////////////////////////
 //necesario en chrome:
 document.getElementById("CI").style.height="50px";
 

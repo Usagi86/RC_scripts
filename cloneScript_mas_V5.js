@@ -2,7 +2,8 @@
 	CloneScript Version 5
 	11/11/2015
 	versión 5.2 al 26/11/2015
-	vversión 6 al 26/04/2016
+	versión 6 al 26/04/2016
+	
 	Author: ++
 **************************/
 

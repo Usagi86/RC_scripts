@@ -393,18 +393,26 @@ function sym3()
 {IN.sEm(' ♡ ');}
 function sym4()
 {IN.sEm(' ❥ ');}
+//*********************************************************************************************
 function sym5()
-{IN.sEm(' [c=#FF037F]✿[/c][c=#238C00]⊱╮[/c] [c=#FF037F]❀[/c][c=#238C00]⊱╮[/c] [c=#FF037F]❁[/c][c=#238C00]⊱╮[/c] [c=#FF037F]✾[/c][c=#238C00]⊱╮[/c] [c=#FF037F]✽[/c][c=#238C00]⊱╮[/c] [c=#FF037F]❃[/c][c=#238C00]⊱╮[/c] ');}
+{IN.sEm(' [b][c=#FF037F]✿[/c][c=#238C00]⊱╮[/c] [c=#FF037F]❀[/c][c=#238C00]⊱╮[/c][/b] ');}
+
+function sym5_2()
+{IN.sEm(' [b][c=#FF0000]✿[/c][c=#238C00]⊱╮[/c] [c=#FF0000]❀[/c][c=#238C00]⊱╮[/c][/b] ');}
+//*********************************************************************************************
 function sym6()
 {IN.sEm(' ✿ ❀ ❁ ✾ ✽ ❃ ');}
 function sym7()
 {IN.sEm(' ♬♪♫ ヾ(*・。・)ﾉ ♬♪♫ ');}
+/*
 function sym8()
 {IN.sEm(' ︻╦̵̵͇̿̿̿̿╤── ');}
+*/
 function sym9()
 {IN.sEm(' ︻┳═一 ');}
 // modificar elemento de los iconos para mostrar los simbolos:
-document.getElementById("EP").innerHTML += ' <tr><td><a style="border:1px solid #000000" onclick="sym1();">♫</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym2();">❤</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym3();">♡</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym4();">❥</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym5();">F</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym6();">✿</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym7();">♪</a></td><td><a style="border:1px solid #000000" onclick="sym8();">☺</a></td><td><a style="border:1px solid #000000" onclick="sym9();">☻</a></td></tr>';
+document.getElementById("EP").innerHTML += ' <tr><td><a style="border:1px solid #000000" onclick="sym1();">♫</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym2();">❤</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym3();">♡</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym4();">❥</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym5();">F1</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym5_2();">F2</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym6();">✿</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym7();">♪</a></td><td><a style="border:1px solid #000000" onclick="sym9();">☺</a></td></tr>';
+
 
 //_fin_de_mmodificar_el_elemento_con_los_iconos.
 

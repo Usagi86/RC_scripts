@@ -186,11 +186,22 @@ function newColor_L10()
 //Fin de nuevos colores.
 
 //+ NUEVA EDICION DE ESTILOS:
-//Fondos:
+
+//Fondos: (antiguo color celeste)
+/*
 document.getElementById("WRP").style.background='rgb(0,0,0)';
 document.getElementsByClassName("pN")[0].style.background = 'rgba(44,175,226,1)';
 document.getElementsByClassName("pN")[1].style.background = 'rgba(44,175,226,0.8)';
 document.getElementsByClassName("pN")[2].style.background = 'rgba(44,175,226,0.8)';
+*/
+//zona grande central:
+document.getElementsByClassName("pN")[0].style = 'background: #5a068b; background-image: url("./gl/glyphs.png!120617083118"); background-position: 0 -97px; background-repeat: repeat-x;';
+//zona de escribir:
+document.getElementsByClassName("pN")[1].style = 'background: #5a068b; background-image: url("./gl/glyphs.png!120617083118"); background-position: 0 -97px; background-repeat: repeat-x;';
+//zona de la lista de usuarios:	
+document.getElementsByClassName("pN")[2].style = 'background: #5a068b; background-image: url("./gl/glyphs.png!120617083118"); background-position: 0 -97px; background-repeat: repeat-x;';
+
+
 
 // PL, PC (lista de participantes):
 document.getElementById("PL").style.color='#FFFFFF';

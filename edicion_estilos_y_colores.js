@@ -195,12 +195,13 @@ document.getElementsByClassName("pN")[1].style.background = 'rgba(44,175,226,0.8
 document.getElementsByClassName("pN")[2].style.background = 'rgba(44,175,226,0.8)';
 */
 //zona grande central:
+/*
 document.getElementsByClassName("pN")[0].style = 'background: #5a068b; background-image: url("https://raw.githubusercontent.com/Usagi86/repo_img/new/clase_em1.png"); background-position: 0 -97px; background-repeat: repeat-x;';
 //zona de escribir:
 document.getElementsByClassName("pN")[1].style = 'background: #5a068b; background-image: url("https://raw.githubusercontent.com/Usagi86/repo_img/new/clase_em1.png"); background-position: 0 -97px; background-repeat: repeat-x;';
 //zona de la lista de usuarios:	
 document.getElementsByClassName("pN")[2].style = 'background: #5a068b; background-image: url("https://raw.githubusercontent.com/Usagi86/repo_img/new/clase_em1.png"); background-position: 0 -97px; background-repeat: repeat-x;';
-
+*/
 
 
 // PL, PC (lista de participantes):

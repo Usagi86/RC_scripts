@@ -108,7 +108,16 @@ nuevoAnclaC.innerHTML = ' C1:<select id="tMC_1" onclick="d_color_1();" style="ba
 function abrirF(){document.getElementById("flores").style.visibility="visible";}
 function cerrarF(){document.getElementById("flores").style.visibility="hidden";}
 function F_1(){IN.set(' [b][c=#FF037F]❀❀[/c][c=#238C00]ಮ[/c][/b] ');}
-
+    function F_2(){IN.set(' [b][c=#FF037F]✿✿[/c][c=#238C00]ಮ[/c][/b] ');}
+    function F_3(){IN.set(' [b][c=#FF037F]✿[/c][c=#238C00]ಮ[/c][/b] ');}
+    function F_4(){IN.set(' [b][c=#B300B3]✿✿[/c][c=#238C00]ಮ[/c][/b] ');}
+    function F_5(){IN.set(' [b][c=#FF99E5]✿✿[/c][c=#238C00]ಮ[/c][/b] ');}
+    function F_6(){IN.set(' [b][c=#FFCD00]✿✿[/c][c=#238C00]ಮ[/c][/b] ');}
+    function F_7(){IN.set(' [b][c=#FF037F]இ[/c][c=#238C00]ڿڰۣ-ڰۣ—[/c][/b] ');}
+    function F_8(){IN.set(' [b][c=#238C00]--------{---([/c][c=#FF037F]@[/c][/b] ');}
+    function F_9(){IN.set(' [b][c=#B300B3]இ[/c][c=#238C00]ڿڰۣ-ڰۣ—[/c][/b] ');}
+    function F_10(){IN.set(' [b][c=#B300B3]❁[/c][c=#238C00]ಮ[/c][/b] ');}
+    
 // funcion para darle color a la eleccion de color que hagamos en el 'select':
 function d_color_1()
 {

@@ -118,8 +118,8 @@ function F_1(){IN.set(' [b][c=#FF037F]❀❀[/c][c=#238C00]ಮ[/c][/b] ');}
     function F_9(){IN.set(' [b][c=#B300B3]இ[/c][c=#238C00]ڿڰۣ-ڰۣ—[/c][/b] ');}
     function F_10(){IN.set(' [b][c=#B300B3]❁[/c][c=#238C00]ಮ[/c][/b] ');}
     	function F_11(){IN.set(' [c=#238C00]█[/c][c=#FFFFFF]█[/c][c=#F12020]█[/c] ');}
-	function F_12(){IN.set(' [c=#238C00]████[/c][c=#FFFFFF]████[/c][c=#F12020]█████[/c] ');}
-	function F_13(){IN.set(' [c=#238C00]████████[/c][c=#FFFFFF]████████[/c][c=#F12020]█████████[/c] ');}
+	function F_12(){IN.set(' [c=#238C00]████[/c][c=#FFFFFF]████[/c][c=#F12020]████[/c] ');}
+	function F_13(){IN.set(' [c=#238C00]████████[/c][c=#FFFFFF]████████[/c][c=#F12020]████████[/c] ');}
 // funcion para darle color a la eleccion de color que hagamos en el 'select':
 function d_color_1()
 {

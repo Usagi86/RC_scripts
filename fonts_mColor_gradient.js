@@ -189,7 +189,10 @@ function pSMas()
 	if (document.getElementById("newFont").value == "_uno")
 	{
 		//here
-		alert("funciona");
+		//alert("funciona");
+		var cambiar = myTe.replace(/a/g, "𝔞").replace(/b/g, "𝔟").replace(/c/g, "𝔠")
+		var r0= cambiar;
+		r4 = r0.replace("<br>", "");
 	}
 	else
 	{

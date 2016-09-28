@@ -190,10 +190,9 @@ function pSMas()
 	if (document.getElementById("newFont").value == "_uno")
 	{
 		//here
-		//alert("funciona");
-		var cambiar = myTe.replace(/a/g, "𝔞").replace(/b/g, "𝔟").replace(/c/g, "𝔠")
-		var r0= cambiar;
-		salidaTexto = r0.replace("<br>", "");
+		salidaTexto = mTexto.replace(/a/g, "𝔞").replace(/b/g, "𝔟").replace(/c/g, "𝔠").replace(/d/g, "𝔡").replace(/e/g, "𝔢").replace(/f/g, "𝔣").replace(/g/g, "𝔤").replace(/h/g, "𝔥").replace(/i/g, "𝔦").replace(/j/g, "𝔧").replace(/k/g, "𝑘").replace(/l/g, "𝔩").replace(/m/g, "𝔪").replace(/n/g, "𝔫").replace(/ñ/g, "ῆ").replace(/o/g, "𝔬").replace(/p/g, "𝔭").replace(/q/g, "𝔮").replace(/r/g, "𝔯").replace(/s/g, "𝔰").replace(/t/g, "𝔱").replace(/u/g, "𝔲").replace(/v/g, "𝔳").replace(/w/g, "𝔴").replace(/x/g, "𝔵").replace(/y/g, "𝑦").replace(/z/g, "𝔷")
+	
+		//el split de más adelante, en la funcion de enviar (a colores) es el que no permite que se envíen las letras.
 	}
 	else
 	{

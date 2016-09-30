@@ -181,7 +181,6 @@ function colPred1()
 	}
 
 // SCRIPT "GENERADOR DE TEXTO con fuente de símbolos y de 2 Colores":
-
 var salidaTexto;
 function pSMas()
 {
@@ -228,21 +227,25 @@ function pSMas()
     else // si i no es par:
     {
     var nt = "<font color=" + tColor2 + ">" + stexto[i] + "</font>";
-    nm += nt
+    nm += nt;
     }
+    var salidaD2Colores = nm.replace("undefined", "");
   }
 
   if ( texto != "" )
   {
     if (document.getElementById('TBB').className == "tbtn")//si no está en negrita:
 	{
-		var nt = nm;
+		var nnt = salidaD2Colores;
 	}
-	else//entonces
+	else//entonces, si lo está:
 	{
-		var nt = "<b>" + nm + "</b>";
+		var nnt = salidaD2Colores ;
+    //console.log(nnt);
 	}
-    var nb = nt.replace("undefined", "");
+	  //tomar el texto completo con la fuente cambiada y con los tags de color agregados:
+    //var nnt = salidaD2Colores;
+    var nb = nnt.replace("undefined", "");
     BL.sendMessage(TB.aT,rcUtil.html2bb(nb));
     IN.CI.document.body.innerHTML="";
     nm="";

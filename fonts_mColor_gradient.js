@@ -202,16 +202,6 @@ function pSMas()
 
 		var rText = myTe.replace(/a/g, n_t[0]).replace(/b/g, n_t[1]).replace(/c/g, n_t[2]).replace(/d/g, n_t[3]).replace(/e/g, n_t[4]).replace(/f/g, n_t[5]).replace(/g/g, n_t[6]).replace(/h/g, n_t[7]).replace(/i/g, n_t[8]).replace(/j/g, n_t[9]).replace(/k/g, n_t[10]).replace(/l/g, n_t[11]).replace(/m/g, n_t[12]).replace(/n/g, n_t[13]).replace(/ñ/g, n_t[14]).replace(/o/g, n_t[15]).replace(/p/g,n_t[16]).replace(/q/g,n_t[17]).replace(/r/g, n_t[18]).replace(/s/g, n_t[19]).replace(/t/g, n_t[20]).replace(/u/g, n_t[21]).replace(/v/g, n_t[22]).replace(/w/g, n_t[23]).replace(/x/g, n_t[24]).replace(/y/g, n_t[25]).replace(/z/g, n_t[26]);
 
-		var negrita0 = ""; var negrita1 = "";
-		if (document.getElementById('TBB').className == "tbtn")//black
-		{
-		negrita0 = ""; negrita1 = "";
-		}
-		else
-		{
-		negrita0 = "[b]"; negrita1 = "[/b]";
-		}
-
 		var r2= rText;
 		//EXCEPCIONES de fuente:
 		// .replace(/&𝔫𝔟𝔰𝔭;/g, " ").replace(/&𝔑𝔟𝔰𝔭;/g, " ").replace(/&𝔑𝔅𝔖𝔓;/g, " ").replace(/&𝓃𝒷𝓈𝓅;/g, " ").replace(/&𝒩𝒷𝓈𝓅;/g, " ").replace(/&𝒩𝐵𝒮𝒫;/g, " ")
@@ -244,7 +234,14 @@ function pSMas()
 
   if ( texto != "" )
   {
-    var nt = "<b>" + nm + "</b>";
+    if (document.getElementById('TBB').className == "tbtn")//si no está en negrita:
+	{
+		var nt = nm;
+	}
+	else//entonces
+	{
+		var nt = "<b>" + nm + "</b>";
+	}
     var nb = nt.replace("undefined", "");
     BL.sendMessage(TB.aT,rcUtil.html2bb(nb));
     IN.CI.document.body.innerHTML="";
@@ -277,7 +274,7 @@ function pGrad()
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // constructor de la funcion para texto con Gradiente:
 
-	var textoG = r4G;// SALIDA DE TEXTO YA CON LOS CARACTERES CAMBIADOS.
+	var textoG = r4G;// SALIDA DE TEXTO YA CON LOS CARACTERES (la fuente) CAMBIADOS.
   
 // lookup table (SCTIOT DE Gradientes)
 var tohex = new Array(256);

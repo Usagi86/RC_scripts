@@ -179,6 +179,7 @@ function colPred1()
 	limpia = 3;
 	document.getElementById("form_colores").style.visibility = "hidden";
 	}
+///////////////////////////////////////////////////////////////////////////////////////////////
 
 // SCRIPT "GENERADOR DE TEXTO con fuente de símbolos y de 2 Colores":
 var salidaTexto;
@@ -237,15 +238,18 @@ function pSMas()
     if (document.getElementById('TBB').className == "tbtn")//si no está en negrita:
 	{
 		var nnt = salidaD2Colores;
+    var salidaF = nnt;
 	}
 	else//entonces, si lo está:
 	{
 		var nnt = salidaD2Colores ;
-    //console.log(nnt);
+    var partir = nnt.slice(84,nnt.length-112)
+    var salidaF = "<b>" + partir + "</b>";
+    console.log(salidaF);
 	}
 	  //tomar el texto completo con la fuente cambiada y con los tags de color agregados:
-    //var nnt = salidaD2Colores;
-    var nb = nnt.replace("undefined", "");
+
+    var nb = salidaF.replace("undefined", "");
     BL.sendMessage(TB.aT,rcUtil.html2bb(nb));
     IN.CI.document.body.innerHTML="";
     nm="";

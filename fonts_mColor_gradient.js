@@ -7,6 +7,7 @@
     con letras normales, como con las letras
     de símbolos.
     // v5
+    // v6 (al 29.30/09/2016)
 ***********************************************/
 
 // Crear div que contendrá una "tabla u form" para elegir los colores para la opcion de gradientes:
@@ -191,7 +192,7 @@ function pSMas()
 	if (document.getElementById("newFont").value == "_uno")
 	{
 		//here
-		salidaTexto = myTe.replace("+", "").replace(/a/g, "𝔞").replace(/b/g, "𝔟").replace(/c/g, "𝔠").replace(/d/g, "𝔡").replace(/e/g, "𝔢").replace(/f/g, "𝔣").replace(/g/g, "𝔤").replace(/h/g, "𝔥").replace(/i/g, "𝔦").replace(/j/g, "𝔧").replace(/k/g, "𝑘").replace(/l/g, "𝔩").replace(/m/g, "𝔪").replace(/n/g, "𝔫").replace(/ñ/g, "ῆ").replace(/o/g, "𝔬").replace(/p/g, "𝔭").replace(/q/g, "𝔮").replace(/r/g, "𝔯").replace(/s/g, "𝔰").replace(/t/g, "𝔱").replace(/u/g, "𝔲").replace(/v/g, "𝔳").replace(/w/g, "𝔴").replace(/x/g, "𝔵").replace(/y/g, "𝑦").replace(/z/g, "𝔷")
+		salidaTexto = myTe.replace("+", "").replace(/a/g, "𝔞").replace(/b/g, "𝔟").replace(/c/g, "𝔠").replace(/d/g, "𝔡").replace(/e/g, "𝔢").replace(/f/g, "𝔣").replace(/g/g, "𝔤").replace(/h/g, "𝔥").replace(/i/g, "𝔦").replace(/j/g, "𝔧").replace(/k/g, "𝑘").replace(/l/g, "𝔩").replace(/m/g, "𝔪").replace(/n/g, "𝔫").replace(/ñ/g, "ῆ").replace(/o/g, "𝔬").replace(/p/g, "𝔭").replace(/q/g, "𝔮").replace(/r/g, "𝔯").replace(/s/g, "𝔰").replace(/t/g, "𝔱").replace(/u/g, "𝔲").replace(/v/g, "𝔳").replace(/w/g, "𝔴").replace(/x/g, "𝔵").replace(/y/g, "𝑦").replace(/z/g, "𝔷").replace(/A/g, "𝔄").replace(/B/g, "𝔅").replace(/C/g, "𝓒").replace(/D/g, "𝔇").replace(/E/g, "𝔈").replace(/F/g, "𝔉").replace(/G/g, "𝔊").replace(/H/g, "𝓗").replace(/I/g, "𝓘").replace(/J/g, "𝔍").replace(/K/g, "𝔎").replace(/L/g, "𝔏").replace(/M/g, "𝔐").replace(/N/g, "𝔑").replace(/N/g, "ῆ").replace(/O/g, "𝔒").replace(/P/g, "𝔓").replace(/Q/g, "𝔔").replace(/R/g, "𝓡").replace(/S/g, "𝔖").replace(/T/g, "𝔗").replace(/U/g, "𝔘").replace(/V/g, "𝔙").replace(/W/g, "𝔚").replace(/X/g, "𝔛").replace(/Y/g, "𝔜").replace(/Z/g, "𝓩");
 		var texto = salidaTexto;
 		var stexto = texto.split(" ");
 
@@ -212,7 +213,6 @@ function pSMas()
 				nm += nt + " ";
 			}
 		var salidaD2Colores = nm.replace("undefined", "").replace(/<𝔟𝔯>/g, "<br>").replace(/&𝔫𝔟𝔰𝔭;/g, "").replace(/<\u2F/g, "</b>");
-      //console.log(salidaD2Colores);
 		}
 
 		if ( texto != "" )
@@ -228,7 +228,7 @@ function pSMas()
 				//var partir = nnt.slice(84,nnt.length-112)
 				//var salidaF = "<b>" + partir + "</b>";
         var salidaF = "<b>" + nnt.replace(/<𝔟>/g, "").replace(/<\u002F𝔟>/g, "") + "</b>";//partir;
-        console.log(salidaF);
+        
 			}
 
 		var nb = salidaF.replace("undefined", "");

@@ -181,6 +181,7 @@ function colPred1()
 	}
 
 // SCRIPT "GENERADOR DE TEXTO con fuente de símbolos y de 2 Colores":
+
 var salidaTexto;
 function pSMas()
 {
@@ -218,33 +219,32 @@ function pSMas()
 		//Excepciones (cada vez que se agrega una fuente agregar su respectiva excepcion a <br>):
 		salidaTexto = r3.replace("[b][/b]", "").replace("<br>", "").replace("<Ᏸᖇ>", "").replace("<ჩΓ>", "").replace("<ßR>", "").replace("<ßŔ>", "").replace("<ᏰᏒ>", "").replace("<вя>", "").replace("<Ᏸᖇ>", "").replace("<ЪЯ>", "").replace("<Յʀ>", "").replace("<8Я>", "").replace("<ⓑⓡ>", "").replace("<br>", "").replace("<ҌЯ>", "").replace("<ᙖᖇ>", "").replace("<ᵇʳ>", "").replace("<bɹ>", "").replace("<Bᴚ>", "").replace("<ҍɾ>", "").replace("<ｂｒ>", "").replace("<ცԄ>", "").replace("<ც२>", "").replace("<ᵇͬ>", "").replace("<Ᏸᖇ>", "").replace("<ʙr>", "").replace("<ℬℛ>", "").replace("<bᏒ>", "").replace("<♭r>", "").replace("<βЯ>", "").replace("<๒г>", "").replace("<ḇṝ>", "");
 	}
-////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////
 // constructor de la funcion para texto multicolor:
-
   var texto = salidaTexto;
   var stexto = texto.split("");
   
   var tColor1 = document.getElementById("tMC_1").value;
   var tColor2 = document.getElementById("tMC_2").value;
-  
+  var nm;
+
   for (var i=0; i<stexto.length; i++)
   {
     if ( i % 2 == 0 )//si el indice(i) es par:
     {
-    var nm;
-    var nn = "[c=" + tColor1 + "]" + stexto[i] + "[/c]";
+    var nn = "<font color=" + tColor1 + ">" + stexto[i] + "</font>";
     nm += nn;
     }
     else // si i no es par:
     {
-    var nt = "[c=" + tColor2 + "]" + stexto[i] + "[/c]";
+    var nt = "<font color=" + tColor2 + ">" + stexto[i] + "</font>";
     nm += nt
     }
   }
 
   if ( texto != "" )
   {
-    var nt = "[b]" + nm + "[/b]";
+    var nt = "<b>" + nm + "</b>";
     var nb = nt.replace("undefined", "");
     BL.sendMessage(TB.aT,rcUtil.html2bb(nb));
     IN.CI.document.body.innerHTML="";

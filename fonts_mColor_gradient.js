@@ -191,9 +191,52 @@ function pSMas()
 	if (document.getElementById("newFont").value == "_uno")
 	{
 		//here
-		salidaTexto = myTe.replace(/a/g, "𝔞").replace(/b/g, "𝔟").replace(/c/g, "𝔠").replace(/d/g, "𝔡").replace(/e/g, "𝔢").replace(/f/g, "𝔣").replace(/g/g, "𝔤").replace(/h/g, "𝔥").replace(/i/g, "𝔦").replace(/j/g, "𝔧").replace(/k/g, "𝑘").replace(/l/g, "𝔩").replace(/m/g, "𝔪").replace(/n/g, "𝔫").replace(/ñ/g, "ῆ").replace(/o/g, "𝔬").replace(/p/g, "𝔭").replace(/q/g, "𝔮").replace(/r/g, "𝔯").replace(/s/g, "𝔰").replace(/t/g, "𝔱").replace(/u/g, "𝔲").replace(/v/g, "𝔳").replace(/w/g, "𝔴").replace(/x/g, "𝔵").replace(/y/g, "𝑦").replace(/z/g, "𝔷")
-	
-		//el split de más adelante, en la funcion de enviar (a colores) es el que no permite que se envíen las letras.
+		salidaTexto = myTe.replace("+", "").replace(/a/g, "𝔞").replace(/b/g, "𝔟").replace(/c/g, "𝔠").replace(/d/g, "𝔡").replace(/e/g, "𝔢").replace(/f/g, "𝔣").replace(/g/g, "𝔤").replace(/h/g, "𝔥").replace(/i/g, "𝔦").replace(/j/g, "𝔧").replace(/k/g, "𝑘").replace(/l/g, "𝔩").replace(/m/g, "𝔪").replace(/n/g, "𝔫").replace(/ñ/g, "ῆ").replace(/o/g, "𝔬").replace(/p/g, "𝔭").replace(/q/g, "𝔮").replace(/r/g, "𝔯").replace(/s/g, "𝔰").replace(/t/g, "𝔱").replace(/u/g, "𝔲").replace(/v/g, "𝔳").replace(/w/g, "𝔴").replace(/x/g, "𝔵").replace(/y/g, "𝑦").replace(/z/g, "𝔷")
+		var texto = salidaTexto;
+		var stexto = texto.split(" ");
+
+		var tColor1 = document.getElementById("tMC_1").value;
+		var tColor2 = document.getElementById("tMC_2").value;
+		var nm;
+
+		for (var i=0; i<stexto.length; i++)
+		{
+			if ( i % 2 == 0 )//si el indice(i) es par:
+			{
+				var nn = "<font color=" + tColor1 + ">" + stexto[i] + "</font>";
+				nm += nn + " ";
+			}
+			else // si i no es par:
+			{
+				var nt = "<font color=" + tColor2 + ">" + stexto[i] + "</font>";
+				nm += nt + " ";
+			}
+		var salidaD2Colores = nm.replace("undefined", "").replace(/<𝔟𝔯>/g, "<br>").replace(/&𝔫𝔟𝔰𝔭;/g, "").replace(/<\u2F/g, "</b>");
+      //console.log(salidaD2Colores);
+		}
+
+		if ( texto != "" )
+		{
+			if (document.getElementById('TBB').className == "tbtn")//si no está en negrita:
+			{
+				var nnt = salidaD2Colores;
+				var salidaF = nnt;
+			}
+			else//entonces, si lo está:
+			{
+				var nnt = salidaD2Colores ;
+				//var partir = nnt.slice(84,nnt.length-112)
+				//var salidaF = "<b>" + partir + "</b>";
+        var salidaF = "<b>" + nnt.replace(/<𝔟>/g, "").replace(/<\u002F𝔟>/g, "") + "</b>";//partir;
+        console.log(salidaF);
+			}
+
+		var nb = salidaF.replace("undefined", "");
+		BL.sendMessage(TB.aT,rcUtil.html2bb(nb));
+		IN.CI.document.body.innerHTML="";
+		nm="";
+		}
+		
 	}
 	else
 	{
@@ -204,61 +247,59 @@ function pSMas()
 
 		var r2= rText;
 		//EXCEPCIONES de fuente:
-		// .replace(/&𝔫𝔟𝔰𝔭;/g, " ").replace(/&𝔑𝔟𝔰𝔭;/g, " ").replace(/&𝔑𝔅𝔖𝔓;/g, " ").replace(/&𝓃𝒷𝓈𝓅;/g, " ").replace(/&𝒩𝒷𝓈𝓅;/g, " ").replace(/&𝒩𝐵𝒮𝒫;/g, " ")
 		r3 = r2.replace("+", "").replace(/&nbsp;/g, " ").replace(/&ՌβϚƿ;/g, " ").replace(/&ภ๒รթ;/g, " ").replace(/&ᾖḇṧῤ;/g, " ").replace(/&ᏁbsᏢ;/g, " ").replace(/&ՌᏰຮᑬ;/g, " ").replace(/&Ǹʙ＄ƿ;/g, " ").replace(/&Ǹʙ＄ƿ;/g, " ").replace(/&ɲℬᏕ℘;/g, " ").replace(/&ո♭Ֆр;/g, " ").replace(/&ᶮᵇᶳᵖ;/g, " ").replace(/&Ոცﻯƿ;/g, " ").replace(/&ṈᏰຮᑬ;/g, " ").replace(/&ⁿᵇˢᵖ;/g, " ").replace(/&иჩჰρ;/g, " ").replace(/&ИßՏP;/g, " ").replace(/&ИßSṖ;/g, " ").replace(/&ᏁᏰᏕᎮ;/g, " ").replace(/&ивѕρ;/g, " ").replace(/&nᏰຮᑬ;/g, " ").replace(/&הЪ૬Ϸ;/g, " ").replace(/&ՌՅՏρ;/g, " ").replace(/&И85P;/g, " ").replace(/&ⓝⓑⓢⓟ;/g, " ").replace(/&ηbSǷ;/g, " ").replace(/&ﾢҌଌϸ;/g, " ").replace(/&ᑎᙖᔕᑭ;/g, " ").replace(/&uqsd;/g, " ").replace(/&nbsd;/g, " ").replace(/&ᴎBSԀ;/g, " ").replace(/&ղҍʂք;/g, " ").replace(/&ｎｂｓｐ;/g, " ").replace(/&ȠცƧק;/g, " ");
 		//Excepciones (cada vez que se agrega una fuente agregar su respectiva excepcion a <br>):
 		salidaTexto = r3.replace("[b][/b]", "").replace("<br>", "").replace("<Ᏸᖇ>", "").replace("<ჩΓ>", "").replace("<ßR>", "").replace("<ßŔ>", "").replace("<ᏰᏒ>", "").replace("<вя>", "").replace("<Ᏸᖇ>", "").replace("<ЪЯ>", "").replace("<Յʀ>", "").replace("<8Я>", "").replace("<ⓑⓡ>", "").replace("<br>", "").replace("<ҌЯ>", "").replace("<ᙖᖇ>", "").replace("<ᵇʳ>", "").replace("<bɹ>", "").replace("<Bᴚ>", "").replace("<ҍɾ>", "").replace("<ｂｒ>", "").replace("<ცԄ>", "").replace("<ც२>", "").replace("<ᵇͬ>", "").replace("<Ᏸᖇ>", "").replace("<ʙr>", "").replace("<ℬℛ>", "").replace("<bᏒ>", "").replace("<♭r>", "").replace("<βЯ>", "").replace("<๒г>", "").replace("<ḇṝ>", "");
-	}
-///////////////////////////////////////////////////
-// constructor de la funcion para texto multicolor:
-  var texto = salidaTexto;
-  var stexto = texto.split("");
+		
+		// Enviar texto ya cambiado cuando la fuente elegida no tiene 2 caracteres en 1:
+		var texto = salidaTexto;
+		var stexto = texto.split("");
   
-  var tColor1 = document.getElementById("tMC_1").value;
-  var tColor2 = document.getElementById("tMC_2").value;
-  var nm;
+		var tColor1 = document.getElementById("tMC_1").value;
+		var tColor2 = document.getElementById("tMC_2").value;
+		var nm;
 
-  for (var i=0; i<stexto.length; i++)
-  {
-    if ( i % 2 == 0 )//si el indice(i) es par:
-    {
-    var nn = "<font color=" + tColor1 + ">" + stexto[i] + "</font>";
-    nm += nn;
-    }
-    else // si i no es par:
-    {
-    var nt = "<font color=" + tColor2 + ">" + stexto[i] + "</font>";
-    nm += nt;
-    }
-    var salidaD2Colores = nm.replace("undefined", "");
-  }
+		for (var i=0; i<stexto.length; i++)
+		{
+			if ( i % 2 == 0 )//si el indice(i) es par:
+			{
+				var nn = "<font color=" + tColor1 + ">" + stexto[i] + "</font>";
+				nm += nn;
+			}
+			else // si i no es par:
+			{
+				var nt = "<font color=" + tColor2 + ">" + stexto[i] + "</font>";
+				nm += nt;
+			}
+		var salidaD2Colores = nm.replace("undefined", "");
+		}
 
-  if ( texto != "" )
-  {
-    if (document.getElementById('TBB').className == "tbtn")//si no está en negrita:
-	{
-		var nnt = salidaD2Colores;
-    var salidaF = nnt;
+		if ( texto != "" )
+		{
+			if (document.getElementById('TBB').className == "tbtn")//si no está en negrita:
+			{
+				var nnt = salidaD2Colores;
+				var salidaF = nnt;
+			}
+			else//entonces, si lo está:
+			{
+				var nnt = salidaD2Colores ;
+				var partir = nnt.slice(84,nnt.length-112)
+				var salidaF = "<b>" + partir + "</b>";
+			}
+
+		var nb = salidaF.replace("undefined", "");
+		BL.sendMessage(TB.aT,rcUtil.html2bb(nb));
+		IN.CI.document.body.innerHTML="";
+		nm="";
+		}
 	}
-	else//entonces, si lo está:
-	{
-		var nnt = salidaD2Colores ;
-    var partir = nnt.slice(84,nnt.length-112)
-    var salidaF = "<b>" + partir + "</b>";
-    console.log(salidaF);
-	}
-	  //tomar el texto completo con la fuente cambiada y con los tags de color agregados:
-
-    var nb = salidaF.replace("undefined", "");
-    BL.sendMessage(TB.aT,rcUtil.html2bb(nb));
-    IN.CI.document.body.innerHTML="";
-    nm="";
-  }
 ////////////////////////////////////////////////////////////////////////////////////////////////
+
 	IN.clear();
 	IN.doFocus();
 }
-//Fin del Generador_de_texto_+_texto_multi_color.
+//Fin del Generador_de_texto_+_texto_multi_color_a_Dos_Colores.
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 // FUNCION PARA TEXTO CON GRADIENTE:

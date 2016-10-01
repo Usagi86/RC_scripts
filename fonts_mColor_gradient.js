@@ -238,6 +238,54 @@ function pSMas()
 		}
 		
 	}
+	if (document.getElementById("newFont").value == "_dos")
+	{
+		//here
+		salidaTexto = myTe.replace("+", "").replace(/a/g, "𝒶").replace(/b/g, "𝒷").replace(/c/g, "𝒸").replace(/d/g, "𝒹").replace(/e/g, "𝑒").replace(/f/g, "𝒻").replace(/g/g, "𝑔").replace(/h/g, "𝒽").replace(/i/g, "𝒾").replace(/j/g, "𝒿").replace(/k/g, "𝓀").replace(/l/g, "𝓁").replace(/m/g, "𝓂").replace(/n/g, "𝓃").replace(/ñ/g, "ῆ").replace(/o/g, "𝑜").replace(/p/g, "𝓅").replace(/q/g, "𝓆").replace(/r/g, "𝓇").replace(/s/g, "𝓈").replace(/t/g, "𝓉").replace(/u/g, "𝓊").replace(/v/g, "𝓋").replace(/w/g, "𝓌").replace(/x/g, "𝓍").replace(/y/g, "𝓎").replace(/z/g, "𝓏").replace(/A/g, "𝔄").replace(/B/g, "𝔅").replace(/C/g, "𝓒").replace(/D/g, "𝔇").replace(/E/g, "𝔈").replace(/F/g, "𝔉").replace(/G/g, "𝔊").replace(/H/g, "𝓗").replace(/I/g, "𝓘").replace(/J/g, "𝔍").replace(/K/g, "𝔎").replace(/L/g, "𝔏").replace(/M/g, "𝔐").replace(/N/g, "𝔑").replace(/N/g, "ῆ").replace(/O/g, "𝔒").replace(/P/g, "𝔓").replace(/Q/g, "𝔔").replace(/R/g, "𝓡").replace(/S/g, "𝔖").replace(/T/g, "𝔗").replace(/U/g, "𝔘").replace(/V/g, "𝔙").replace(/W/g, "𝔚").replace(/X/g, "𝔛").replace(/Y/g, "𝔜").replace(/Z/g, "𝓩");
+		var texto = salidaTexto;
+		var stexto = texto.split(" ");
+
+		var tColor1 = document.getElementById("tMC_1").value;
+		var tColor2 = document.getElementById("tMC_2").value;
+		var nm;
+
+		for (var i=0; i<stexto.length; i++)
+		{
+			if ( i % 2 == 0 )//si el indice(i) es par:
+			{
+				var nn = "<font color=" + tColor1 + ">" + stexto[i] + "</font>";
+				nm += nn + " ";
+			}
+			else // si i no es par:
+			{
+				var nt = "<font color=" + tColor2 + ">" + stexto[i] + "</font>";
+				nm += nt + " ";
+			}
+		var salidaD2Colores = nm.replace("undefined", "").replace(/<𝔟𝔯>/g, "<br>").replace(/&𝔫𝔟𝔰𝔭;/g, "").replace(/<\u2F/g, "</b>");
+		}
+
+		if ( texto != "" )
+		{
+			if (document.getElementById('TBB').className == "tbtn")//si no está en negrita:
+			{
+				var nnt = salidaD2Colores;
+				var salidaF = nnt;
+			}
+			else//entonces, si lo está:
+			{
+				var nnt = salidaD2Colores ;
+				//var partir = nnt.slice(84,nnt.length-112)
+				//var salidaF = "<b>" + partir + "</b>";
+        var salidaF = "<b>" + nnt.replace(/<𝔟>/g, "").replace(/<\u002F𝔟>/g, "") + "</b>";//partir;
+        
+			}
+
+		var nb = salidaF.replace("undefined", "");
+		BL.sendMessage(TB.aT,rcUtil.html2bb(nb));
+		IN.CI.document.body.innerHTML="";
+		nm="";
+		}
+	
 	else
 	{
 		var nn = document.getElementById("newFont").value
@@ -298,6 +346,7 @@ function pSMas()
 
 	IN.clear();
 	IN.doFocus();
+	}
 }
 //Fin del Generador_de_texto_+_texto_multi_color_a_Dos_Colores.
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//

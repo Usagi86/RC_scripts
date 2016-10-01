@@ -191,7 +191,6 @@ function pSMas()
   //funcion para las demas fuentes:
   function fuentes(a)//donde a será la string de letras.
 {
-
 		var nuevasFuentes = a;
 		n_t = nuevasFuentes.split("");
 		var rText = myTe.replace(/a/g, n_t[0]).replace(/b/g, n_t[1]).replace(/c/g, n_t[2]).replace(/d/g, n_t[3]).replace(/e/g, n_t[4]).replace(/f/g, n_t[5]).replace(/g/g, n_t[6]).replace(/h/g, n_t[7]).replace(/i/g, n_t[8]).replace(/j/g, n_t[9]).replace(/k/g, n_t[10]).replace(/l/g, n_t[11]).replace(/m/g, n_t[12]).replace(/n/g, n_t[13]).replace(/ñ/g, n_t[14]).replace(/o/g, n_t[15]).replace(/p/g,n_t[16]).replace(/q/g,n_t[17]).replace(/r/g, n_t[18]).replace(/s/g, n_t[19]).replace(/t/g, n_t[20]).replace(/u/g, n_t[21]).replace(/v/g, n_t[22]).replace(/w/g, n_t[23]).replace(/x/g, n_t[24]).replace(/y/g, n_t[25]).replace(/z/g, n_t[26]).replace(/A/g, n_t[27]).replace(/B/g, n_t[28]).replace(/C/g, n_t[29]).replace(/D/g, n_t[30]).replace(/E/g, n_t[31]).replace(/F/g, n_t[32]).replace(/G/g, n_t[33]).replace(/H/g, n_t[34]).replace(/I/g, n_t[35]).replace(/J/g, n_t[36]).replace(/K/g, n_t[37]).replace(/L/g, n_t[38]).replace(/M/g, n_t[39]).replace(/N/g, n_t[40]).replace(/Ñ/g, n_t[41]).replace(/O/g, n_t[42]).replace(/P/g, n_t[43]).replace(/Q/g, n_t[44]).replace(/R/g, n_t[45]).replace(/S/g, n_t[46]).replace(/T/g, n_t[47]).replace(/U/g, n_t[48]).replace(/V/g, n_t[49]).replace(/W/g, n_t[50]).replace(/X/g, n_t[51]).replace(/Y/g, n_t[52]).replace(/Z/g, n_t[53]);
@@ -274,7 +273,6 @@ function pSMas()
 				nm += nt + " ";
 			}
 		var salidaD2Colores = nm.replace("undefined", "").replace(/&𝔫𝔟𝔰𝔭;/g, "")//.replace(/<𝔟𝔯>/g, "<br>").replace(/<\u2F/g, "</b>");
-		console.log(salidaD2Colores)
 		}
 
 		if ( texto != "" )
@@ -341,90 +339,91 @@ function pSMas()
 		}
 	break;
 	case "_cero":
-      fuentes("abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      			fuentes("abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_tres":
+			fuentes("ᾀᏰᏨᕍ⁅ᖴgᏲḭʝḳ℄ḾṈῆṎᑬQᖇຮtᙈעᏔჯẙẔABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_cuatro":
-      fuentes("მჩეძპfცhἶქκlოиῆᎤρგΓჰtυ√wჯყzABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      			fuentes("მჩეძპfცhἶქκlოиῆᎤρგΓჰtυ√wჯყzABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_cinco":
-      fuentes("ÂßĈÐЄŦǤĦĪʖҚĿ♏ИῆØPҨRՏ†ЦVЩX￥ẔABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+     			 fuentes("ÂßĈÐЄŦǤĦĪʖҚĿ♏ИῆØPҨRՏ†ЦVЩX￥ẔABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_seis":
-      fuentes("ΛßƇDƐFƓĤĪĴҠĿMИῆ♡ṖҨŔSƬƱѴѠӾYZABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+     			 fuentes("ΛßƇDƐFƓĤĪĴҠĿMИῆ♡ṖҨŔSƬƱѴѠӾYZABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_siete":
-      fuentes("ᏗᏰՇᎴᏋƒĢᏂᎥᏠᏦᏝᎷᏁῆᎧᎮᎤᏒᏕᏖᏬᏉᏇጀᎩፚABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      			fuentes("ᏗᏰՇᎴᏋƒĢᏂᎥᏠᏦᏝᎷᏁῆᎧᎮᎤᏒᏕᏖᏬᏉᏇጀᎩፚABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_ocho":
-      fuentes("αвς∂εƒցнɪĵƙℓɱиῆσρףяѕтƲνωχϓՀABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      			fuentes("αвς∂εƒցнɪĵƙℓɱиῆσρףяѕтƲνωχϓՀABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_nueve":
-      fuentes("ᎯᏰᏨᕍḕᖴgᏲḭǰḳl๓nῆ๏ᑬqᖇຮtᙈvᏔჯẙẔABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      			fuentes("ᎯᏰᏨᕍḕᖴgᏲḭǰḳl๓nῆ๏ᑬqᖇຮtᙈvᏔჯẙẔABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_diez":
-      fuentes("નЪ૮ԁ૯ԲցસіڙқԼறהῆଇϷ૧Я૬ҬμνயϰϓｚABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      			fuentes("નЪ૮ԁ૯ԲցસіڙқԼறהῆଇϷ૧Я૬ҬμνயϰϓｚABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_once":
-      fuentes("ԹՅՇԺƐԲցɧᎥʝƙℓʍՌῆʘρφʀՏԵՄעաχՎʑABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      			fuentes("ԹՅՇԺƐԲցɧᎥʝƙℓʍՌῆʘρφʀՏԵՄעաχՎʑABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_doce":
-      fuentes("48CD3F6HIJK1MИÑ0PQЯ57UVWXY248CD3F6HIJKLMNÑ0PQR57UVWXYZ");
+      			fuentes("48CD3F6HIJK1MИÑ0PQЯ57UVWXY248CD3F6HIJKLMNÑ0PQR57UVWXYZ");
 	break;
 	  case "_trece":
-      fuentes("ⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝñⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      			fuentes("ⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝñⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_cato":
-      fuentes("ªb¢ÞÈF૬ɧÎjΚĻмηῆ◊ǷƍrS⊥µ√w×ýzABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      			fuentes("ªb¢ÞÈF૬ɧÎjΚĻмηῆ◊ǷƍrS⊥µ√w×ýzABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_quince":
-      fuentes("ΔҌﾧdﾼԲɢￃΙۆӃﾤϺﾢῆﾷϸϘЯଌȚȗѵ￦ҲעŻABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      			fuentes("ΔҌﾧdﾼԲɢￃΙۆӃﾤϺﾢῆﾷϸϘЯଌȚȗѵ￦ҲעŻABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_dseis":
-      fuentes("ᗩᙖᙅᗪᙓᖴᘜᕼIᒍKᒪᙏᑎῆOᑭᑫᖇᔕTᙀᐯᙎ᙭YᘔABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      			fuentes("ᗩᙖᙅᗪᙓᖴᘜᕼIᒍKᒪᙏᑎῆOᑭᑫᖇᔕTᙀᐯᙎ᙭YᘔABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_dsiete":
-      fuentes("ᵃᵇᶜᵈᵉᶠᵍʰᶤʲᵏˡᵐⁿῆᵒᵖᵠʳˢᵗᵘᵛʷˣʸᶻABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      			fuentes("ᵃᵇᶜᵈᵉᶠᵍʰᶤʲᵏˡᵐⁿῆᵒᵖᵠʳˢᵗᵘᵛʷˣʸᶻABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_docho":
-      fuentes("ɐqɔpǝɟɓɥıſʞlɯuñodbɹsʇnʌʍxʎzABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      			fuentes("ɐqɔpǝɟɓɥıſʞlɯuñodbɹsʇnʌʍxʎzABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_dnueve":
-      fuentes("∀BɔDƎℲGHIſʞlWᴎñOԀQᴚS⊥∩ᴧMXʎZABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      			fuentes("∀BɔDƎℲGHIſʞlWᴎñOԀQᴚS⊥∩ᴧMXʎZABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_veinte":
-      fuentes("ąҍçժҽƒցհìʝҟӀʍղῆ✿քզɾʂէմѵա×վՀABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      			fuentes("ąҍçժҽƒցհìʝҟӀʍղῆ✿քզɾʂէմѵա×վՀABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_vuno":
-      fuentes("ａｂｃｄｅｆｇｈｉｊｋｌｍｎñｏｐｑｒｓｔｕｖｗｘｙｚABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      			fuentes("ａｂｃｄｅｆｇｈｉｊｋｌｍｎñｏｐｑｒｓｔｕｖｗｘｙｚABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_vdos":
-      fuentes("ᕱცᕳᗬӬ∮ʛஅɪلɮᄂ♏ȠňФקϤԄƧてʊᏉʬϪץʑABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      			fuentes("ᕱცᕳᗬӬ∮ʛஅɪلɮᄂ♏ȠňФקϤԄƧてʊᏉʬϪץʑABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_vtres":
-      fuentes("ąც८ძ૯ʄ૭ҺɿڽқℓɱՈῆరƿҩ२ﻯ੮υ౮ω૪ყζABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      			fuentes("ąც८ძ૯ʄ૭ҺɿڽқℓɱՈῆరƿҩ२ﻯ੮υ౮ω૪ყζABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_vcuatro":
-      fuentes("ₐᵇᵓᵈₑᶠᵍʰᵢᶨᵏᶫᶬᶮῆₒᵖᵩͬᶳᵗᵤᵛᵚ×ᵧᶼABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      			fuentes("ₐᵇᵓᵈₑᶠᵍʰᵢᶨᵏᶫᶬᶮῆₒᵖᵩͬᶳᵗᵤᵛᵚ×ᵧᶼABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_vcinco":
-      fuentes("ᾀᏰᏨᕍ⁅ᖴgᏲḭᏧḳ℄๓ՌñṎᑬQᖇຮtᙈvᏔჯẙẔABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      			fuentes("ᾀᏰᏨᕍ⁅ᖴgᏲḭᏧḳ℄๓ՌñṎᑬQᖇຮtᙈvᏔჯẙẔABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_vseis":
-      fuentes("Aʙඋd㉫ƒＧħÏﻝĸし๓Ǹñ✿ƿqr＄†µvŴxƴzABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      			fuentes("Aʙඋd㉫ƒＧħÏﻝĸし๓Ǹñ✿ƿqr＄†µvŴxƴzABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_vsiete":
-      fuentes("ᎪbᏟᎠᎬfᎶhᎥjᏦᏞmᏁñᎾᏢqᏒsᏆuᏉᎳxᎽᏃABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      			fuentes("ᎪbᏟᎠᎬfᎶhᎥjᏦᏞmᏁñᎾᏢqᏒsᏆuᏉᎳxᎽᏃABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_vocho":
-      fuentes("Ⱥβ↻DƐƑƓǶįلҠL♏ՌῆoƿףЯϚTԱVచჯӋʑABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      			fuentes("Ⱥβ↻DƐƑƓǶįلҠL♏ՌῆoƿףЯϚTԱVచჯӋʑABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_vnueve":
-      fuentes("ค๒ς๔єŦɠђเןкl๓ภÑ๏թợгรtยvฬxץzABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      			fuentes("ค๒ς๔єŦɠђเןкl๓ภÑ๏թợгรtยvฬxץzABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_treinta":
-      fuentes("ᾆḇḉḓễḟḡḧἷjḵḺḿᾖῇỠῤǬṝṧṯῠṽᾧẍỹẐABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      			fuentes("ᾆḇḉḓễḟḡḧἷjḵḺḿᾖῇỠῤǬṝṧṯῠṽᾧẍỹẐABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	}
 ////////////////////////////////////////////////////////////////////////////////////////////////

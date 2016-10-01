@@ -632,7 +632,7 @@ elemento.addEventListener( "keyup", function()
 		// aqui se ejecuta la (las) funcion (es) propiamente:
 		if ( document.getElementById("c_btn").innerHTML == "Modo1" )
 		{
-		pGrad();
+		//pGrad();
 		}
 		else
 		{

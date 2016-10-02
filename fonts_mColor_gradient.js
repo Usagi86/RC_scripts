@@ -149,7 +149,7 @@ var padreT = anclaExistenteT.parentNode;
 var nuevoHijoT1 = padreT.insertBefore(nuevaAnclaT1, anclaExistenteT);
 
 // Parte del html con los nuevos símbolos:
-nuevaAnclaT1.innerHTML = ' Letras: <select id="newFont"><option value="_cero">abc</option><option value="_uno">𝔞𝔟𝔠𝔄𝔅𝓒</option><option value="_dos">𝒶𝒷𝒸𝒜𝐵𝒞</option><option value="_tres">ᾀᏰᏨ</option><option value="_cuatro">მჩე</option><option value="_cinco">ÂßĈ</option><option value="_seis">ΛßƇ♡</option><option value="_siete">ᏗᏰՇ</option><option value="_ocho">αвς</option><option value="_nueve">ᎯᏰᏨ</option><option value="_diez">નЪ૮</option><option value="_once">ԹՅՇ</option><option value="_doce">48C</option><option value="_trece">ⓐⓑⓒ</option><option value="_cato">ªb¢</option><option value="_quince">ΔҌﾧ</option><option value="_dseis">ᗩᙖᙅ</option><option value="_dsiete">ᵃᵇᶜ</option><option value="_docho">ɐqɔ</option><option value="_dnueve">∀Bɔ</option><option value="_veinte">ąҍç</option><option value="_vuno">ａｂｃ</option><option value="_vdos">ᕱცᕳ</option><option value="_vtres">ąც८</option><option value="_vcuatro" title="ₐᵇᵓᵈₑᶠᵍʰᵢᶨᵏᶫᶬᶮῆₒᵖᵩͬᶳᵗᵤᵛᵚ×ᵧᶼ">ₐᵇᵓ</option><option value="_vcinco">ᾀᏰᏨ</option><option value="_vseis">Aʙඋ</option><option value="_vsiete">ᎪbᏟ</option><option value="_vocho">Ⱥβ↻</option><option value="_vnueve">ค๒ς</option><option value="_treinta">ᾆḇḉ</option></select> <button id="c_btn" onmouseup="cambiar_modo()">Modo1</button> <button id="mostForm" onclick="funcMCol()">Colores</button>';
+nuevaAnclaT1.innerHTML = ' Letras: <select id="newFont" ><option value="_cero" onmouseup="IN.doFocus();">abc</option><option value="_uno" onmouseup="IN.doFocus();">𝔞𝔟𝔠𝔄𝔅𝓒</option><option value="_dos" onmouseup="IN.doFocus();">𝒶𝒷𝒸𝒜𝐵𝒞</option><option value="_tres" onmouseup="IN.doFocus();">ᾀᏰᏨ</option><option value="_cuatro" onmouseup="IN.doFocus();">მჩე</option><option value="_cinco" onmouseup="IN.doFocus();">ÂßĈ</option><option value="_seis" onmouseup="IN.doFocus();">ΛßƇ♡</option><option value="_siete" onmouseup="IN.doFocus();">ᏗᏰՇ</option><option value="_ocho" onmouseup="IN.doFocus();">αвς</option><option value="_nueve" onmouseup="IN.doFocus();">ᎯᏰᏨ</option><option value="_diez" onmouseup="IN.doFocus();">નЪ૮</option><option value="_once" onmouseup="IN.doFocus();">ԹՅՇ</option><option value="_doce" onmouseup="IN.doFocus();">48C</option><option value="_trece" onmouseup="IN.doFocus();">ⓐⓑⓒ</option><option value="_cato" onmouseup="IN.doFocus();">ªb¢</option><option value="_quince" onmouseup="IN.doFocus();">ΔҌﾧ</option><option value="_dseis" onmouseup="IN.doFocus();">ᗩᙖᙅ</option><option value="_dsiete" onmouseup="IN.doFocus();">ᵃᵇᶜ</option><option value="_docho" onmouseup="IN.doFocus();">ɐqɔ</option><option value="_dnueve" onmouseup="IN.doFocus();">∀Bɔ</option><option value="_veinte" onmouseup="IN.doFocus();">ąҍç</option><option value="_vuno" onmouseup="IN.doFocus();">ａｂｃ</option><option value="_vdos" onmouseup="IN.doFocus();">ᕱცᕳ</option><option value="_vtres" onmouseup="IN.doFocus();">ąც८</option><option value="_vcuatro" onmouseup="IN.doFocus();" title="ₐᵇᵓᵈₑᶠᵍʰᵢᶨᵏᶫᶬᶮῆₒᵖᵩͬᶳᵗᵤᵛᵚ×ᵧᶼ">ₐᵇᵓ</option><option value="_vcinco" onmouseup="IN.doFocus();">ᾀᏰᏨ</option><option value="_vseis" onmouseup="IN.doFocus();">Aʙඋ</option><option value="_vsiete" onmouseup="IN.doFocus();">ᎪbᏟ</option><option value="_vocho" onmouseup="IN.doFocus();">Ⱥβ↻</option><option value="_vnueve" onmouseup="IN.doFocus();">ค๒ς</option><option value="_treinta" onmouseup="IN.doFocus();">ᾆḇḉ</option></select> <button id="c_btn" onmouseup="cambiar_modo(); IN.doFocus();">Modo1</button> <button id="mostForm" onclick="funcMCol()">Colores</button>';
 //abre pag:
 function abrirPag()
 {
@@ -187,7 +187,8 @@ var salidaTexto;
 function pSMas()
 {
   myTe = CI.window.document.getElementById("B").innerHTML;//debe ir dentro de la funcion.
-    
+
+  
   //funcion para las demas fuentes:
   function fuentes(a)//donde a será la string de letras.
 {
@@ -199,12 +200,12 @@ function pSMas()
 		//EXCEPCIONES de fuente:
 		r3 = r2.replace("+", "").replace(/&nbsp;/g, " ").replace(/&ՌβϚƿ;/g, " ").replace(/&ภ๒รթ;/g, " ").replace(/&ᾖḇṧῤ;/g, " ").replace(/&ᏁbsᏢ;/g, " ").replace(/&ՌᏰຮᑬ;/g, " ").replace(/&Ǹʙ＄ƿ;/g, " ").replace(/&Ǹʙ＄ƿ;/g, " ").replace(/&ɲℬᏕ℘;/g, " ").replace(/&ո♭Ֆр;/g, " ").replace(/&ᶮᵇᶳᵖ;/g, " ").replace(/&Ոცﻯƿ;/g, " ").replace(/&ṈᏰຮᑬ;/g, " ").replace(/&ⁿᵇˢᵖ;/g, " ").replace(/&иჩჰρ;/g, " ").replace(/&ИßՏP;/g, " ").replace(/&ИßSṖ;/g, " ").replace(/&ᏁᏰᏕᎮ;/g, " ").replace(/&ивѕρ;/g, " ").replace(/&nᏰຮᑬ;/g, " ").replace(/&הЪ૬Ϸ;/g, " ").replace(/&ՌՅՏρ;/g, " ").replace(/&И85P;/g, " ").replace(/&ⓝⓑⓢⓟ;/g, " ").replace(/&ηbSǷ;/g, " ").replace(/&ﾢҌଌϸ;/g, " ").replace(/&ᑎᙖᔕᑭ;/g, " ").replace(/&uqsd;/g, " ").replace(/&nbsd;/g, " ").replace(/&ᴎBSԀ;/g, " ").replace(/&ղҍʂք;/g, " ").replace(/&ｎｂｓｐ;/g, " ").replace(/&ȠცƧק;/g, " ");
 		//Excepciones:
-		salidaTexto = r3.replace("[b][/b]", "").replace("<br>", "").replace("<Ᏸᖇ>", "").replace("<ჩΓ>", "").replace("<ßR>", "").replace("<ßŔ>", "").replace("<ᏰᏒ>", "").replace("<вя>", "").replace("<Ᏸᖇ>", "").replace("<ЪЯ>", "").replace("<Յʀ>", "").replace("<8Я>", "").replace("<ⓑⓡ>", "").replace("<br>", "").replace("<ҌЯ>", "").replace("<ᙖᖇ>", "").replace("<ᵇʳ>", "").replace("<bɹ>", "").replace("<Bᴚ>", "").replace("<ҍɾ>", "").replace("<ｂｒ>", "").replace("<ცԄ>", "").replace("<ც२>", "").replace("<ᵇͬ>", "").replace("<Ᏸᖇ>", "").replace("<ʙr>", "").replace("<ℬℛ>", "").replace("<bᏒ>", "").replace("<♭r>", "").replace("<βЯ>", "").replace("<๒г>", "").replace("<ḇṝ>", "");
+		salidaTexto = r3.replace(/<Ᏸᖇ>|<ჩΓ>|<ßR>|<ßŔ>|<ᏰᏒ>|<вя>|<ЪЯ>|<Յʀ>|<8Я>|<ⓑⓡ>|<br>|<ҌЯ>|<ᙖᖇ>|<ᵇʳ>|<bɹ>|<Bᴚ>|<ҍɾ>|<ｂｒ>|<ცԄ>|<ʙr>|<ℬℛ>|<bᏒ>|<♭r>|<βЯ>|<๒г>|<ḇṝ>|<ც२>/, "");
 		
 		// Enviar texto ya cambiado cuando la fuente elegida no tiene 2 caracteres en 1:
-		var texto = salidaTexto;
+		var texto = salidaTexto.replace(/<Ᏸ>|<ჩ>|<ß>|<ß>|<Ᏸ>|<в>|<Ъ>|<Յ>|<8>|<ⓑ>|<Ҍ>|<ᙖ>|<ᵇ>|<q>|<B>|<ҍ>|<ｂ>|<ც>|<ʙ>|<β>|<๒>|<ḇ>/, "<b>").replace(/<\u002FᏰ>|<\u002Fჩ>|<\u002Fß>|<\u002Fß>|<\u002FᏰ>|<\u002Fв>|<\u002FЪ>|<\u002FՅ>|<\u002F8>|<\u002Fⓑ>|<\u002FҌ>|<\u002Fᙖ>|<\u002Fᵇ>|<\u002Fq>|<\u002FB>|<\u002Fҍ>|<\u002Fｂ>|<\u002Fც>|<\u002Fʙ>|<\u002Fβ>|<\u002F๒>|<\u002Fḇ>/, "</b>");
 		var stexto = texto.split("");
-  
+		
 		var tColor1 = document.getElementById("tMC_1").value;
 		var tColor2 = document.getElementById("tMC_2").value;
 		var nm;
@@ -297,7 +298,7 @@ function pSMas()
 	break;
 	case "_dos":
 		//here
-		salidaTexto = myTe.replace("+", "").replace(/a/g, "𝒶").replace(/b/g, "𝒷").replace(/c/g, "𝒸").replace(/d/g, "𝒹").replace(/e/g, "𝑒").replace(/f/g, "𝒻").replace(/g/g, "𝑔").replace(/h/g, "𝒽").replace(/i/g, "𝒾").replace(/j/g, "𝒿").replace(/k/g, "𝓀").replace(/l/g, "𝓁").replace(/m/g, "𝓂").replace(/n/g, "𝓃").replace(/ñ/g, "ῆ").replace(/o/g, "𝑜").replace(/p/g, "𝓅").replace(/q/g, "𝓆").replace(/r/g, "𝓇").replace(/s/g, "𝓈").replace(/t/g, "𝓉").replace(/u/g, "𝓊").replace(/v/g, "𝓋").replace(/w/g, "𝓌").replace(/x/g, "𝓍").replace(/y/g, "𝓎").replace(/z/g, "𝓏").replace(/A/g, "𝒜").replace(/B/g, "𝐵").replace(/C/g, "𝒞").replace(/D/g, "𝒟").replace(/E/g, "𝐸").replace(/F/g, "𝐹").replace(/G/g, "𝒢").replace(/H/g, "𝐻").replace(/I/g, "𝐼").replace(/J/g, "𝒥").replace(/K/g, "𝒦").replace(/L/g, "𝐿").replace(/M/g, "𝑀").replace(/N/g, "𝒩").replace(/N/g, "ῆ").replace(/O/g, "𝒪").replace(/P/g, "𝒫").replace(/Q/g, "𝒬").replace(/R/g, "𝑅").replace(/S/g, "𝒮").replace(/T/g, "𝒯").replace(/U/g, "𝒰").replace(/V/g, "𝒱").replace(/W/g, "𝒲").replace(/X/g, "𝒳").replace(/Y/g, "𝒴").replace(/Z/g, "𝒵");
+		salidaTexto = myTe.replace("+", "").replace(/a/g, "𝒶").replace(/b/g, "𝒷").replace(/c/g, "𝒸").replace(/d/g, "𝒹").replace(/e/g, "𝑒").replace(/f/g, "𝒻").replace(/g/g, "𝑔").replace(/h/g, "𝒽").replace(/i/g, "𝒾").replace(/j/g, "𝒿").replace(/k/g, "𝓀").replace(/l/g, "𝓁").replace(/m/g, "𝓂").replace(/n/g, "𝓃").replace(/ñ/g, "ῆ").replace(/o/g, "𝑜").replace(/p/g, "𝓅").replace(/q/g, "𝓆").replace(/r/g, "𝓇").replace(/s/g, "𝓈").replace(/t/g, "𝓉").replace(/u/g, "𝓊").replace(/v/g, "𝓋").replace(/w/g, "𝓌").replace(/x/g, "𝓍").replace(/y/g, "𝓎").replace(/z/g, "𝓏").replace(/A/g, "𝔄").replace(/B/g, "𝔅").replace(/C/g, "𝓒").replace(/D/g, "𝔇").replace(/E/g, "𝔈").replace(/F/g, "𝔉").replace(/G/g, "𝔊").replace(/H/g, "𝓗").replace(/I/g, "𝓘").replace(/J/g, "𝔍").replace(/K/g, "𝔎").replace(/L/g, "𝔏").replace(/M/g, "𝔐").replace(/N/g, "𝔑").replace(/N/g, "ῆ").replace(/O/g, "𝔒").replace(/P/g, "𝔓").replace(/Q/g, "𝔔").replace(/R/g, "𝓡").replace(/S/g, "𝔖").replace(/T/g, "𝔗").replace(/U/g, "𝔘").replace(/V/g, "𝔙").replace(/W/g, "𝔚").replace(/X/g, "𝔛").replace(/Y/g, "𝔜").replace(/Z/g, "𝓩");
 		var texto = salidaTexto.replace("<𝒷𝓇>", "").replace(/&𝓃𝒷𝓈𝓅;/g, "");;
 		var stexto = texto.split(" ");
 
@@ -339,94 +340,95 @@ function pSMas()
 		}
 	break;
 	case "_cero":
-      			fuentes("abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      fuentes("abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_tres":
-			fuentes("ᾀᏰᏨᕍ⁅ᖴgᏲḭʝḳ℄ḾṈῆṎᑬQᖇຮtᙈעᏔჯẙẔABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+	  fuentes("ᾀᏰᏨᕍ⁅ᖴgᏲḭʝḳ℄ḾṈῆṎᑬQᖇຮtᙈעᏔჯẙẔABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_cuatro":
-      			fuentes("მჩეძპfცhἶქκlოиῆᎤρგΓჰtυ√wჯყzABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      fuentes("მჩეძპfცhἶქκlოиῆᎤρგΓჰtυ√wჯყzABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_cinco":
-     			 fuentes("ÂßĈÐЄŦǤĦĪʖҚĿ♏ИῆØPҨRՏ†ЦVЩX￥ẔABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      fuentes("ÂßĈÐЄŦǤĦĪʖҚĿ♏ИῆØPҨRՏ†ЦVЩX￥ẔABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_seis":
-     			 fuentes("ΛßƇDƐFƓĤĪĴҠĿMИῆ♡ṖҨŔSƬƱѴѠӾYZABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      fuentes("ΛßƇDƐFƓĤĪĴҠĿMИῆ♡ṖҨŔSƬƱѴѠӾYZABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_siete":
-      			fuentes("ᏗᏰՇᎴᏋƒĢᏂᎥᏠᏦᏝᎷᏁῆᎧᎮᎤᏒᏕᏖᏬᏉᏇጀᎩፚABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      fuentes("ᏗᏰՇᎴᏋƒĢᏂᎥᏠᏦᏝᎷᏁῆᎧᎮᎤᏒᏕᏖᏬᏉᏇጀᎩፚABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_ocho":
-      			fuentes("αвς∂εƒցнɪĵƙℓɱиῆσρףяѕтƲνωχϓՀABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      fuentes("αвς∂εƒցнɪĵƙℓɱиῆσρףяѕтƲνωχϓՀABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_nueve":
-      			fuentes("ᎯᏰᏨᕍḕᖴgᏲḭǰḳl๓nῆ๏ᑬqᖇຮtᙈvᏔჯẙẔABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      fuentes("ᎯᏰᏨᕍḕᖴgᏲḭǰḳl๓nῆ๏ᑬqᖇຮtᙈvᏔჯẙẔABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_diez":
-      			fuentes("નЪ૮ԁ૯ԲցસіڙқԼறהῆଇϷ૧Я૬ҬμνயϰϓｚABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      fuentes("નЪ૮ԁ૯ԲցસіڙқԼறהῆଇϷ૧Я૬ҬμνயϰϓｚABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_once":
-      			fuentes("ԹՅՇԺƐԲցɧᎥʝƙℓʍՌῆʘρφʀՏԵՄעաχՎʑABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      fuentes("ԹՅՇԺƐԲցɧᎥʝƙℓʍՌῆʘρφʀՏԵՄעաχՎʑABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_doce":
-      			fuentes("48CD3F6HIJK1MИÑ0PQЯ57UVWXY248CD3F6HIJKLMNÑ0PQR57UVWXYZ");
+      fuentes("48CD3F6HIJK1MИÑ0PQЯ57UVWXY248CD3F6HIJKLMNÑ0PQR57UVWXYZ");
 	break;
 	  case "_trece":
-      			fuentes("ⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝñⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      fuentes("ⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝñⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_cato":
-      			fuentes("ªb¢ÞÈF૬ɧÎjΚĻмηῆ◊ǷƍrS⊥µ√w×ýzABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      fuentes("ªb¢ÞÈF૬ɧÎjΚĻмηῆ◊ǷƍrS⊥µ√w×ýzABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_quince":
-      			fuentes("ΔҌﾧdﾼԲɢￃΙۆӃﾤϺﾢῆﾷϸϘЯଌȚȗѵ￦ҲעŻABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      fuentes("ΔҌﾧdﾼԲɢￃΙۆӃﾤϺﾢῆﾷϸϘЯଌȚȗѵ￦ҲעŻABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_dseis":
-      			fuentes("ᗩᙖᙅᗪᙓᖴᘜᕼIᒍKᒪᙏᑎῆOᑭᑫᖇᔕTᙀᐯᙎ᙭YᘔABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      fuentes("ᗩᙖᙅᗪᙓᖴᘜᕼIᒍKᒪᙏᑎῆOᑭᑫᖇᔕTᙀᐯᙎ᙭YᘔABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_dsiete":
-      			fuentes("ᵃᵇᶜᵈᵉᶠᵍʰᶤʲᵏˡᵐⁿῆᵒᵖᵠʳˢᵗᵘᵛʷˣʸᶻABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      fuentes("ᵃᵇᶜᵈᵉᶠᵍʰᶤʲᵏˡᵐⁿῆᵒᵖᵠʳˢᵗᵘᵛʷˣʸᶻABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_docho":
-      			fuentes("ɐqɔpǝɟɓɥıſʞlɯuñodbɹsʇnʌʍxʎzABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      fuentes("ɐqɔpǝɟɓɥıſʞlɯuñodbɹsʇnʌʍxʎzABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_dnueve":
-      			fuentes("∀BɔDƎℲGHIſʞlWᴎñOԀQᴚS⊥∩ᴧMXʎZABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      fuentes("∀BɔDƎℲGHIſʞlWᴎñOԀQᴚS⊥∩ᴧMXʎZABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_veinte":
-      			fuentes("ąҍçժҽƒցհìʝҟӀʍղῆ✿քզɾʂէմѵա×վՀABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      fuentes("ąҍçժҽƒցհìʝҟӀʍղῆ✿քզɾʂէմѵա×վՀABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_vuno":
-      			fuentes("ａｂｃｄｅｆｇｈｉｊｋｌｍｎñｏｐｑｒｓｔｕｖｗｘｙｚABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      fuentes("ａｂｃｄｅｆｇｈｉｊｋｌｍｎñｏｐｑｒｓｔｕｖｗｘｙｚABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_vdos":
-      			fuentes("ᕱცᕳᗬӬ∮ʛஅɪلɮᄂ♏ȠňФקϤԄƧてʊᏉʬϪץʑABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      fuentes("ᕱცᕳᗬӬ∮ʛஅɪلɮᄂ♏ȠňФקϤԄƧてʊᏉʬϪץʑABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_vtres":
-      			fuentes("ąც८ძ૯ʄ૭ҺɿڽқℓɱՈῆరƿҩ२ﻯ੮υ౮ω૪ყζABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      fuentes("ąც८ძ૯ʄ૭ҺɿڽқℓɱՈῆరƿҩ२ﻯ੮υ౮ω૪ყζABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_vcuatro":
-      			fuentes("ₐᵇᵓᵈₑᶠᵍʰᵢᶨᵏᶫᶬᶮῆₒᵖᵩͬᶳᵗᵤᵛᵚ×ᵧᶼABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      fuentes("ₐᵇᵓᵈₑᶠᵍʰᵢᶨᵏᶫᶬᶮῆₒᵖᵩͬᶳᵗᵤᵛᵚ×ᵧᶼABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_vcinco":
-      			fuentes("ᾀᏰᏨᕍ⁅ᖴgᏲḭᏧḳ℄๓ՌñṎᑬQᖇຮtᙈvᏔჯẙẔABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      fuentes("ᾀᏰᏨᕍ⁅ᖴgᏲḭᏧḳ℄๓ՌñṎᑬQᖇຮtᙈvᏔჯẙẔABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_vseis":
-      			fuentes("Aʙඋd㉫ƒＧħÏﻝĸし๓Ǹñ✿ƿqr＄†µvŴxƴzABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      fuentes("Aʙඋd㉫ƒＧħÏﻝĸし๓Ǹñ✿ƿqr＄†µvŴxƴzABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_vsiete":
-      			fuentes("ᎪbᏟᎠᎬfᎶhᎥjᏦᏞmᏁñᎾᏢqᏒsᏆuᏉᎳxᎽᏃABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      fuentes("ᎪbᏟᎠᎬfᎶhᎥjᏦᏞmᏁñᎾᏢqᏒsᏆuᏉᎳxᎽᏃABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_vocho":
-      			fuentes("Ⱥβ↻DƐƑƓǶįلҠL♏ՌῆoƿףЯϚTԱVచჯӋʑABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      fuentes("Ⱥβ↻DƐƑƓǶįلҠL♏ՌῆoƿףЯϚTԱVచჯӋʑABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_vnueve":
-      			fuentes("ค๒ς๔єŦɠђเןкl๓ภÑ๏թợгรtยvฬxץzABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      fuentes("ค๒ς๔єŦɠђเןкl๓ภÑ๏թợгรtยvฬxץzABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	  case "_treinta":
-      			fuentes("ᾆḇḉḓễḟḡḧἷjḵḺḿᾖῇỠῤǬṝṧṯῠṽᾧẍỹẐABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
+      fuentes("ᾆḇḉḓễḟḡḧἷjḵḺḿᾖῇỠῤǬṝṧṯῠṽᾧẍỹẐABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
 	break;
 	}
 ////////////////////////////////////////////////////////////////////////////////////////////////
+
 	IN.clear();
 	IN.doFocus();
 }
@@ -586,7 +588,7 @@ IN.doFocus();
 }
 //Fin del Generador_de_texto + Gradiente, o sea Fin de la funcion pGrad().
 
-////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////// Adición de Símbolos:
 // Funciones para agregar simbolos donde van los iconos:
 function sym1()
 {IN.sEm(' ♫♬♪ ');}
@@ -607,16 +609,11 @@ function sym6()
 {IN.sEm(' ✿ ❀ ❁ ✾ ✽ ❃ ');}
 function sym7()
 {IN.sEm(' ♬♪♫ ヾ(*・。・)ﾉ ♬♪♫ ');}
-/*
-function sym8()
-{IN.sEm(' ︻╦̵̵͇̿̿̿̿╤── ');}
-*/
 function sym9()
 {IN.sEm(' ︻┳═一 ');}
-// modificar elemento de los iconos para mostrar los simbolos:
+
+// modificar elemento de los iconos para mostrar los simbolos ascii que estan aquí arriba^:
 document.getElementById("EP").innerHTML += ' <tr><td><a style="border:1px solid #000000" onclick="sym1();">♫</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym2();">❤</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym3();">♡</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym4();">❥</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym5();">F1</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym5_2();">F2</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym6();">✿</a></td><a>&nbsp;</a><td><a style="border:1px solid #000000" onclick="sym7();">♪</a></td><td><a style="border:1px solid #000000" onclick="sym9();">☺</a></td></tr>';
-
-
 //_fin_de_mmodificar_el_elemento_con_los_iconos.
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//

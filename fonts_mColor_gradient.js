@@ -434,159 +434,454 @@ function pSMas()
 }
 //Fin del Generador_de_texto_+_texto_multi_color_a_Dos_Colores.
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-
+////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 // FUNCION PARA TEXTO CON GRADIENTE:
 function pGrad()
 {
   myTe = CI.window.document.getElementById("B").innerHTML;//debe ir dentro de la funcion.
-    
-	//enviar:
-	var nnG = document.getElementById("newFont").value
-	var n_t = nnG.split("");
-
-	var rTextG = myTe.replace(/a/g, n_t[0]).replace(/b/g, n_t[1]).replace(/c/g, n_t[2]).replace(/d/g, n_t[3]).replace(/e/g, n_t[4]).replace(/f/g, n_t[5]).replace(/g/g, n_t[6]).replace(/h/g, n_t[7]).replace(/i/g, n_t[8]).replace(/j/g, n_t[9]).replace(/k/g, n_t[10]).replace(/l/g, n_t[11]).replace(/m/g, n_t[12]).replace(/n/g, n_t[13]).replace(/ñ/g, n_t[14]).replace(/o/g, n_t[15]).replace(/p/g,n_t[16]).replace(/q/g,n_t[17]).replace(/r/g, n_t[18]).replace(/s/g, n_t[19]).replace(/t/g, n_t[20]).replace(/u/g, n_t[21]).replace(/v/g, n_t[22]).replace(/w/g, n_t[23]).replace(/x/g, n_t[24]).replace(/y/g, n_t[25]).replace(/z/g, n_t[26]);
-
-	var r2= rTextG;
-	//EXCEPCIONES de fuente:
-	r3G = r2.replace("+", "").replace("undefined", "").replace(/&nbsp;/g, " ").replace(/&ՌβϚƿ;/g, " ").replace(/&ภ๒รթ;/g, " ").replace(/&ᾖḇṧῤ;/g, " ").replace(/&ᏁbsᏢ;/g, " ").replace(/&ՌᏰຮᑬ;/g, " ").replace(/&Ǹʙ＄ƿ;/g, " ").replace(/&Ǹʙ＄ƿ;/g, " ").replace(/&ɲℬᏕ℘;/g, " ").replace(/&ո♭Ֆр;/g, " ").replace(/&ᶮᵇᶳᵖ;/g, " ").replace(/&Ոცﻯƿ;/g, " ").replace(/&ṈᏰຮᑬ;/g, " ").replace(/&ⁿᵇˢᵖ;/g, " ").replace(/&иჩჰρ;/g, " ").replace(/&ИßՏP;/g, " ").replace(/&ИßSṖ;/g, " ").replace(/&ᏁᏰᏕᎮ;/g, " ").replace(/&ивѕρ;/g, " ").replace(/&nᏰຮᑬ;/g, " ").replace(/&הЪ૬Ϸ;/g, " ").replace(/&ՌՅՏρ;/g, " ").replace(/&И85P;/g, " ").replace(/&ⓝⓑⓢⓟ;/g, " ").replace(/&ηbSǷ;/g, " ").replace(/&ﾢҌଌϸ;/g, " ").replace(/&ᑎᙖᔕᑭ;/g, " ").replace(/&uqsd;/g, " ").replace(/&nbsd;/g, " ").replace(/&ᴎBSԀ;/g, " ").replace(/&ղҍʂք;/g, " ").replace(/&ｎｂｓｐ;/g, " ").replace(/&ȠცƧק;/g, " ");
-	//Excepciones (cada vez que se agrega una fuente agregar su respectiva excepcion a <br>):
-	r4G = r3G.replace("undefined", "").replace("<br>", "").replace("<Ᏸᖇ>", "").replace("<ჩΓ>", "").replace("<ßR>", "").replace("<ßŔ>", "").replace("<ᏰᏒ>", "").replace("<вя>", "").replace("<Ᏸᖇ>", "").replace("<ЪЯ>", "").replace("<Յʀ>", "").replace("<8Я>", "").replace("<ⓑⓡ>", "").replace("<br>", "").replace("<ҌЯ>", "").replace("<ᙖᖇ>", "").replace("<ᵇʳ>", "").replace("<bɹ>", "").replace("<Bᴚ>", "").replace("<ҍɾ>", "").replace("<ｂｒ>", "").replace("<ცԄ>", "").replace("<ც२>", "").replace("<ᵇͬ>", "").replace("<Ᏸᖇ>", "").replace("<ʙr>", "").replace("<ℬℛ>", "").replace("<bᏒ>", "").replace("<♭r>", "").replace("<βЯ>", "").replace("<๒г>", "").replace("<ḇṝ>", "");
-
-////////////////////////////////////////////////////////////////////////////////////////////////
-// constructor de la funcion para texto con Gradiente:
-
-	var textoG = r4G;// SALIDA DE TEXTO YA CON LOS CARACTERES (la fuente) CAMBIADOS.
   
-// lookup table (SCTIOT DE Gradientes)
-var tohex = new Array(256);
-var hex = "0123456789ABCDEF";
-var count = 0;
-for (x=0; x<16; x++) {
- for (y=0; y<16; y++) {
- tohex[count] = hex.charAt(x) + hex.charAt(y);
- count++;
- }
-}
-
-//ColorCode constructor
-function ColorCode(hexcode) {
-  if (hexcode.length == 7) {
-    this.r = parseInt(hexcode.substring(1,3),16);
-    this.g = parseInt(hexcode.substring(3,5),16);
-    this.b = parseInt(hexcode.substring(5,7),16);
-  }
-  else if (hexcode.length == 6) {
-    this.r = parseInt(hexcode.substring(0,2),16);
-    this.g = parseInt(hexcode.substring(2,4),16);
-    this.b = parseInt(hexcode.substring(4,6),16);
-  }
-  else {
-    this.r = this.g = this.b = 0;
-    alert("Error: ColorCode constructor failed");
-  }
-  if (isNaN(this.r)||isNaN(this.g)||isNaN(this.b))
-    alert("Error: ColorCode constructor failed");
-}
-
-// ColorList constructor
-function ColorList(hexcodes) {
-  var i = 0;
-  var c = 0;
-  this.codes = new Array(Math.round(hexcodes.length/7));
-  while (i < hexcodes.length) {
-    if (isNaN(parseInt(hexcodes.substring(i,i+6),16))) ++i;
-    else {
-      this.codes[c] = new ColorCode(hexcodes.substring(i,i+6));
-      i += 7;
-      ++c;
-    }
-  }
-  this.len = c;
-}
-
-function interpolate (x1, y1, x3, y3, x2) {
-  if (x3 == x1) return y1
-  else return (x2-x1)*(y3-y1)/(x3-x1) + y1
-}
-
-// x=index of letter, y=number of letters, z=number of colors
-function lowcolorindex (x, y, z) {
-  if (y == 1) return 0
-  else return Math.floor( (x*(z-1))/(y-1) )
-}
-
-function hicolorindex (x, y, z, low) { 
-  if ( low*(y-1) == x*(z-1) ) return low
-  else if (y == 1) return 0
-  else return Math.floor( (x*(z-1))/(y-1) + 1 )
-}
-
-//
-var nT;
-var nR;
-function gradient (thetext,thecolors) 
+  function fuentesG(a, b)
+  {
+	if (b == "1")
 	{
-    	var colors = new ColorList(thecolors);
-    	var numcolors = colors.len;
-    	var numchars = thetext.length;
-    	var rr = 0;
-    	var gg = 0;
-    	var bb = 0;
-    	var lci = 0; //lower color index
-    	var hci = 0; //high color index
+		var nnG = a;
+		var n_t = nnG.split("");
 
-	for (i=0; i<numchars; ++i) 
-	{
-      		lci = lowcolorindex(i, numchars, numcolors);
-      		hci = hicolorindex(i, numchars, numcolors, lci);
-      		rr = Math.round(interpolate( lci/(numcolors-1), colors.codes[lci].r, hci/(numcolors-1), colors.codes[hci].r, i/(numchars-1)));
-      		gg = Math.round(interpolate( lci/(numcolors-1), colors.codes[lci].g, hci/(numcolors-1), colors.codes[hci].g, i/(numchars-1)));
-      		bb = Math.round(interpolate( lci/(numcolors-1), colors.codes[lci].b, hci/(numcolors-1), colors.codes[hci].b, i/(numchars-1)));
-		/////
-		var salida = "[c=#" + tohex[rr] + tohex[gg] + tohex[bb] + "]" + thetext.charAt(i) + "[/c]"
-  		nT += salida
-  		nR = nT.replace("undefined", "");
-	}
-	
-	  //aqui debe ir el envio de datos:
-	  var tN = "[b]"+nR+"[/b]";
-	  var uT = tN.replace("undefined", "");
-	  BL.sendMessage(TB.aT,rcUtil.html2bb(uT));
-	  IN.CI.document.body.innerHTML="";
-	  nT="";
-	  nR="";
-	}
-	
-	if ( myTe != "" )
-	{
-		// Aqui tomamos el texto y se lo pasamos a la funcion de arriba:
-		var e_text = textoG;
-		var r_t = e_text.replace("undefined", "").replace("<br>", "").replace("<b>", "").replace("</b>", "").replace("<i>", "").replace("</i>", "").replace("<u>", "").replace("</u>", "");
-		// id de los select:
-		if ( limpia == 0 )
+		var rTextG = myTe.replace(/a/g, n_t[0]).replace(/b/g, n_t[1]).replace(/c/g, n_t[2]).replace(/d/g, n_t[3]).replace(/e/g, n_t[4]).replace(/f/g, n_t[5]).replace(/g/g, n_t[6]).replace(/h/g, n_t[7]).replace(/i/g, n_t[8]).replace(/j/g, n_t[9]).replace(/k/g, n_t[10]).replace(/l/g, n_t[11]).replace(/m/g, n_t[12]).replace(/n/g, n_t[13]).replace(/ñ/g, n_t[14]).replace(/o/g, n_t[15]).replace(/p/g,n_t[16]).replace(/q/g,n_t[17]).replace(/r/g, n_t[18]).replace(/s/g, n_t[19]).replace(/t/g, n_t[20]).replace(/u/g, n_t[21]).replace(/v/g, n_t[22]).replace(/w/g, n_t[23]).replace(/x/g, n_t[24]).replace(/y/g, n_t[25]).replace(/z/g, n_t[26]).replace(/A/g, n_t[27]).replace(/B/g, n_t[28]).replace(/C/g, n_t[29]).replace(/D/g, n_t[30]).replace(/E/g, n_t[31]).replace(/F/g, n_t[32]).replace(/G/g, n_t[33]).replace(/H/g, n_t[34]).replace(/I/g, n_t[35]).replace(/J/g, n_t[36]).replace(/K/g, n_t[37]).replace(/L/g, n_t[38]).replace(/M/g, n_t[39]).replace(/N/g, n_t[40]).replace(/Ñ/g, n_t[41]).replace(/O/g, n_t[42]).replace(/P/g, n_t[43]).replace(/Q/g, n_t[44]).replace(/R/g, n_t[45]).replace(/S/g, n_t[46]).replace(/T/g, n_t[47]).replace(/U/g, n_t[48]).replace(/V/g, n_t[49]).replace(/W/g, n_t[50]).replace(/X/g, n_t[51]).replace(/Y/g, n_t[52]).replace(/Z/g, n_t[53]);
+
+		var r2= rTextG;
+		//EXCEPCIONES de fuente:
+		r3G = r2.replace("+", "").replace("undefined", "").replace(/&nbsp;/g, " ").replace(/&ՌβϚƿ;/g, " ").replace(/&ภ๒รթ;/g, " ").replace(/&ᾖḇṧῤ;/g, " ").replace(/&ᏁbsᏢ;/g, " ").replace(/&ՌᏰຮᑬ;/g, " ").replace(/&Ǹʙ＄ƿ;/g, " ").replace(/&Ǹʙ＄ƿ;/g, " ").replace(/&ɲℬᏕ℘;/g, " ").replace(/&ո♭Ֆр;/g, " ").replace(/&ᶮᵇᶳᵖ;/g, " ").replace(/&Ոცﻯƿ;/g, " ").replace(/&ṈᏰຮᑬ;/g, " ").replace(/&ⁿᵇˢᵖ;/g, " ").replace(/&иჩჰρ;/g, " ").replace(/&ИßՏP;/g, " ").replace(/&ИßSṖ;/g, " ").replace(/&ᏁᏰᏕᎮ;/g, " ").replace(/&ивѕρ;/g, " ").replace(/&nᏰຮᑬ;/g, " ").replace(/&הЪ૬Ϸ;/g, " ").replace(/&ՌՅՏρ;/g, " ").replace(/&И85P;/g, " ").replace(/&ⓝⓑⓢⓟ;/g, " ").replace(/&ηbSǷ;/g, " ").replace(/&ﾢҌଌϸ;/g, " ").replace(/&ᑎᙖᔕᑭ;/g, " ").replace(/&uqsd;/g, " ").replace(/&nbsd;/g, " ").replace(/&ᴎBSԀ;/g, " ").replace(/&ղҍʂք;/g, " ").replace(/&ｎｂｓｐ;/g, " ").replace(/&ȠცƧק;/g, " ");
+		//Excepciones (cada vez que se agrega una fuente agregar su respectiva excepcion a <br>):
+		r4G = r3G.replace("undefined", "").replace(/<Ᏸᖇ>|<ᵇ\u036C>|<ჩΓ>|<ßR>|<ßŔ>|<ᏰᏒ>|<вя>|<ЪЯ>|<Յʀ>|<8Я>|<ⓑⓡ>|<br>|<ҌЯ>|<ᙖᖇ>|<ᵇʳ>|<bɹ>|<Bᴚ>|<ҍɾ>|<ｂｒ>|<ცԄ>|<ʙr>|<ℬℛ>|<bᏒ>|<♭r>|<βЯ>|<๒г>|<ḇṝ>|<ც२>/, "").replace(/<ᵇ>|<Ᏸ>|<ჩ>|<ß>|<ß>|<Ᏸ>|<в>|<Ъ>|<Յ>|<8>|<ⓑ>|<Ҍ>|<ᙖ>|<ᵇ>|<q>|<B>|<ҍ>|<ｂ>|<ც>|<ʙ>|<β>|<๒>|<ḇ>/, "<b>").replace(/<\u002FᏰ>|<\u002Fჩ>|<\u002Fß>|<\u002Fß>|<\u002FᏰ>|<\u002Fв>|<\u002FЪ>|<\u002FՅ>|<\u002F8>|<\u002Fⓑ>|<\u002FҌ>|<\u002Fᙖ>|<\u002Fᵇ>|<\u002Fq>|<\u002FB>|<\u002Fҍ>|<\u002Fｂ>|<\u002Fც>|<\u002Fʙ>|<\u002Fβ>|<\u002F๒>|<\u002Fḇ>/, "</b>");
+
+		var textoG = r4G;// SALIDA DE TEXTO YA CON LOS CARACTERES (la fuente) CAMBIADOS.
+	  
+	// lookup table (SCTIOT DE Gradientes)
+		var tohex = new Array(256);
+		var hex = "0123456789ABCDEF";
+		var count = 0;
+		for (x=0; x<16; x++)
 		{
-			var _sel1 = document.getElementById("sel1").value;
-			var _sel2 = document.getElementById("sel2").value;
-			var _sel3 = document.getElementById("sel3").value;
-			var _sel4 = document.getElementById("sel4").value;
-			var _sel5 = document.getElementById("sel5").value;
-			var _sel6 = document.getElementById("sel6").value;
-			//adiciones.
-			adiciones = _sel1 + _sel2 + _sel3 + _sel4 + _sel5 + _sel6;
+			for (y=0; y<16; y++)
+				{
+					tohex[count] = hex.charAt(x) + hex.charAt(y);
+					count++;
+				}
 		}
-		if ( limpia == 1 )
-		{adiciones = "EA112F FF037F 6F6EF1 02B5F3 00FF00 10650D 164CB2";}
-		if ( limpia == 2 )
-		{adiciones = "FF8888 FFFF88 88FF88 88FFFF 8888FF FF88FF";}
-		if ( limpia == 3 )
-		{adiciones = "884488 444488 448888 448844 888844 884444";}
+
+	//ColorCode constructor
+		function ColorCode(hexcode)
+		{
+			if (hexcode.length == 7)
+			{
+				this.r = parseInt(hexcode.substring(1,3),16);
+				this.g = parseInt(hexcode.substring(3,5),16);
+				this.b = parseInt(hexcode.substring(5,7),16);
+			}
+			else if (hexcode.length == 6)
+			{
+				this.r = parseInt(hexcode.substring(0,2),16);
+				this.g = parseInt(hexcode.substring(2,4),16);
+				this.b = parseInt(hexcode.substring(4,6),16);
+			}
+			else
+			{
+				this.r = this.g = this.b = 0;
+				alert("Error: ColorCode constructor failed");
+			}
+			if (isNaN(this.r)||isNaN(this.g)||isNaN(this.b))
+			alert("Error: ColorCode constructor failed");
+		}
+
+		// ColorList constructor
+		function ColorList(hexcodes)
+		{
+			var i = 0;
+			var c = 0;
+			this.codes = new Array(Math.round(hexcodes.length/7));
+			while (i < hexcodes.length)
+			{
+				if (isNaN(parseInt(hexcodes.substring(i,i+6),16))) ++i;
+				else 
+				{
+					this.codes[c] = new ColorCode(hexcodes.substring(i,i+6));
+					i += 7;
+					++c;
+				}
+			}
+			this.len = c;
+		}
+
+		function interpolate (x1, y1, x3, y3, x2)
+		{
+			if (x3 == x1) return y1
+			else return (x2-x1)*(y3-y1)/(x3-x1) + y1
+		}
+
+		// x=index of letter, y=number of letters, z=number of colors
+		function lowcolorindex (x, y, z)
+		{
+			if (y == 1) return 0
+			else return Math.floor( (x*(z-1))/(y-1) )
+		}
+
+		function hicolorindex (x, y, z, low)
+		{ 
+			if ( low*(y-1) == x*(z-1) ) return low
+			else if (y == 1) return 0
+			else return Math.floor( (x*(z-1))/(y-1) + 1 )
+		}
+
+		/////////////////////////////////////////////////
+		var nT;
+		var nR;
+		function gradient (thetext,thecolors) 
+		{
+			var colors = new ColorList(thecolors);
+			var numcolors = colors.len;
+			var numchars = thetext.length;
+			var rr = 0;
+			var gg = 0;
+			var bb = 0;
+			var lci = 0; //lower color index
+			var hci = 0; //high color index
+
+			for (i=0; i<numchars; ++i) 
+			{
+				lci = lowcolorindex(i, numchars, numcolors);
+				hci = hicolorindex(i, numchars, numcolors, lci);
+				rr = Math.round(interpolate( lci/(numcolors-1), colors.codes[lci].r, hci/(numcolors-1), colors.codes[hci].r, i/(numchars-1)));
+				gg = Math.round(interpolate( lci/(numcolors-1), colors.codes[lci].g, hci/(numcolors-1), colors.codes[hci].g, i/(numchars-1)));
+				bb = Math.round(interpolate( lci/(numcolors-1), colors.codes[lci].b, hci/(numcolors-1), colors.codes[hci].b, i/(numchars-1)));
+				/////
+				var salida = "<font color=#" + tohex[rr] + tohex[gg] + tohex[bb] + ">" + thetext.charAt(i) + "</font>";
+				nT += salida
+				nR = nT.replace("undefined", "");
+			}
+
+		//aqui debe ir el envio de datos:
+		// poner aqui un if para el modo en negrita.
+		if (document.getElementById('TBB').className == "tbtn")//si no está en negrita:
+		{
+			var salidaG = nR;
+		}
+		else
+		{
+			var salidaG = "<b>" + nR + "</b>";
+		}
 		
-	gradient(r_t,adiciones);
+		var tN = salidaG;
+		var uT = tN.replace("undefined", "");
+		BL.sendMessage(TB.aT,rcUtil.html2bb(uT));
+		IN.CI.document.body.innerHTML="";
+		nT="";
+		nR="";
+		}
+		
+		if ( myTe != "" )
+		{
+			// Aqui tomamos el texto y se lo pasamos a la funcion de arriba:
+			var e_text = textoG;
+			var r_t = e_text.replace("undefined", "").replace("<br>", "").replace("<b>", "").replace("</b>", "").replace("<i>", "").replace("</i>", "").replace("<u>", "").replace("</u>", "");
+			// id de los select:
+			if ( limpia == 0 )
+			{
+				var _sel1 = document.getElementById("sel1").value;
+				var _sel2 = document.getElementById("sel2").value;
+				var _sel3 = document.getElementById("sel3").value;
+				var _sel4 = document.getElementById("sel4").value;
+				var _sel5 = document.getElementById("sel5").value;
+				var _sel6 = document.getElementById("sel6").value;
+				//adiciones.
+				adiciones = _sel1 + _sel2 + _sel3 + _sel4 + _sel5 + _sel6;
+			}
+			if ( limpia == 1 )
+			{adiciones = "EA112F FF037F 6F6EF1 02B5F3 00FF00 10650D 164CB2";}
+			if ( limpia == 2 )
+			{adiciones = "FF8888 FFFF88 88FF88 88FFFF 8888FF FF88FF";}
+			if ( limpia == 3 )
+			{adiciones = "884488 444488 448888 448844 888844 884444";}
+			
+		}
+		gradient(r_t,adiciones);
 	}
+	else{
+		if (b == "2")
+		{
+			var nnG = a;
+			var n_t = nnG.split(" ");
+
+			var rTextG = myTe.replace(/a/g, n_t[0]).replace(/b/g, n_t[1]).replace(/c/g, n_t[2]).replace(/d/g, n_t[3]).replace(/e/g, n_t[4]).replace(/f/g, n_t[5]).replace(/g/g, n_t[6]).replace(/h/g, n_t[7]).replace(/i/g, n_t[8]).replace(/j/g, n_t[9]).replace(/k/g, n_t[10]).replace(/l/g, n_t[11]).replace(/m/g, n_t[12]).replace(/n/g, n_t[13]).replace(/ñ/g, n_t[14]).replace(/o/g, n_t[15]).replace(/p/g,n_t[16]).replace(/q/g,n_t[17]).replace(/r/g, n_t[18]).replace(/s/g, n_t[19]).replace(/t/g, n_t[20]).replace(/u/g, n_t[21]).replace(/v/g, n_t[22]).replace(/w/g, n_t[23]).replace(/x/g, n_t[24]).replace(/y/g, n_t[25]).replace(/z/g, n_t[26]).replace(/A/g, n_t[27]).replace(/B/g, n_t[28]).replace(/C/g, n_t[29]).replace(/D/g, n_t[30]).replace(/E/g, n_t[31]).replace(/F/g, n_t[32]).replace(/G/g, n_t[33]).replace(/H/g, n_t[34]).replace(/I/g, n_t[35]).replace(/J/g, n_t[36]).replace(/K/g, n_t[37]).replace(/L/g, n_t[38]).replace(/M/g, n_t[39]).replace(/N/g, n_t[40]).replace(/Ñ/g, n_t[41]).replace(/O/g, n_t[42]).replace(/P/g, n_t[43]).replace(/Q/g, n_t[44]).replace(/R/g, n_t[45]).replace(/S/g, n_t[46]).replace(/T/g, n_t[47]).replace(/U/g, n_t[48]).replace(/V/g, n_t[49]).replace(/W/g, n_t[50]).replace(/X/g, n_t[51]).replace(/Y/g, n_t[52]).replace(/Z/g, n_t[53]);
+
+			var r2= rTextG;
+			//EXCEPCIONES de fuente:
+			r3G = r2.replace("+", "").replace("undefined", "").replace(/&𝔫𝔟𝔰𝔭;/g, " ").replace(/&𝓃𝒷𝓈𝓅;/g, " ");
+			//Excepciones (cada vez que se agrega una fuente agregar su respectiva excepcion a <br>):
+			r4G = r3G.replace("undefined", "").replace(/<𝔟𝔯>|<𝒷𝓇>/, "").replace(/<𝒷>|<𝔟>/, "<b>").replace(/<\u002F𝒷>|<\u002F𝔟>/, "</b>");
+			
+			var textoG = r4G;// SALIDA DE TEXTO YA CON LOS CARACTERES (la fuente) CAMBIADOS.
+		  
+		// lookup table (SCTIOT DE Gradientes)
+			var tohex = new Array(256);
+			var hex = "0123456789ABCDEF";
+			var count = 0;
+			for (x=0; x<16; x++)
+			{
+				for (y=0; y<16; y++)
+					{
+						tohex[count] = hex.charAt(x) + hex.charAt(y);
+						count++;
+					}
+			}
+
+		//ColorCode constructor
+			function ColorCode(hexcode)
+			{
+				if (hexcode.length == 7)
+				{
+					this.r = parseInt(hexcode.substring(1,3),16);
+					this.g = parseInt(hexcode.substring(3,5),16);
+					this.b = parseInt(hexcode.substring(5,7),16);
+				}
+				else if (hexcode.length == 6)
+				{
+					this.r = parseInt(hexcode.substring(0,2),16);
+					this.g = parseInt(hexcode.substring(2,4),16);
+					this.b = parseInt(hexcode.substring(4,6),16);
+				}
+				else
+				{
+					this.r = this.g = this.b = 0;
+					alert("Error: ColorCode constructor failed");
+				}
+				if (isNaN(this.r)||isNaN(this.g)||isNaN(this.b))
+				alert("Error: ColorCode constructor failed");
+			}
+
+			// ColorList constructor
+			function ColorList(hexcodes)
+			{
+				var i = 0;
+				var c = 0;
+				this.codes = new Array(Math.round(hexcodes.length/7));
+				while (i < hexcodes.length)
+				{
+					if (isNaN(parseInt(hexcodes.substring(i,i+6),16))) ++i;
+					else 
+					{
+						this.codes[c] = new ColorCode(hexcodes.substring(i,i+6));
+						i += 7;
+						++c;
+					}
+				}
+				this.len = c;
+			}
+
+			function interpolate (x1, y1, x3, y3, x2)
+			{
+				if (x3 == x1) return y1
+				else return (x2-x1)*(y3-y1)/(x3-x1) + y1
+			}
+
+			// x=index of letter, y=number of letters, z=number of colors
+			function lowcolorindex (x, y, z)
+			{
+				if (y == 1) return 0
+				else return Math.floor( (x*(z-1))/(y-1) )
+			}
+
+			function hicolorindex (x, y, z, low)
+			{ 
+				if ( low*(y-1) == x*(z-1) ) return low
+				else if (y == 1) return 0
+				else return Math.floor( (x*(z-1))/(y-1) + 1 )
+			}
+
+			/////////////////////////////////////////////////
+			var nT;
+			var nR;
+			function gradient (thetext,thecolors) 
+			{
+				var colors = new ColorList(thecolors);
+				var numcolors = colors.len;
+				var numchars = thetext.length;
+				var rr = 0;
+				var gg = 0;
+				var bb = 0;
+				var lci = 0; //lower color index
+				var hci = 0; //high color index
+
+				for (i=0; i<numchars; ++i) 
+				{
+					lci = lowcolorindex(i, numchars, numcolors);
+					hci = hicolorindex(i, numchars, numcolors, lci);
+					rr = Math.round(interpolate( lci/(numcolors-1), colors.codes[lci].r, hci/(numcolors-1), colors.codes[hci].r, i/(numchars-1)));
+					gg = Math.round(interpolate( lci/(numcolors-1), colors.codes[lci].g, hci/(numcolors-1), colors.codes[hci].g, i/(numchars-1)));
+					bb = Math.round(interpolate( lci/(numcolors-1), colors.codes[lci].b, hci/(numcolors-1), colors.codes[hci].b, i/(numchars-1)));
+					/////
+					var salida = "<font color=#" + tohex[rr] + tohex[gg] + tohex[bb] + ">" + thetext.charAt(i) + "</font>";
+					nT += salida
+					nR = nT.replace("undefined", "");
+				}
+			
+			//aqui debe ir el envio de datos:
+			// poner aqui un if para el modo en negrita.
+				if (document.getElementById('TBB').className == "tbtn")//si no está en negrita:
+				{
+					var salidaG = nR;
+				}
+				else
+				{
+					var salidaG = "<b>" + nR + "</b>";
+				}
+				var tN = salidaG;
+				var uT = tN.replace("undefined", "");
+				BL.sendMessage(TB.aT,rcUtil.html2bb(uT));
+				IN.CI.document.body.innerHTML="";
+				nT="";
+				nR="";
+			}
+			
+			if ( myTe != "" )
+			{
+				// Aqui tomamos el texto y se lo pasamos a la funcion de arriba:
+				var e_text = textoG;
+				var r_t = e_text.replace("undefined", "").replace("<br>", "").replace("<b>", "").replace("</b>", "").replace("<i>", "").replace("</i>", "").replace("<u>", "").replace("</u>", "");
+				// id de los select:
+				if ( limpia == 0 )
+				{
+					var _sel1 = document.getElementById("sel1").value;
+					var _sel2 = document.getElementById("sel2").value;
+					var _sel3 = document.getElementById("sel3").value;
+					var _sel4 = document.getElementById("sel4").value;
+					var _sel5 = document.getElementById("sel5").value;
+					var _sel6 = document.getElementById("sel6").value;
+					//adiciones.
+					adiciones = _sel1 + _sel2 + _sel3 + _sel4 + _sel5 + _sel6;
+				}
+				if ( limpia == 1 )
+				{adiciones = "EA112F FF037F 6F6EF1 02B5F3 00FF00 10650D 164CB2";}
+				if ( limpia == 2 )
+				{adiciones = "FF8888 FFFF88 88FF88 88FFFF 8888FF FF88FF";}
+				if ( limpia == 3 )
+				{adiciones = "884488 444488 448888 448844 888844 884444";}
+				
+			}
+			gradient(r_t,adiciones);
+		}
+	}
+  }
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////// Enviar:
+	switch ( document.getElementById("newFont").value )
+	{
+		case "_cero":
+		fuentesG("abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+		case "_uno":
+		fuentesG("𝔞 𝔟 𝔠 𝔡 𝔢 𝔣 𝔤 𝔥 𝔦 𝔧 𝑘 𝔩 𝔪 𝔫 ῆ 𝔬 𝔭 𝔮 𝔯 𝔰 𝔱 𝔲 𝔳 𝔴 𝔵 𝑦 𝔷 𝔄 𝔅 𝓒 𝔇 𝔈 𝔉 𝔊 𝓗 𝓘 𝔍 𝔎 𝔏 𝔐 𝔑 Ñ 𝔒 𝔓 𝔔 𝓡 𝔖 𝔗 𝔘 ℣ 𝔚 𝔛 𝔜 𝓩", "2");
+		break;
+		case "_dos":
+		fuentesG("𝒶 𝒷 𝒸 𝒹 𝑒 𝒻 𝑔 𝒽 𝒾 𝒿 𝓀 𝓁 𝓂 𝓃 ῆ 𝑜 𝓅 𝓆 𝓇 𝓈 𝓉 𝓊 𝓋 𝓌 𝓍 𝓎 𝓏 𝒜 𝐵 𝒞 𝒟 𝐸 𝐹 𝒢 𝐻 𝐼 𝒥 𝒦 𝐿 𝑀 𝒩 Ñ 𝒪 𝒫 𝒬 𝑅 𝒮 𝒯 𝒰 𝒱 𝒲 𝒳 𝒴 𝒵", "2");
+		break;
+		case "_tres":
+		fuentesG("ᾀᏰᏨᕍ⁅ᖴgᏲḭʝḳ℄ḾṈῆṎᑬQᖇຮtᙈעᏔჯẙẔABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+		case "_cuatro":
+		  fuentesG("მჩეძპfცhἶქκlოиῆᎤρგΓჰtυ√wჯყzABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+		  case "_cinco":
+		  fuentesG("ÂßĈÐЄŦǤĦĪʖҚĿ♏ИῆØPҨRՏ†ЦVЩX￥ẔABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+		  case "_seis":
+		  fuentesG("ΛßƇDƐFƓĤĪĴҠĿMИῆ♡ṖҨŔSƬƱѴѠӾYZABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+		  case "_siete":
+		  fuentesG("ᏗᏰՇᎴᏋƒĢᏂᎥᏠᏦᏝᎷᏁῆᎧᎮᎤᏒᏕᏖᏬᏉᏇጀᎩፚABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+		  case "_ocho":
+		  fuentesG("αвς∂εƒցнɪĵƙℓɱиῆσρףяѕтƲνωχϓՀABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+		  case "_nueve":
+		  fuentesG("ᎯᏰᏨᕍḕᖴgᏲḭǰḳl๓nῆ๏ᑬqᖇຮtᙈvᏔჯẙẔABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+		  case "_diez":
+		  fuentesG("નЪ૮ԁ૯ԲցસіڙқԼறהῆଇϷ૧Я૬ҬμνயϰϓｚABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+		  case "_once":
+		  fuentesG("ԹՅՇԺƐԲցɧᎥʝƙℓʍՌῆʘρφʀՏԵՄעաχՎʑABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+		  case "_doce":
+		  fuentesG("48CD3F6HIJK1MИÑ0PQЯ57UVWXY248CD3F6HIJKLMNÑ0PQR57UVWXYZ", "1");
+		break;
+		  case "_trece":
+		  fuentesG("ⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝñⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+		  case "_cato":
+		  fuentesG("ªb¢ÞÈF૬ɧÎjΚĻмηῆ◊ǷƍrS⊥µ√w×ýzABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+		  case "_quince":
+		  fuentesG("ΔҌﾧdﾼԲɢￃΙۆӃﾤϺﾢῆﾷϸϘЯଌȚȗѵ￦ҲעŻABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+		  case "_dseis":
+		  fuentesG("ᗩᙖᙅᗪᙓᖴᘜᕼIᒍKᒪᙏᑎῆOᑭᑫᖇᔕTᙀᐯᙎ᙭YᘔABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+		  case "_dsiete":
+		  fuentesG("ᵃᵇᶜᵈᵉᶠᵍʰᶤʲᵏˡᵐⁿῆᵒᵖᵠʳˢᵗᵘᵛʷˣʸᶻABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+		  case "_docho":
+		  fuentesG("ɐqɔpǝɟɓɥıſʞlɯuñodbɹsʇnʌʍxʎzABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+		  case "_dnueve":
+		  fuentesG("∀BɔDƎℲGHIſʞlWᴎñOԀQᴚS⊥∩ᴧMXʎZABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+		  case "_veinte":
+		  fuentesG("ąҍçժҽƒցհìʝҟӀʍղῆ✿քզɾʂէմѵա×վՀABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+		  case "_vuno":
+		  fuentesG("ａｂｃｄｅｆｇｈｉｊｋｌｍｎñｏｐｑｒｓｔｕｖｗｘｙｚABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+		  case "_vdos":
+		  fuentesG("ᕱცᕳᗬӬ∮ʛஅɪلɮᄂ♏ȠňФקϤԄƧてʊᏉʬϪץʑABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+		  case "_vtres":
+		  fuentesG("ąც८ძ૯ʄ૭ҺɿڽқℓɱՈῆరƿҩ२ﻯ੮υ౮ω૪ყζABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+		  case "_vcuatro":
+		  fuentesG("ₐᵇᵓᵈₑᶠᵍʰᵢᶨᵏᶫᶬᶮῆₒᵖᵩͬᶳᵗᵤᵛᵚ×ᵧᶼABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+		  case "_vcinco":
+		  fuentesG("ᾀᏰᏨᕍ⁅ᖴgᏲḭᏧḳ℄๓ՌñṎᑬQᖇຮtᙈvᏔჯẙẔABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+		  case "_vseis":
+		  fuentesG("Aʙඋd㉫ƒＧħÏﻝĸし๓Ǹñ✿ƿqr＄†µvŴxƴzABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+		  case "_vsiete":
+		  fuentesG("ᎪbᏟᎠᎬfᎶhᎥjᏦᏞmᏁñᎾᏢqᏒsᏆuᏉᎳxᎽᏃABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+		  case "_vocho":
+		  fuentesG("Ⱥβ↻DƐƑƓǶįلҠL♏ՌῆoƿףЯϚTԱVచჯӋʑABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+		  case "_vnueve":
+		  fuentesG("ค๒ς๔єŦɠђเןкl๓ภÑ๏թợгรtยvฬxץzABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+		  case "_treinta":
+		  fuentesG("ᾆḇḉḓễḟḡḧἷjḵḺḿᾖῇỠῤǬṝṧṯῠṽᾧẍỹẐABCDEFGHIJKLMNÑOPQRSTUVWXYZ", "1");
+		break;
+	}
+
 IN.clear();
 IN.doFocus();
 }
 //Fin del Generador_de_texto + Gradiente, o sea Fin de la funcion pGrad().
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 //////////////////////////////////////////////////////////////////////////////////////////////// Adición de Símbolos:
 // Funciones para agregar simbolos donde van los iconos:
@@ -629,8 +924,7 @@ elemento.addEventListener( "keyup", function()
 		// aqui se ejecuta la (las) funcion (es) propiamente:
 		if ( document.getElementById("c_btn").innerHTML == "Modo1" )
 		{
-		//pGrad();
-			alert("Te AmO Mi CiElO PrEcIoSa♥ Hasta Las Estrellas");
+		pGrad();
 		}
 		else
 		{

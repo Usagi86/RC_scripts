@@ -630,6 +630,7 @@ elemento.addEventListener( "keyup", function()
 		if ( document.getElementById("c_btn").innerHTML == "Modo1" )
 		{
 		//pGrad();
+			alert("Te AmO Mi CiElO PrEcIoSa♥ Hasta Las Estrellas");
 		}
 		else
 		{

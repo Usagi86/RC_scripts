@@ -286,8 +286,8 @@ var nuevoHijoCS = padreCS.insertBefore(nuevoAnclaCS, anclaExistenteCS);
 nuevoAnclaCS.innerHTML = ' <div id="crear_sala" style="visibility: hidden; position: absolute; top: 78px; left: 88px; border: 3px solid rgb(0, 0, 0); background: rgb(16, 159, 166) none repeat scroll 0% 0%;"><div><center><b><font color=#FFFFFF><u>Crear sala con caracteres Invisibles:</u></font></b></center></div><center><button id ="poner_invi" onmouseup="ponerInvi(); contarInviCS();">(Poner Invi)</button><div>&nbsp;Colocaste <a id="cantidadInvis" style="color:#FF0000">#<a> símbolos invisibles.</div></center><div><a>&nbsp;</a>Name:&nbsp;<input id="input1" style="width:250px"></input><a>&nbsp;</a><button id="btn_pegar1" onmouseup="pegar1();">Pegar</button><a>&nbsp;</a><button id="limpiar1" onmouseup="limpiar_campo1();">Limpiar</button></div><div><div><a>&nbsp;</a></div><div><a>&nbsp;</a>Topic.:&nbsp;<input id="input2" style="width:250px"></input><a>&nbsp;</a><button id="btn_pegar2" onmouseup="pegar2();">Pegar</button><a>&nbsp;</a><button id="limpiar2" onmouseup="limpiar_campo2();">Limpiar</button></div><div><div><a>&nbsp;</a></div><div><a>&nbsp;</a>Contraseña:&nbsp;<input id="input2" style="width:250px"></input></div><div><div><a>&nbsp;</a></div><center><button id="btn_crearSala" onmouseup="crearSala();">Crear Sala</button><a>&nbsp;</a><a>&nbsp;</a><button id="btn_cancelarCS" onmouseup="cancelarCS();"> Cancelar</button></center></div><div><a style="color:#FF0000; cursor:help;" title="En el espacio de Name deberás agregar al inicio el simbolo invi. Si la sala debes hacerla con 5 nicks entonces La primera lleva 5 simbolos invis, la segunda lleva 4, la tercera 3, la cuarta 2 y la quinta/última solo uno. Si quieres agregar mas salas con  un mensaje diferente entonces haces lo mismo: contando desde el número superior siendo 6 el numero de simbolos que le colocarás a la ultima sala con el nuevo mensaje.">&nbsp;<u>Cómo usarlo? Aún no lo termino</u></a></div></div> ';
 //final_parte_del_html
 
-//funciones:
-//funcion solo para mostrar:
+		//funciones:
+//funcion solo para mostrar la ventanita de crear sala:
 function mostrar()
 {document.getElementById('crear_sala').style.visibility = 'visible'};
 //funcion para cancelar/cerrar:
@@ -296,7 +296,65 @@ function cancelarCS()
 	document.getElementById("crear_sala").style.visibility = "hidden";
 }
 
+// funcion para ingresar el invi en el campo de texto:
+function ponerInvi()
+{
+	inviSala = document.getElementById('input1');
+	inviSala.value = "" + inviSala.value;
+}
 
+// funcion para pegar lo que se tenga en el portapapeles:
+function pegar1()
+{
+	alert("1: agregar esta funcion al final");
+}
+function pegar2()
+{
+	alert("2: agregar esta funcion al final");
+}
+
+//funciones para limpiar los campos de texto:
+function limpiar_campo1()
+{
+	document.getElementById("input1").value = "";
+}
+function limpiar_campo2()
+{
+	document.getElementById("input2").value = "";
+}
+
+// funcion para contar los simbolos invisibles.
+function contarInviCS()
+{
+	  var cInput1 = document.getElementById('input1').value;
+	  var cantidadII = cInput1.match(//g);
+	  var conteo = document.getElementById("cantidadInvis");
+	  if (!cantidadII)
+	  {
+		conteo.innerHTML = "0";
+	  }
+	  else
+	  {
+		conteo.innerHTML = cantidadII.length;
+	  }
+}
+
+// funcion para crear la sala:
+function crearSala()
+{ 
+	var cI1 = document.getElementById('input1').value;
+	var cI2 = document.getElementById('input2').value;
+	var cI3 = document.getElementById('input3').value;
+  
+	var rnI=rcUtil.html2bb(cI1);//name
+	var rtI=rcUtil.html2bb(cI2);//topic
+	var rpI=rcUtil.html2bb(cI3);//password
+	if(rn!=null&&rn!="")
+	{
+		rcFC.send("300","313",rnI,rtI,rpI); 
+	} 
+}
+//////////////////.
 
 //
 ////FIN DEL SCRIPT.

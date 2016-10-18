@@ -273,6 +273,22 @@ else
 }
 })
 
+//////////////////////////////CREAR SALA CON NICK INVIS///////////////////////////:
+// el boton para mostrar está en el archivo de fonts_and_gradients.
+
+var anclaTextoCS = document.createTextNode('');
+var nuevoAnclaCS = document.createElement("div");
+nuevoAnclaCS.appendChild(anclaTextoCS);
+
+var anclaExistenteCS = document.getElementById("SD");
+var padreCS = anclaExistenteCS.parentNode;
+var nuevoHijoCS = padreCS.insertBefore(nuevoAnclaCS, anclaExistenteCS);
+nuevoAnclaCS.innerHTML = ' <div id="crear_sala" style="visibility: hidden; position: absolute; top: 78px; left: 88px; border: 3px solid rgb(0, 0, 0); background: rgb(16, 159, 166) none repeat scroll 0% 0%;"><div><center><b><font color=#FFFFFF><u>Crear sala con caracteres Invisibles:</u></font></b></center></div><center><button id ="poner_invi" onmouseup="ponerInvi();">(Poner Invi)</button></center><div><a>&nbsp;</a>Name:&nbsp;<input id="input1" style="width:250px"></input><a>&nbsp;</a><button id="btn_pegar1" onmouseup="pegar1();">Pegar</button><a>&nbsp;</a><button id="limpiar1" onmouseup="limpiar_campo1();">Limpiar</button></div><div><a>&nbsp;</a>Topic.:&nbsp;<input id="input2" style="width:250px"></input><a>&nbsp;</a><button id="btn_pegar2" onmouseup="pegar2();">Pegar</button><a>&nbsp;</a><button id="limpiar2" onmouseup="limpiar_campo2();">Limpiar</button></div><div><div><a>&nbsp;</a></div><center><button id="btn_crearSala" onmouseup="crearSala();">Crear Sala</button><button id="btn_cancelarCS" onmouseup="cancelarCS();"> Cancelar</button></center></div><div><a style="color:#FF0000; cursor:help;">&nbsp;<u>Como usarlo?</u></a></div></div> ';
+//final_parte_del_html
+
+//funciones:
+
+
 
 //
 ////FIN DEL SCRIPT.

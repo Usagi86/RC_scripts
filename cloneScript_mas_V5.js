@@ -243,7 +243,7 @@ LDM.style.color="#FFFFFF";
 
 // BOTON para colocar nick invi a la entrada:
 var ent = document.getElementById("LDN");
-ent.innerHTML += "<div style='color:#FFFFFF'>Da Click en Ok para insertar el nick Invi:&nbsp;&nbsp;&nbsp;<button onclick='nickInvi();'>Ok</button><div id='conteo'>número de nicks invis: )</div></div>"
+ent.innerHTML += "<div style='color:#FFFFFF'>Da Click en Ok para insertar el nick Invi:&nbsp;&nbsp;&nbsp;<button onclick='nickInvi();'>Ok</button><div id='conteo'>número de símbolos invis: )</div></div>"
 
 function nickInvi()
 {
@@ -253,7 +253,7 @@ function nickInvi()
   var cantidad = vNick.match(/‫‫ ‫‫ ‫‫ ‫‫/g).length;
 
   var conteo = document.getElementById("conteo");
-  conteo.innerHTML = "(número de nicks invis: " + "<font color=#FF0000>"+cantidad+"</font>" +")";
+  conteo.innerHTML = "(número de símbolos invis: " + "<font color=#FF0000>"+cantidad+"</font>" +")";
 }
 /// para cuando se presiona borrar:
 var elE = LDNN;
@@ -265,11 +265,11 @@ var conteo = document.getElementById("conteo");
 
 if (!cantidad)
 {
-  conteo.innerHTML = "(número de nicks invis: " + "<font color=#FF0000>0</font>" +")";//cero
+  conteo.innerHTML = "(número de símbolos invis: " + "<font color=#FF0000>0</font>" +")";//cero
 }
 else
 {
-  conteo.innerHTML = "(número de nicks invis: " + "<font color=#FF0000>"+cantidad.length+"</font>" +")";
+  conteo.innerHTML = "(número de símbolos invis: " + "<font color=#FF0000>"+cantidad.length+"</font>" +")";
 }
 })
 
@@ -287,6 +287,14 @@ nuevoAnclaCS.innerHTML = ' <div id="crear_sala" style="visibility: hidden; posit
 //final_parte_del_html
 
 //funciones:
+//funcion solo para mostrar:
+function mostrar()
+{document.getElementById('crear_sala').style.visibility = 'visible'};
+//funcion para cancelar/cerrar:
+function cancelarCS()
+{
+	document.getElementById("crear_sala").style.visibility = "hidden";
+}
 
 
 

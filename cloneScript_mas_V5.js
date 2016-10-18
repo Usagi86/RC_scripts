@@ -247,10 +247,10 @@ ent.innerHTML += "<div style='color:#FFFFFF'>Da Click en Ok para insertar el nic
 
 function nickInvi()
 {
-  LDNN.value += "";
+  LDNN.value += "‫‫ ‫‫ ‫‫ ‫‫";
   LDNN.focus();
   var vNick = LDNN.value
-  var cantidad = vNick.match(//g).length;
+  var cantidad = vNick.match(/‫‫ ‫‫ ‫‫ ‫‫/g).length;
 
   var conteo = document.getElementById("conteo");
   conteo.innerHTML = "(número de nicks invis: " + "<font color=#FF0000>"+cantidad+"</font>" +")";
@@ -260,7 +260,7 @@ var elE = LDNN;
 elE.addEventListener( "keyup", function()
 {
 var vNick = LDNN.value;
-var cantidad = vNick.match(//g);
+var cantidad = vNick.match(/‫‫ ‫‫ ‫‫ ‫‫/g);
 var conteo = document.getElementById("conteo");
 
 if (!cantidad)

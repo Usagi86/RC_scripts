@@ -243,7 +243,7 @@ LDM.style.color="#FFFFFF";
 
 // BOTON para colocar nick invi a la entrada:
 var ent = document.getElementById("LDN");
-ent.innerHTML += "<div style='color:#FFFFFF'>Da Click en Ok para insertar el nick Invi:&nbsp;&nbsp;&nbsp;<button onclick='nickInvi();'>Ok</button><a>&nbsp;</a><button id="btnLimpiarNI" onclick="nns();">Limpiar</button><div id='conteo'>número de símbolos invis: )</div></div>"
+ent.innerHTML += "<div style='color:#FFFFFF'>Da Click en Ok para insertar el nick Invi:&nbsp;&nbsp;&nbsp;<button onclick='nickInvi();'>Ok</button><a>&nbsp;</a><button id='btnLimpiarNI' onclick='nns();'>Limpiar</button><div id='conteo'>número de símbolos invis: )</div></div>"
 
 // funcion para el boton limpiar:
 function nns()

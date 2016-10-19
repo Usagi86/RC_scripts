@@ -349,9 +349,10 @@ function crearSala()
 	var rnI=rcUtil.html2bb(cI1);//name
 	var rtI=rcUtil.html2bb(cI2);//topic
 	var rpI=rcUtil.html2bb(cI3);//password
-	if(rn!=null&&rn!="")
+	if(rnI!=null&&rnI!="")
 	{
-		rcFC.send("300","313",rnI,rtI,rpI); 
+		rcFC.send("300","313",rnI,rtI,rpI);
+		document.getElementById("crear_sala").style.visibility = "hidden";
 	} 
 }
 //////////////////.

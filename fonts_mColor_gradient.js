@@ -154,8 +154,21 @@ var padreT = anclaExistenteT.parentNode;
 var nuevoHijoT1 = padreT.insertBefore(nuevaAnclaT1, anclaExistenteT);
 
 // Parte del html con los nuevos símbolos:
-nuevaAnclaT1.innerHTML = ' Letras: <select id="newFont"><option value="_cero">abc</option><option value="_uno">𝔞𝔟𝔠𝔄𝔅𝓒</option><option value="_dos">𝒶𝒷𝒸𝒜𝐵𝒞</option><option value="_tres">ᾀᏰᏨ</option><option value="_cuatro">მჩე</option><option value="_cinco">ÂßĈ</option><option value="_seis">ΛßƇ♡</option><option value="_siete">ᏗᏰՇ</option><option value="_ocho">αвς</option><option value="_nueve">ᎯᏰᏨ</option><option value="_diez">નЪ૮</option><option value="_once">ԹՅՇ</option><option value="_doce">48C</option><option value="_trece">ⓐⓑⓒ</option><option value="_cato">ªb¢</option><option value="_quince">ΔҌﾧ</option><option value="_dseis">ᗩᙖᙅ</option><option value="_dsiete">ᵃᵇᶜ</option><option value="_docho">ɐqɔ</option><option value="_dnueve">∀Bɔ</option><option value="_veinte">ąҍç</option><option value="_vuno">ａｂｃ</option><option value="_vdos">ᕱცᕳ</option><option value="_vtres">ąც८</option><option value="_vcuatro" title="ₐᵇᵓᵈₑᶠᵍʰᵢᶨᵏᶫᶬᶮῆₒᵖᵩͬᶳᵗᵤᵛᵚ×ᵧᶼ">ₐᵇᵓ</option><option value="_vcinco">ᾀᏰᏨ</option><option value="_vseis">Aʙඋ</option><option value="_vsiete">ᎪbᏟ</option><option value="_vocho">Ⱥβ↻</option><option value="_vnueve">ค๒ς</option><option value="_treinta">ᾆḇḉ</option></select> <button id="c_btn" onmouseup="cambiar_modo(); IN.doFocus();">Modo1</button> <button id="mostForm" onclick="funcMCol()">Colores</button> <button onmouseup="mostrar();">CrearSala</button>';
+nuevaAnclaT1.innerHTML = ' Letras: <select id="newFont"><option value="_cero">abc</option><option value="_uno">𝔞𝔟𝔠𝔄𝔅𝓒</option><option value="_dos">𝒶𝒷𝒸𝒜𝐵𝒞</option><option value="_tres">ᾀᏰᏨ</option><option value="_cuatro">მჩე</option><option value="_cinco">ÂßĈ</option><option value="_seis">ΛßƇ♡</option><option value="_siete">ᏗᏰՇ</option><option value="_ocho">αвς</option><option value="_nueve">ᎯᏰᏨ</option><option value="_diez">નЪ૮</option><option value="_once">ԹՅՇ</option><option value="_doce">48C</option><option value="_trece">ⓐⓑⓒ</option><option value="_cato">ªb¢</option><option value="_quince">ΔҌﾧ</option><option value="_dseis">ᗩᙖᙅ</option><option value="_dsiete">ᵃᵇᶜ</option><option value="_docho">ɐqɔ</option><option value="_dnueve">∀Bɔ</option><option value="_veinte">ąҍç</option><option value="_vuno">ａｂｃ</option><option value="_vdos">ᕱცᕳ</option><option value="_vtres">ąც८</option><option value="_vcuatro" title="ₐᵇᵓᵈₑᶠᵍʰᵢᶨᵏᶫᶬᶮῆₒᵖᵩͬᶳᵗᵤᵛᵚ×ᵧᶼ">ₐᵇᵓ</option><option value="_vcinco">ᾀᏰᏨ</option><option value="_vseis">Aʙඋ</option><option value="_vsiete">ᎪbᏟ</option><option value="_vocho">Ⱥβ↻</option><option value="_vnueve">ค๒ς</option><option value="_treinta">ᾆḇḉ</option></select> <button id="c_btn" onmouseup="cambiar_modo(); IN.doFocus();">Modo1</button> <button id="mostForm" onclick="funcMCol()">Colores</button> <button onmouseup="mostrar();">CrearSala</button> <button onmouseup="protPant();">Prot_Pant</button>';
 ////////////////////////////////////////
+
+//funcion del boton del protector de pantalla:
+function protPant()
+{
+GB.style.height = '600px';
+
+
+if ( GB.style.visibility == 'visible' )
+{GB.style.visibility = 'hidden';}
+  else
+  {GB.style.visibility = 'visible';}
+}
+
 ///////////////////////////////////////
 
 

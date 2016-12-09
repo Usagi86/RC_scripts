@@ -158,6 +158,7 @@ nuevaAnclaT1.innerHTML = ' Letras: <select id="newFont"><option value="_cero">ab
 ////////////////////////////////////////
 
 //funcion del boton del protector de pantalla:
+/*
 function protPant()
 {
 GB.style.height = '600px';
@@ -168,6 +169,7 @@ if ( GB.style.visibility == 'visible' )
   else
   {GB.style.visibility = 'visible';}
 }
+*/
 
 ///////////////////////////////////////
 

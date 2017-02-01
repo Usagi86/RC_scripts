@@ -31,7 +31,7 @@ function mi_bot()
 	var id = ULS.users[uSL].nick;
 	
 	var checkUser=ULS.getID(id);
-	if (checkUser != null)
+	if (checkUser != null && checkUser != BL.uID)
 	{
 		rcFC.send("500","503",ULS.getID(id), _bot);
 		CA.addUserMessage(4,ULS.getID(id),_bot);

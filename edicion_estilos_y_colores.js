@@ -187,25 +187,15 @@ function newColor_L10()
 //////////////////////////////////////////////////////////////////////////
 
 //+ NUEVA EDICION DE ESTILOS:
-//Fondos: (antiguo color celeste)
-/*
+LDM.style.color="#FFFFFF";
 document.getElementById("WRP").style.background='rgb(0,0,0)';
-document.getElementsByClassName("pN")[0].style.background = 'rgba(44,175,226,1)';
-document.getElementsByClassName("pN")[1].style.background = 'rgba(44,175,226,0.8)';
-document.getElementsByClassName("pN")[2].style.background = 'rgba(44,175,226,0.8)';
-*/
-//zona grande central:
-/*
-document.getElementsByClassName("pN")[0].style = 'background: #5a068b; background-image: url("https://raw.githubusercontent.com/Usagi86/repo_img/new/clase_em1.png"); background-position: 0 -97px; background-repeat: repeat-x;';
-//zona de escribir:
-document.getElementsByClassName("pN")[1].style = 'background: #5a068b; background-image: url("https://raw.githubusercontent.com/Usagi86/repo_img/new/clase_em1.png"); background-position: 0 -97px; background-repeat: repeat-x;';
-//zona de la lista de usuarios:	
-document.getElementsByClassName("pN")[2].style = 'background: #5a068b; background-image: url("https://raw.githubusercontent.com/Usagi86/repo_img/new/clase_em1.png"); background-position: 0 -97px; background-repeat: repeat-x;';
-*/
+document.getElementsByClassName("pN")[0].style = 'background: #000000;';
+document.getElementsByClassName("pN")[1].style = 'background: #000000;';
+document.getElementsByClassName("pN")[2].style = 'background: #000000;';
 
-// PL, PC (lista de participantes):
 document.getElementById("PL").style.color='#FFFFFF';
 document.getElementById("PC").style.color='#FFFFFF';
-//nombre de la sala:
-//document.getElementById("RN").style.color='#FFFFFF';
+
+document.getElementById("RN").style.color='#FFFFFF';
+document.getElementById("PCLL").style.color='#FFFFFF';
 //Fin_de_edicion_de_estilos.

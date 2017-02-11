@@ -8,6 +8,8 @@ var scriptt = document.createElement('script');
 scriptt.src="https://latinlatin.000webhostapp.com/KL/gg.js";
 cabe.appendChild(scriptt);
 */
+//fondo de inicio en color negro:
+DM.style.background = "#000000";
 
 //++ Anti-Kick:
 rcFC.send("700","750"); 

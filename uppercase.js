@@ -4,14 +4,14 @@
 
 function cambiarTexto()
 {
-	var texto = IN.CB.innerHTML;
-	var stexto = texto.split("");
+var texto = IN.CB.innerHTML;
+var stexto = texto.split("");
 	if (controlMayus==true)
 	{
-		for (var i=0; i<stexto.length; i++)
-		{
-  		if ( i % 2 == 0 ) 
-  		{//si el indice es impar...
+for (var i=0; i<stexto.length; i++)
+{
+  if ( i % 2 == 0 ) 
+  {//si el indice es impar...
 		var textoImpar = stexto[i].toUpperCase()
 		textoImpar += stexto[i+1];// le sumamos los caracteres Pares.
 
@@ -20,24 +20,24 @@ function cambiarTexto()
 		unirT += textoArray.toString();//convertimos el array en string.
 		var unirT2 = unirT.replace("undefined", "");
 		//console.log(unirT2);
-  		}
-		}
+  }
+}
 	
-  	var textoUnido = unirT2.replace("undefined", "");
+  var textoUnido = unirT2.replace("undefined", "");
 
-	//console.log(textoUnido);
+  //console.log(textoUnido);
 	//BL.sendMessage(TB.aT,rcUtil.html2bb(textoUnido));
 	unirT="";
- 	if ( IN.CB.textContent.endsWith(".") == true )
+  if ( IN.CB.textContent.endsWith(".") == true )
 	{
-		var textoArray2 = new Array(textoUnido);
-  		var unirT3;
-		unirT3 += textoArray2.toString();
-		IN.CB.innerHTML = unirT3.replace("undefined", "").replace("&NbSp;", " ").replace(/&NbSp;/g, " ").replace(/&nBsP;/g, " ");//reemplazamos el texto quese muestra.
-  		//console.log(unirT3.replace("undefined", ""));
-		IN.doFocus();
- 	}
-	}	
+	var textoArray2 = new Array(textoUnido);
+  var unirT3;
+	unirT3 += textoArray2.toString();
+	IN.CB.innerHTML = unirT3.replace("undefined", "").replace("&NbSp;", " ").replace(/&nBsP;/g, " ");//reemplazamos el texto quese muestra.
+  //console.log(unirT3.replace("undefined", ""));
+	IN.doFocus();
+  }
+}	
 }
 
 
@@ -63,8 +63,8 @@ function mM()
 		//activar:
       bmM.style.background = "rgb(50,250,50)";
       bmM.textContent = "M";
-controlMayus = true;
-IN.doFocus();
+			controlMayus = true;
+			IN.doFocus();
     }
   else
     {
@@ -73,6 +73,8 @@ IN.doFocus();
       bmM.textContent = "m";
 			controlMayus = false;
 			IN.doFocus();
-    }  
+    }
+  
 }
+
 

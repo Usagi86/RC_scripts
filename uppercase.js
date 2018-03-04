@@ -41,7 +41,7 @@ function cambiarTexto()
 	}	
 }
 
-// bloque para el archivo que llama a los demás codigos:
+// bloque para el evento que llama al codigo de la función escrita arriba:
 var elemento = CI.window.document.getElementById("B");
 var controlMayus = false;
 
@@ -70,6 +70,7 @@ if (navegador.includes("Chrome") == true)
 			bmM.textContent = "M";
 			controlMayus = true;
 			IN.doFocus();
+		   IN.CIF.focus();
 		}
 	  else
 		{
@@ -78,6 +79,7 @@ if (navegador.includes("Chrome") == true)
 			bmM.textContent = "m";
 			controlMayus = false;
 			IN.doFocus();
+			IN.CIF.focus();
 		}
 	}
 }

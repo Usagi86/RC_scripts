@@ -477,14 +477,14 @@ function crearSala()
 }
 //////////////////.
 
-/*
+
 // Script del UPPER CASE intercalado:
 var elFrame = IN.CI.document.head
 var sUpperCase = document.createElement('script');
 sUpperCase.src="https://rawgit.com/Usagi86/RC_scripts/master/uppercase.js";
 elFrame.appendChild(sUpperCase);
 //fin_de_agregar_script_del_UC.
-*/
+
 
 //
 ////FIN DEL SCRIPT.

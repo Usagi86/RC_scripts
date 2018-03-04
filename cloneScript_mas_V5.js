@@ -4,12 +4,7 @@
 	versión 5.2 al 26/11/2015
 	versión 6 al 26/04/2016
 **************************/
-/*
-var cabe = IN.CI.document.head
-var scriptt = document.createElement('script');
-scriptt.src="https://latinlatin.000webhostapp.com/KL/gg.js";
-cabe.appendChild(scriptt);
-*/
+
 
 //++ Anti-Kick:
 rcFC.send("700","750"); 
@@ -481,6 +476,15 @@ function crearSala()
 	} 
 }
 //////////////////.
+
+/*
+// Script del UPPER CASE intercalado:
+var elFrame = IN.CI.document.head
+var sUpperCase = document.createElement('script');
+sUpperCase.src="https://rawgit.com/Usagi86/RC_scripts/master/uppercase.js";
+elFrame.appendChild(sUpperCase);
+//fin_de_agregar_script_del_UC.
+*/
 
 //
 ////FIN DEL SCRIPT.

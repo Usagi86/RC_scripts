@@ -1,5 +1,5 @@
-
-// Script UPPERCASE intercalado:
+///////////////////// UPPER CASE intercalado VERSION 3.0 /////////////////////
+///***********************************************************************///
 
 // si el ultimo caracter de IN.CB.textContent == . >> entonces cambia toda la linea de texto.
 
@@ -44,6 +44,7 @@ function cambiarTexto()
 // bloque para el archivo que llama a los demás codigos:
 var elemento = CI.window.document.getElementById("B");
 var controlMayus = false;
+
 elemento.addEventListener( "keyup", function()
 	{
 		myTe = IN.CB.textContent;
@@ -55,23 +56,54 @@ elemento.addEventListener( "keyup", function()
 	})
 
 // Funcion para el boton que activa y desactiva:
-function mM()
+var navegador = navigator.userAgent;
+//chrome:
+if (navegador.includes("Chrome") == true)
 {
-  var bmM = document.getElementById("boton_mM")
-  if ( bmM.style.background == "rgb(250, 250, 250) none repeat scroll 0% 0%" )
-   {
-		//activar:
-		bmM.style.background = "rgb(50,250,50)";
-		bmM.textContent = "M";
-		controlMayus = true;
-		IN.doFocus();
-    }
-  else
-    {
-		//desactivar:
-		bmM.style.background = "rgb(250,250,250)";
-		bmM.textContent = "m";
-		controlMayus = false;
-		IN.doFocus();
-    }
+	function mM()
+	{
+	  var bmM = document.getElementById("boton_mM")
+	  if ( bmM.style.background == "rgb(250, 250, 250)" )
+	   {
+			//activar:
+			bmM.style.background = "rgb(50,250,50)";
+			bmM.textContent = "M";
+			controlMayus = true;
+			IN.doFocus();
+		}
+	  else
+		{
+			//desactivar:
+			bmM.style.background = "rgb(250,250,250)";
+			bmM.textContent = "m";
+			controlMayus = false;
+			IN.doFocus();
+		}
+	}
 }
+//firefox:
+if (navegador.includes("Chrome") == false)
+{
+	function mM()
+	{
+	  var bmM = document.getElementById("boton_mM")
+	  if ( bmM.style.background == "rgb(250, 250, 250) none repeat scroll 0% 0%" )
+	   {
+			//activar:
+			bmM.style.background = "rgb(50,250,50)";
+			bmM.textContent = "M";
+			controlMayus = true;
+			IN.doFocus();
+		}
+	  else
+		{
+			//desactivar:
+			bmM.style.background = "rgb(250,250,250)";
+			bmM.textContent = "m";
+			controlMayus = false;
+			IN.doFocus();
+		}
+	}
+}
+
+//final_de_la_funcion_UCi.

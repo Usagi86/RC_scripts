@@ -280,9 +280,9 @@ function newColor_3L10()
 //+ NUEVA EDICION DE ESTILOS:
 LDM.style.color="#FFFFFF";
 document.getElementById("WRP").style.background='rgb(0,0,0)';
-document.getElementsByClassName("pN")[0].style = 'background: #FF037F;';
-document.getElementsByClassName("pN")[1].style = 'background: #FF037F;';
-document.getElementsByClassName("pN")[2].style = 'background: #FF037F;';
+document.getElementsByClassName("pN")[0].style = 'background: #000000;';//#FF037F; COLOR DE LOS MARCOS DE VENTANA.
+document.getElementsByClassName("pN")[1].style = 'background: #000000;';
+document.getElementsByClassName("pN")[2].style = 'background: #000000;';
 
 document.getElementById("PL").style.color='#FFFFFF';
 document.getElementById("PC").style.color='#FFFFFF';

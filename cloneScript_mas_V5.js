@@ -202,7 +202,7 @@ function n_clon()
 	if ( document.getElementById('UMB').innerHTML != '<ul><li><a onclick="return E.hide(ULS.uM)">You</a></li></ul>' )
 	{
 		var get_id = nn[1].innerHTML;
-		tomar = get_id.substring(27,30);
+		tomar = get_id.substring(27,32);//TOMAR EL NICK DEL USUARIO A CLONAR.
 	}
 	else
 	{
